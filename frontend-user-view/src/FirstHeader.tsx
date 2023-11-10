@@ -8,21 +8,9 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
 
-    function HoursLocationButton({ title }: { title: string }) {
+    function MyButton({ title }: { title: string }) {
         return (
-            <button id="hours-location-button">{title}</button>
-        )
-    }
-
-    function ContactButton({ title }: { title: string }) {
-        return (
-            <button id="contact-button">{title}</button>
-        )
-    }
-
-    function FAQButton({ title }: { title: string }) {
-        return (
-            <button id="faq-button">{title}</button>
+            <button id="first-header-button">{title}</button>
         )
     }
     
@@ -35,13 +23,13 @@ export default function Header() {
                     </Col>
                     <Col>
                     <Link to="FAQ">
-                            <FAQButton title="FAQs" />
+                            <MyButton title="FAQs" />
                         </Link>
                         <Link to="/ContactPage">
-                            <ContactButton title="Contact Us" />
+                            <MyButton title="Contact Us" />
                         </Link>
                         <Link to="/HoursLocationPage">
-                            <HoursLocationButton title="Hours & Location" />
+                            <MyButton title="Hours & Location" />
                         </Link>
                     </Col>
                 </Row>

@@ -23,84 +23,29 @@
   justify-content: flex-end; */
 }
 
-#hours-location-button {
-  background-color: #f7fe72;
+#first-header-button {
+  background-color: #ffd9da;
   width: 10rem;
   padding: .5rem;
   margin-right: .5rem;
   color: #474044;
   font-weight: bold;
   font-size: 1rem;
-}
-
-#hours-location-button:hover {
-  background-color: #474044;
-  color: #f7fe72 ;
-  border: 1px solid #f7fe72;
-}
-
-#hours-location-button:active {
-  background-color: #f7fe72;
-  color: #474044;
-}
-
-#contact-button {
-  background-color: #f49fbc;
-  width: 10rem;
-  padding: .5rem;
-  margin-right: .5rem;
-  color: #474044;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-#contact-button:hover {
-  background-color: #474044;
-  color: #f49fbc ;
-  border: 1px solid #f49fbc;
-}
-
-#contact-button:active {
-  background-color: #f49fbc;
-  color: #474044;
-}
-
-#faq-button {
-  background-color: #50d8d7;
-  width: 10rem;
-  padding: .5rem;
-  margin-right: .5rem;
-  color: #474044;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-#faq-button:hover {
-  background-color: #474044 ;
-  color: #50d8d7;
-  border: 1px solid #50d8d7;
-}
-
-#faq-button:active {
-  background-color: #50d8d7;
-  color: #474044;
 }
 
 #first-header-button:hover {
-  background-color: #474044;
-  color: #50d8d7;
-  border: 1px solid #50d8d7;
+  background-color: #f49fbc;
+  color: #474044;
 }
 
 #first-header-button:active {
-  background-color: #50d8d7;
+  background-color: #ffd9da;
   color: #474044;
-  border: 1px solid #50d8d7;
 }
 
 /*Second Header*/
 #second-header-container {
-  background-color: #50d8d7;
+  background-color: #9bbec7;
   display: flex;
   justify-content: center;
   width: 101vw;
