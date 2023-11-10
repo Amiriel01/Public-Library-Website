@@ -1,6 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo2 from "./images/logo2.png";
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
@@ -18,9 +19,15 @@ export default function Header() {
                         <img id="logo-image" src={logo2} alt="library logo"></img>
                     </Col>
                     <Col md={12}>
-                        <MyButton title="Hours & Location" />
-                        <MyButton title="Contact Us" />
-                        <MyButton title="FAQs" />
+                        <Link to="/HoursLocationPage">
+                            <MyButton title="Hours & Location" />
+                        </Link>
+                        <Link to="/ContactPage">
+                            <MyButton title="Contact Us" />
+                        </Link>
+                        <Link to="FAQ">
+                            <MyButton title="FAQs" />
+                        </Link>
                     </Col>
                 </Row>
             </Row>
