@@ -3,7 +3,25 @@ import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
 
 export default function HoursLocationPage() {
-    return {
-        
-    }
+    return (
+        <>
+            <Row>
+                <Col>
+                    <Link to="/Homepage">
+                        <p>
+                            Home
+                        </p>
+                    </Link>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h1>
+                        Hours & Location
+                    </h1>
+                </Col>
+            </Row>
+        </>
+    )
+
 }
