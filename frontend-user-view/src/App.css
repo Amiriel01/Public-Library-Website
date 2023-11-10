@@ -8,18 +8,17 @@
   background-color: #474044;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 101vw;
 }
 
 #first-header-logo-button-container {
   width: 80%;
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
 }
 
-#logo-image {
-  /* height: 10rem; */
+#header-buttons-container {
+  margin-left: 10rem;
 }
 
 #first-header-button {
@@ -29,7 +28,7 @@
   margin-right: .5rem;
   color: #474044;
   font-weight: bold;
-  font-size: 1rem
+  font-size: 1rem;
 }
 
 #first-header-button:hover {

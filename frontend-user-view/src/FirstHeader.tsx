@@ -15,10 +15,10 @@ export default function Header() {
         <>
             <Row id="first-header-container">
                 <Row id="first-header-logo-button-container">
-                    <Col md={12} id="logo-container">
-                        <img id="logo-image" src={logo2} alt="library logo"></img>
+                    <Col sm={12}  lg={6} id="logo-container">
+                        <img id="logo-image" className="img-fluid" src={logo2} alt="library logo"></img>
                     </Col>
-                    <Col md={12}>
+                    <Col id='header-buttons-container'>
                         <Link to="/HoursLocationPage">
                             <MyButton title="Hours & Location" />
                         </Link>
