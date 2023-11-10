@@ -1,1 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+/*First Header*/
+#first-header-container {
+  background-color: #474044;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+#first-header-logo-button-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo-image {
+  /* height: 10rem; */
+}
+
+#first-header-button {
+  background-color: #50d8d7;
+  width: 10rem;
+  padding: .5rem;
+  margin-right: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem
+}
