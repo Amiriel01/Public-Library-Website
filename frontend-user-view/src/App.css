@@ -12,13 +12,14 @@
 }
 
 #first-header-logo-button-container {
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
 
 #header-buttons-container {
-  margin-left: 15rem;
+  /* display: flex;
+  justify-content: flex-end; */
 }
 
 #first-header-button {
