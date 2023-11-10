@@ -15,6 +15,7 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
+  /* flex-wrap: wrap; */
 }
 
 #logo-image {
@@ -30,3 +31,24 @@
   font-weight: bold;
   font-size: 1rem
 }
+
+#first-header-button:hover {
+  background-color: #474044;
+  color: #50d8d7;
+  border: 1px solid #50d8d7;
+}
+
+#first-header-button:active {
+  background-color: #50d8d7;
+  color: #474044;
+  border: 1px solid #50d8d7;
+}
+
+/* Colors
+orange dc965a
+brown 474044
+blue 0c7489
+rose ae8ca3
+light blue 50d8d7
+*/
+
