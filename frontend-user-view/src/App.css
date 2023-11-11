@@ -96,10 +96,14 @@
 
 /*Homepage*/
 #homepage-container {
-  /* width: 80%; */
+  
 }
 
 /*HomepageLink*/
+#homepage-link-container {
+  margin-top: 2rem;
+}
+
 #homepage-link {
   color: #474044;
   text-decoration: none;
