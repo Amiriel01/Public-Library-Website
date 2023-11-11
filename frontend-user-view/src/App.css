@@ -101,6 +101,14 @@
   font-weight: bold;
 }
 
+#homepage-link:hover {
+  color: #f49fbc;
+}
+
+#homepage-link:active {
+  color: #ffd9da;
+}
+
 /*HoursLocationPage*/
 #hours-location-page-container {
   width:60%;
