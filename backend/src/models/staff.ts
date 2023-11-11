@@ -24,4 +24,4 @@ const StaffSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model("Staff", StaffSchema);
+export default mongoose.model("Staff", StaffSchema);

@@ -3,14 +3,9 @@ import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
 import LibraryOutside from "./images/libraryoutside.png";
 import { Link } from "react-router-dom";
+import MyButton from './MyButton';
 
 export default function HoursLocationPage() {
-
-    function MyButton({ title }: { title: string }) {
-        return (
-            <button id="contact-us-button">{title}</button>
-        )
-    }
 
     return (
         <>
@@ -47,7 +42,7 @@ export default function HoursLocationPage() {
                                 (555) 555-5555
                             </p>
                             <Link to="/ContactPage">
-                                <MyButton title='Contact Us'></MyButton>
+                                <MyButton id='contact-us-button' title='Contact Us'></MyButton>
                             </Link>
                         </div>
                         <div id='open-hours-container'>
