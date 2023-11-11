@@ -89,6 +89,16 @@
   margin-left: 1rem;
 }
 
+#submit-search-button:active {
+  background-color: #f49fbc;
+  color: #474044;
+}
+
+/* #submit-search-button:active {
+  background-color: #474044;
+  color: #9bbec7;
+} */
+
 /*Homepage*/
 #homepage-container {
   /* width: 80%; */
