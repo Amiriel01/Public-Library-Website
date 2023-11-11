@@ -4,13 +4,21 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const cors = require('cors')
+const cors = require('cors');
+const multer  = require('multer');
+
+//import schema file
+const Staff = require("./models/staff");
 
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 const app = express();
+
+//setting up mutler options
+const storage = multer.memoryStorage();
+const staff = multer({ storage: storage });
 
 // Set up mongoose connection
 const mongoose = require("mongoose");
@@ -50,5 +58,34 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//mutler middleware
+app.post("/staff", staff.single("file"), async (req, res) => {
+  // req.file can be used to access all file properties
+  try {
+    //check if the request has an image or not
+    if (!req.file) {
+      res.json({
+        success: false,
+        message: "You must provide at least 1 file"
+      });
+    } else {
+      let imageUploadObject = {
+        file: {
+          data: req.file.buffer,
+          contentType: req.file.mimetype
+        },
+        fileName: req.body.fileName
+      };
+      const uploadObject = new Upload(imageUploadObject);
+      // saving the object into the database
+      const uploadProcess = await uploadObject.save();
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
 
 module.exports = app;
