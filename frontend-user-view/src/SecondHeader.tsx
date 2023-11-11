@@ -28,9 +28,6 @@ export default function SecondHeader() {
                             </div>
                         </form>
                     </Col>
-                    {/* <Col id='search-input-column'>
-                       
-                    </Col> */}
                 </Row>
             </Row>
         </>

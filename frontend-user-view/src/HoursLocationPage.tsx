@@ -2,7 +2,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
 import LibraryOutside from "./images/libraryoutside.png";
-import GlobeBook from "./images/globebook.png";
 import { Link } from "react-router-dom";
 
 export default function HoursLocationPage() {
@@ -31,7 +30,6 @@ export default function HoursLocationPage() {
                 </Row>
                 <Row id='map-location-container'>
                     <Col id='address-hours-column'>
-                        {/* <img id='globe-book-image' className='img-fluid' src={GlobeBook}></img> */}
                         <div id='address-title-container'>
                             <p id='address-page-title'>
                                 Address:

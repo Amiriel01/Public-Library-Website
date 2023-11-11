@@ -4,6 +4,7 @@ import FirstHeader from './FirstHeader'
 import Homepage from './Homepage';
 import HoursLocationPage from './HoursLocationPage';
 import SecondHeader from './SecondHeader';
+import ContactPage from './ContactPage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Homepage />}></Route>
           <Route path='/HoursLocationPage' element={<HoursLocationPage />}></Route>
+          <Route path='/ContactPage' element={<ContactPage />}></Route>
         </Routes>
       </div>
     </>
