@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /*First Header*/
@@ -16,11 +17,6 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-}
-
-#header-buttons-container {
-  /* display: flex;
-  justify-content: flex-end; */
 }
 
 #first-header-button {
@@ -87,17 +83,81 @@
   width: 10rem;
   padding: .5rem;
   margin-right: .5rem;
-  color: #50d8d7;
+  color: #9bbec7;
   font-weight: bold;
   font-size: 1rem;
   margin-left: 1rem;
 }
 
-/* Colors
-orange dc965a
-brown 474044
-blue 0c7489
-rose ae8ca3
-light blue 50d8d7
-*/
+/*Homepage*/
+#homepage-container {
+  /* width: 80%; */
+}
 
+/*HomepageLink*/
+#homepage-link {
+  color: #474044;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*HoursLocationPage*/
+#hours-location-page-container {
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:3rem;
+  margin-bottom:2rem;
+  color: #474044;
+}
+
+#hours-location-page-title {
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
+}
+
+#hours-location-library-image-container {
+  margin-bottom: 3rem;
+}
+
+/* #globe-book-image {
+  height: 50%;
+  width: 50%;
+} */
+
+#address-hours-column {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#address-title-container {
+  /* padding-left: 5rem; */
+}
+
+#contact-us-button {
+  margin-top: 1rem;
+  background-color: #ffd9da;
+  width: 10rem;
+  padding: .5rem;
+  margin-right: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#contact-us-button:hover {
+  background-color: #f49fbc;
+  color: #474044;
+}
+
+#contact-us-button:active {
+  background-color: #ffd9da;
+  color: #474044;
+}
+
+#address-page-title {
+  font-weight: bold;
+}

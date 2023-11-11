@@ -1,8 +1,6 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from "./images/logo.png";
-import logo2 from "./images/logo2.png";
-import logo3 from "./images/logo3.png";
 import { Link } from "react-router-dom";
 
 
