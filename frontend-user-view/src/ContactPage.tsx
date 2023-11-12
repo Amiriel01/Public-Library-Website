@@ -4,6 +4,7 @@ import HomepageLink from './HomepageLink';
 import { Link } from "react-router-dom";
 import ContactForm from './ContactForm';
 import Card from 'react-bootstrap/Card';
+import StaffImage from "./images/director.png"
 import axios from 'axios';
 
 export default function ContactPage() {
@@ -12,13 +13,13 @@ export default function ContactPage() {
         return (
             <Card id='staff-card'>
                 <Card.Body id='staff-card-flex-container'>
-                    <div id='staff-image'></div>
+                    <img id='staff-image' className='img-fluid' src={StaffImage}></img>
                     <div>
                         <Card.Title id='card-title'>Library Director</Card.Title>
                         <Card.Subtitle id='card-subtitle' className="mb-2 text-muted">Sally Wright</Card.Subtitle>
                         <Card.Text id='card-text'>
                             <p>Phone: (555) 555-5552</p>
-                            <p>Email: director@apage.com</p>
+                            <p>Email: director@page.com</p>
                         </Card.Text>
                     </div>
                 </Card.Body>
@@ -57,6 +58,14 @@ export default function ContactPage() {
                         </h1>
                     </Col>
                 </Row>
+                <TextExample />
+                <TextExample />
+                <TextExample />
+                <TextExample />
+                <TextExample />
+                <TextExample />
+                <TextExample />
+                <TextExample />
                 <TextExample />
                 <Row>
                     <Col>

@@ -192,18 +192,21 @@ body, html {
 #staff-card {
   width: 25rem;
   color: #474044;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  
 }
 
 #staff-card-flex-container {
   display: flex;
+  align-items: center;
+  margin-right: 1rem;
 }
 
 #staff-image {
-  background-image: url(images/director.png);
-  width: 10rem;
-  height: 12rem;
-  background-size: cover;
-  background-position: center;
+  width: 40%;
+  height: 80%;
   margin-right: 1rem;
 }
 
