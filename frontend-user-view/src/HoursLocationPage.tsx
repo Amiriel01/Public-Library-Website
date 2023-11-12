@@ -13,7 +13,7 @@ export default function HoursLocationPage() {
                 <HomepageLink />
                 <Row>
                     <Col>
-                        <h1 id='hours-location-page-title'>
+                        <h1 id='page-titles'>
                             Hours & Location
                         </h1>
                     </Col>

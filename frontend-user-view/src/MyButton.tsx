@@ -1,12 +1,15 @@
-
 interface MyButtonProps {
     title: string,
-    id: string
+    id: string,
+    // onClick():void,
+    //onClick is a function that returns void
+    onClick? : () => undefined,
 }
 
-export default function MyButton({ title, id }: MyButtonProps) {
+export default function MyButton(props: MyButtonProps) {
     return (
-        <button id={id}>{title}</button>
+        // <button onClick={onClick()} id={id}>{title}</button>
+        <button onClick={() => props.onClick?.()} id={props.id}>{props.title}</button>
     )
 }
 
