@@ -7,7 +7,8 @@ import SecondHeader from './SecondHeader';
 import ContactPage from './ContactPage';
 import { useState } from 'react';
 import { BookAPIData, BookDataInterface } from './BookAPIInterface';
-import SearchBookPage from './SearchBookPage';
+import SearchBookPage from './BookSearchResultsPage';
+import BookSearchResultsPage from './BookSearchResultsPage';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
           <Route path="*" element={<Homepage />}></Route>
           <Route path='/HoursLocationPage' element={<HoursLocationPage />}></Route>
           <Route path='/ContactPage' element={<ContactPage />}></Route>
-          <Route path='/BookSearchResultsPage' element={<SearchBookPage
+          <Route path='/BookSearchResultsPage' element={<BookSearchResultsPage
             bookData={bookData}
             setBookData={setBookData}
           />}></Route>

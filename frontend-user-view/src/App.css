@@ -220,3 +220,55 @@ body, html {
 #card-text {
   padding: .5rem;
 }
+
+/*BookSearchResultsPage*/
+#book-search-result-page-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+#book-search-result-page-title {
+  color: #474044;
+  font-weight: bold;
+}
+
+#book-search-result-page-directions {
+  color: #474044;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+#book-info-card-container {
+  margin-bottom: 2rem;
+}
+
+#book-info-card{
+  display: flex;
+  align-items: center;
+  color: #474044;
+}
+
+#book-image {
+margin-right: 2rem;
+}
+
+#book-title {
+  font-weight: bold;
+}
+
+#book-question {
+  font-weight: bold;
+}
+
+#book-info-link {
+  color: #474044;
+  text-decoration: none;
+}
+
+#book-info-link:hover {
+  color: #f49fbc;
+}
+
