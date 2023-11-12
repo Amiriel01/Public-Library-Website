@@ -17,7 +17,7 @@ export default function SecondHeader({ bookData, setBookData }: BookAPIProps) {
             console.log(response)
             setBookData(response.data)
             setSearchInput('')
-            nav("/SearchBookPage")
+            nav("/BookSearchResultsPage")
         })
     }
 

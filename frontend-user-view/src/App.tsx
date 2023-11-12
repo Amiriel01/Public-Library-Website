@@ -25,7 +25,7 @@ function App() {
           <Route path="*" element={<Homepage />}></Route>
           <Route path='/HoursLocationPage' element={<HoursLocationPage />}></Route>
           <Route path='/ContactPage' element={<ContactPage />}></Route>
-          <Route path='/SearchBookPage' element={<SearchBookPage
+          <Route path='/BookSearchResultsPage' element={<SearchBookPage
             bookData={bookData}
             setBookData={setBookData}
           />}></Route>
