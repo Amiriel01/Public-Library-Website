@@ -23,7 +23,7 @@ const ContactSchema = new Schema({
     },
     help: {
         type: String,
-        enum: ['Questions about my library card', 'Questions about the hildrens events or programs', 'Questions about the teen events or programs', 'Questions about the adult events or programs', 'Questions about donations', 'Questions about volunteering', 'Issues with the website', 'Other'],
+        enum: ['Questions about my library card', 'Questions about programs', 'Quesitons about events', 'Questions about donations', 'Questions about Questions about volunteer opportunities', 'Issues with the website', 'Other Questions'],
         required: true
     },
     message: {

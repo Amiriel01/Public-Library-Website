@@ -178,15 +178,9 @@ body, html {
 
 /*ContactPage*/
 #contact-page-container {
-  width: 80%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-}
-
-#faq-page-link {
-  color: #f49fbc;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 #staff-card {
@@ -223,6 +217,19 @@ body, html {
 #card-text {
   padding: .5rem;
 }
+
+#contact-page-form-instructions {
+  color: #474044;
+}
+
+#faq-page-link {
+  color: #f49fbc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Contact Page ContactForm*/
+
 
 /*BookSearchResultsPage*/
 #book-search-result-page-container {
