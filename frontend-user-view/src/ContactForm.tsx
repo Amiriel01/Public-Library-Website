@@ -37,11 +37,11 @@ export default function ContactForm() {
                     <Form.Label>Message:</Form.Label>
                     <Form.Control as="textarea" rows={3} />
                 </Form.Group>
-                <Form.Text className="text-muted">
+                <Form.Text id='form-text' className="text-muted">
                     We'll never share your phone number or email with anyone else.
                 </Form.Text>
                 <div>
-                    <MyButton id='contact-form-submit' title='Submit'></MyButton>
+                    <MyButton id='contact-form-submit-button' title='Submit'></MyButton>
                 </div>
             </Form>
         </>

@@ -228,8 +228,20 @@ body, html {
   font-weight: bold;
 }
 
-/*Contact Page ContactForm*/
+#form-text {
+  font-weight: bold;
+}
 
+#contact-form-submit-button {
+  background-color: #ffd9da;
+  width: 10rem;
+  padding: .5rem;
+  margin-right: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
 
 /*BookSearchResultsPage*/
 #book-search-result-page-container {
