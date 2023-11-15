@@ -138,7 +138,9 @@ export function contact_form_submission_edit() {
 //delete contact form submission
 export function contact_form_submission_delete() {
     return asyncHandler(async (req, res, next) => {
-        const constactFormSubmissionDelete = await Contact.findByIdAndRemove(req.params.id).exec();
-        res.json(constactFormSubmissionDelete);
+        const contactFormSubmissionDelete = await Contact.findByIdAndRemove(req.params.id).exec();
+        console.log(contactFormSubmissionDelete);
+        console.log(req.params.id)
+        res.json(contactFormSubmissionDelete);
     })
 }

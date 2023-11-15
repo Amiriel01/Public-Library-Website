@@ -5,16 +5,18 @@ import { FormEvent, useState } from 'react';
 
 export default function ContactForm() {
 
-    const [contactForm, setContactForm] = useState({
+    const initialValues = {
         name: "",
         phone: "",
         email: "",
         help: "",
         message: "",
-    })
+    }
 
-    const handleChange = (event) => {
-        const { name: value } = event.target;
+    const [contactForm, setContactForm] = useState(initialValues);
+
+    const handleChange = (event: FormEvent) => {
+        const { name, value } = event.target;
         setContactForm({
             ...contactForm,
             [name]: value
@@ -32,7 +34,11 @@ export default function ContactForm() {
             message: contactForm.message,
         }
 
-        await axios.post("")
+        setContactForm(initialValues);
+
+        await axios.post("http://localhost:3000/contact/contactForm", contactFormData).then((response) => {
+            console.log(response.status, response.data)
+        })
 
     }
 
@@ -44,7 +50,7 @@ export default function ContactForm() {
                     <Form.Label>Full Name:</Form.Label>
                     <Form.Control
                         type="text"
-                        name='contact-name'
+                        name='name'
                         placeholder="Type your full name here."
                         value={contactForm.name}
                         onChange={handleChange} />
@@ -53,6 +59,7 @@ export default function ContactForm() {
                     <Form.Label>Phone Number:</Form.Label>
                     <Form.Control
                         type="text"
+                        name='phone'
                         placeholder="Type your phone number here."
                         value={contactForm.phone}
                         onChange={handleChange}
@@ -62,6 +69,7 @@ export default function ContactForm() {
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
                         type="email"
+                        name='email'
                         placeholder="name@example.com"
                         value={contactForm.email}
                         onChange={handleChange}
@@ -69,6 +77,7 @@ export default function ContactForm() {
                 </Form.Group>
                 <Form.Select aria-label="Default select example"
                     value={contactForm.help}
+                    name='help'
                     onChange={handleChange}
                 >
                     <option>How can we help?</option>
@@ -85,6 +94,7 @@ export default function ContactForm() {
                     <Form.Control
                         as="textarea"
                         rows={3}
+                        name='message'
                         value={contactForm.message}
                         onChange={handleChange}
                     />

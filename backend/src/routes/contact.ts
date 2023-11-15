@@ -2,19 +2,19 @@ import {Router} from "express";
 const router = Router();
 import { contact_form_submissions_list, contact_form_submission_get, contact_form_submission_create, contact_form_submission_edit, contact_form_submission_delete} from '../controllers/contactController.ts';
 
-//GET all contact list
+//GET all contactForm Submission list
 router.get("/contactFormList", contact_form_submissions_list());
 
-//GET staff member
+//GET contactForm Submission
 router.get("/contactForm/:id", contact_form_submission_get());
 
-//POST new staff member
+//POST new contactForm Submission
 router.post("/contactForm", contact_form_submission_create());
 
-//PUT edit staff member
+//PUT edit contactForm Submission
 router.put("/contactForm/:id", contact_form_submission_edit());
 
-//DELETE staff member
+//DELETE contactForm Submission
 router.delete("/contactForm/:id", contact_form_submission_delete());
 
 export default router;
