@@ -1,5 +1,6 @@
 //require mongoose
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+// const mongoose = require("mongoose");
 //define schema
 const Schema = mongoose.Schema;
 

@@ -1,25 +1,21 @@
-//require mongoose
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 //define schema
 const Schema = mongoose.Schema;
 
 //create contact schema
-const ContactSchema = new Schema({
+const ContactSubmissionSchema = new Schema({
     name: {
         type: String,
         required: true,
     },
-    contact_method: {
-        type: String,
-        enum: ['phone', 'email'],
-        required: true,
-    },
     phone: {
-        type: Number
+        type: Number,
+        required: true,
     },
     email: {
         type: String,
         match: /.+\@.+\..+/,
+        required: true,
     },
     help: {
         type: String,
@@ -33,7 +29,10 @@ const ContactSchema = new Schema({
     completed: {
         type: Boolean,
         default: false,
+    },
+    admin_notes: {
+        type: String,
     }
 })
 
-export default mongoose.model("Contact", ContactSchema);
+export default mongoose.model("ContactSubmission", ContactSubmissionSchema);

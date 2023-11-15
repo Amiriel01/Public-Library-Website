@@ -22,7 +22,8 @@ import indexRouter from './routes/index.ts';
 // const indexRouter = require('./routes/index');
 import usersRouter from './routes/users.ts';
 // const usersRouter = require('./routes/users');
-import staffRouter from './routes/staff';
+import staffRouter from './routes/staff.ts';
+import contactRouter from './routes/contact.ts'
 
 const app = express();
 
@@ -53,6 +54,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/contact', contactRouter);
+app.use('/staff', staffRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
