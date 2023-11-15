@@ -93,7 +93,7 @@ export function contact_form_submission_edit() {
         body("phone", "Phone number cannot be blank.")
             .trim()
             .isLength({ min: 1 })
-            .isLength({ max: 10 })
+            .isLength({ max: 15 })
             .escape(),
         body("email", "Email cannot be blank")
             .trim()
@@ -111,6 +111,7 @@ export function contact_form_submission_edit() {
             .escape(),
         body("admin_notes")
             .trim()
+            .isLength({ min: 1 })
             .escape(),
 
         asyncHandler(async (req, res, next) => {
@@ -121,10 +122,11 @@ export function contact_form_submission_edit() {
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array()
-                res.json(console.log(errors))
+                console.log(errors)
+                res.json(errors)
             } else {
                 //find the staff member and update
-                const contactFormSubmissionUpdate = await Contact.findByIdAndUpdate(req.params.id, { name: req.body.name, phone: req.body.phone, email: req.body.email, help: req.body.help, message: req.body.message, completed: req.body.completed }, { new: true }).exec()
+                const contactFormSubmissionUpdate = await Contact.findByIdAndUpdate(req.params.id, { name: req.body.name, phone: req.body.phone, email: req.body.email, help: req.body.help, message: req.body.message, completed: req.body.completed, admin_notes: req.body.admin_notes }, { new: true }).exec()
                 //save the staff member update
                 console.log(contactFormSubmissionUpdate)
                 res.json(contactFormSubmissionUpdate)
