@@ -320,4 +320,14 @@ margin-right: 2rem;
   font-weight: bold;
 }
 
+/*LibraryCardForm*/
+#library-card-form-container {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-label {
+  margin-top: .5rem;
+}
 

@@ -38,7 +38,7 @@ export default function BookSearchResultsPage({ bookData, setBookData }: BookAPI
                                         {item.volumeInfo.description}
                                     </Card.Text>
                                     <Card.Text id="book-question">Want to know more about this book? </Card.Text>
-                                    <Card.Link id="book-info-link" href={item.volumeInfo.infoLink}>Click here to view the Google Books book profile!</Card.Link>
+                                    <Card.Link target="_blank" id="book-info-link" href={item.volumeInfo.infoLink}>Click here to view the Google Books book profile!</Card.Link>
                                 </div>
                             </Card.Body>
                         </Card>

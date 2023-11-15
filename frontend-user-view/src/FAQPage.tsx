@@ -28,7 +28,7 @@ export default function FAQPage() {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>How do I apply for a library card?</Accordion.Header>
                         <Accordion.Body>
-                            <p>Complete an <Link id='library-card-form' to="/LibraryCardForm">application form</Link> online ro in-person at the library.</p>
+                            <p>Complete an <Link id='library-card-form' to="/LibraryCardForm">application form</Link> online or in-person at the library.</p>
                             <p>You must present a valid photo ID and proof of address when applying for a library card.</p>
                             <p>Driver's license, utility bills, voter ID, and printed checks are common forms of proof of address.</p>
                         </Accordion.Body>

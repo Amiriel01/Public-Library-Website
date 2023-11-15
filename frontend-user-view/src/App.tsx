@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { BookAPIData, BookDataInterface } from './BookAPIInterface';
 import BookSearchResultsPage from './BookSearchResultsPage';
 import FAQPage from './FAQPage';
+import LibraryCardForm from './LibraryCardForm';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             setBookData={setBookData}
           />}></Route>
           <Route path='FAQPage' element={<FAQPage />}></Route>
+          <Route path='LibraryCardForm' element={<LibraryCardForm />}></Route>
         </Routes>
       </div>
     </>
