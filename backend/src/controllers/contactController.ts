@@ -33,7 +33,7 @@ export function contact_form_submission_create() {
         body("phone", "Phone number cannot be blank.")
             .trim()
             .isLength({ min: 1 })
-            .isLength({ max: 10 })
+            .isLength({ max: 15 })
             .escape(),
         body("email", "Email cannot be blank")
             .trim()
@@ -66,12 +66,13 @@ export function contact_form_submission_create() {
                 message: req.body.message,
                 admin_notes: req.body.admin_notes,
             });
-
+console.log(req.body)
             //check for errors
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array();
                 res.json(contactSubmission);
+                console.log(errors)
             } else {
                 //form data is valid, save the staff member
                 console.log(contactSubmission);
