@@ -20,7 +20,7 @@ export default function Header() {
                         <img id="logo-image" className="img-fluid" src={logo} alt="library logo"></img>
                     </Col>
                     <Col>
-                    <Link to="FAQ">
+                    <Link to="FAQPage">
                             <MyButton title="FAQs" />
                         </Link>
                         <Link to="/ContactPage">

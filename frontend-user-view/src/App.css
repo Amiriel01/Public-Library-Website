@@ -295,3 +295,29 @@ margin-right: 2rem;
   color: #f49fbc;
 }
 
+/*FAQPage*/
+#faq-page-container {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#faq-subtitles {
+  color: #474044;
+  font-weight: bold;
+  border-bottom: 1px solid #474044;
+}
+
+#library-card-form {
+  color: #f49fbc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.accordion-button {
+  background-color: #9bbec7 !important;
+  color: #474044 !important;
+  font-weight: bold;
+}
+
+

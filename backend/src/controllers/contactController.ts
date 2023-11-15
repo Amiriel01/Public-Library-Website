@@ -66,7 +66,7 @@ export function contact_form_submission_create() {
                 message: req.body.message,
                 admin_notes: req.body.admin_notes,
             });
-console.log(req.body)
+            console.log(req.body)
             //check for errors
             if (!errors.isEmpty()) {
                 //take staff information from the form
@@ -139,7 +139,7 @@ export function contact_form_submission_edit() {
 export function contact_form_submission_delete() {
     return asyncHandler(async (req, res, next) => {
         const contactFormSubmissionDelete = await Contact.findByIdAndRemove(req.params.id).exec();
-        console.log("item deleted")
-        res.json(contactFormSubmissionDelete);
+        console.log("item deleted");
+        res.json("item deleted");
     })
 }
