@@ -17,7 +17,7 @@ export default function LibraryCardForm() {
     }
 
     const [libraryCardFormInfo, setLibraryCardFormInfo] = useState(initialValues);
-    const [alerShow, setAlertShow] = useState(false);
+    const [alertShow, setAlertShow] = useState(false);
 
     const handleChange = (event: FormEvent) => {
         const { name, value } = event.target;
@@ -112,7 +112,7 @@ export default function LibraryCardForm() {
                 </Form>
                 <Row>
                     <Col>
-                            <Alert hidden={!alerShow} variant={"success"}>
+                            <Alert hidden={!alertShow} variant={"success"}>
                                 Your library card application was submitted successfully!
                             </Alert>
                     </Col>

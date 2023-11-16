@@ -2,6 +2,9 @@ import Form from 'react-bootstrap/Form';
 import MyButton from './MyButton';
 import axios from 'axios';
 import { FormEvent, useState } from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Alert from 'react-bootstrap/Alert';
 
 export default function ContactForm() {
 
@@ -14,6 +17,7 @@ export default function ContactForm() {
     }
 
     const [contactForm, setContactForm] = useState(initialValues);
+    const [alertShow, setAlertShow] = useState(false)
 
     const handleChange = (event: FormEvent) => {
         const { name, value } = event.target;
@@ -38,6 +42,7 @@ export default function ContactForm() {
 
         await axios.post("http://localhost:3000/contact/contactForm", contactFormData).then((response) => {
             console.log(response.status, response.data)
+            setAlertShow(true)
         })
 
     }
@@ -106,6 +111,13 @@ export default function ContactForm() {
                     <MyButton id='contact-form-submit-button' title='Submit'></MyButton>
                 </div>
             </Form>
+            <Row>
+                <Col>
+                    <Alert hidden={!alertShow} variant={"success"}>
+                        Your contact request was submitted successfully!
+                    </Alert>
+                </Col>
+            </Row>
         </>
     )
 }
