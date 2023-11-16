@@ -32,14 +32,14 @@ export default function LibraryCardForm() {
             name: libraryCardFormInfo.name,
             phone: libraryCardFormInfo.phone,
             email: libraryCardFormInfo.email,
-            additional_information: libraryCardFormInfo.help,
+            additional_information: libraryCardFormInfo.additional_information,
         }
 
         setLibraryCardFormInfo(initialValues);
 
-        // await axios.post("http://localhost:3000/contact/contactForm", libraryCardFormData).then((response) => {
-        //     console.log(response.status, response.data)
-        // })
+        await axios.post("http://localhost:3000/libraryCard/libraryCardSubmission", libraryCardFormData).then((response) => {
+            console.log(response.status, response.data)
+        })
 
     }
 
@@ -92,7 +92,7 @@ export default function LibraryCardForm() {
                         <Form.Control
                             as="textarea"
                             rows={3}
-                            name='message'
+                            name='additional_information'
                             value={libraryCardFormInfo.additional_information}
                             onChange={handleChange}
                         />

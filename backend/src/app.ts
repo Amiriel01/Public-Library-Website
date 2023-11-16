@@ -1,29 +1,19 @@
 import 'dotenv/config';
 import createError from "http-errors";
-// const createError = require('http-errors');
 import express from "express";
-// const express = require('express');
 import path from "path";
-// const path = require('path');
 import cookieParser from 'cookie-parser';
-// const cookieParser = require('cookie-parser');
 import logger from "morgan";
-// const logger = require('morgan');
 import cors from 'cors';
-// const cors = require('cors');
 import multer from 'multer';
-// const multer  = require('multer');
 
 //import schema file
-// const Staff = require("./models/staff");
 import Staff from "./models/staff"
-
 import indexRouter from './routes/index.ts';
-// const indexRouter = require('./routes/index');
 import usersRouter from './routes/users.ts';
-// const usersRouter = require('./routes/users');
 import staffRouter from './routes/staff.ts';
 import contactRouter from './routes/contact.ts'
+import libraryCardRouter from './routes/libraryCard.ts';
 
 const app = express();
 
@@ -32,8 +22,8 @@ const storage = multer.memoryStorage();
 const staff = multer({ storage: storage });
 
 // Set up mongoose connection
-// const mongoose = require("mongoose");
 import mongoose from 'mongoose';
+import libraryCard from './models/libraryCard.ts';
 mongoose.set("strictQuery", false);
 const mongoDB = process.env.SECRET_KEY;
 
@@ -56,6 +46,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/contact', contactRouter);
 app.use('/staff', staffRouter);
+app.use('/libraryCard', libraryCardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
