@@ -295,7 +295,7 @@ margin-right: 2rem;
   color: #f49fbc;
 }
 
-/*FAQPage*/
+/*FAQPage Accoridan Pages*/
 #faq-page-container {
   width: 70%;
   margin-right: auto;
@@ -308,7 +308,11 @@ margin-right: 2rem;
   border-bottom: 1px solid #474044;
 }
 
-#library-card-form {
+#questions-accordion-container {
+  margin-bottom: 2rem;
+}
+
+#library-card-form-link {
   color: #f49fbc;
   text-decoration: none;
   font-weight: bold;
@@ -318,6 +322,15 @@ margin-right: 2rem;
   background-color: #9bbec7 !important;
   color: #474044 !important;
   font-weight: bold;
+}
+
+#bold-text {
+  font-weight: bold;
+  margin-right: .5rem;
+}
+
+#bold-flex-container {
+  display: flex;
 }
 
 /*LibraryCardForm*/

@@ -10,6 +10,8 @@ import { BookAPIData, BookDataInterface } from './BookAPIInterface';
 import BookSearchResultsPage from './BookSearchResultsPage';
 import FAQPage from './FAQPage';
 import LibraryCardForm from './LibraryCardForm';
+import CrossLibraryLoanForm from './CrossLibraryLoanForm';
+
 
 function App() {
 
@@ -33,6 +35,8 @@ function App() {
           />}></Route>
           <Route path='FAQPage' element={<FAQPage />}></Route>
           <Route path='LibraryCardForm' element={<LibraryCardForm />}
+          ></Route>
+           <Route path='CrossLibraryLoanForm' element={<CrossLibraryLoanForm />}
           ></Route>
         </Routes>
       </div>
