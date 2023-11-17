@@ -61,7 +61,6 @@ export function cross_library_submission_create() {
             .escape(),
         body("order_notes")
             .trim()
-            .isLength({ min: 1 })
             .isLength({ max: 500 })
             .escape(),
 
