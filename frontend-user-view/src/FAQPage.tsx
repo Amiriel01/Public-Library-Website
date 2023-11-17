@@ -2,7 +2,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
 import { Link } from "react-router-dom";
-import LibraryCardQuestions from './libraryCardQuestions';
+import LibraryCardQuestions from './LibraryCardQuestions';
 import BorrowingServices from './BorrowingServices';
 
 export default function FAQPage() {
