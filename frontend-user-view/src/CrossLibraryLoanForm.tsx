@@ -84,6 +84,16 @@ export default function CrossLibraryLoanForm() {
                             value={crossLibraryFormInfo.author}
                             onChange={handleChange} />
                     </Form.Group>
+                    <Form.Select aria-label="Default select example"
+                        value={crossLibraryFormInfo.material_type}
+                        name='help'
+                        onChange={handleChange}
+                    >
+                        <option>Material Type Requested?</option>
+                        <option value="Book">Book</option>
+                        <option value="Audio_Book">Audio Book</option>
+                        <option value="DVD">DVD</option>
+                    </Form.Select>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Full Name:</Form.Label>
                         <Form.Control
