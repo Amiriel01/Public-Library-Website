@@ -85,7 +85,7 @@ export default function CrossLibraryLoanForm() {
                     </Form.Group>
                     <Form.Select aria-label="Default select example"
                         value={crossLibraryFormInfo.material_type}
-                        name='help'
+                        name='material_type'
                         onChange={handleChange}
                     >
                         <option>Material Type Requested?</option>

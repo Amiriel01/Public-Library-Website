@@ -112,6 +112,7 @@ export function contact_form_submission_edit() {
         body("admin_notes")
             .trim()
             .isLength({ min: 1 })
+            .isLength({ max: 500 })
             .escape(),
 
         asyncHandler(async (req, res, next) => {

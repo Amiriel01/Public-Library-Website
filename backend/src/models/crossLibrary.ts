@@ -14,7 +14,7 @@ const CrossLibraryFormSchema = new Schema({
     material_type: {
         type: String,
         enum: ['Book', 'Audio_Book', 'DVD'],
-        required: true
+        required: true,
     },
     name: {
         type: String,

@@ -69,7 +69,6 @@ export function cross_library_submission_create() {
             //take out validation errors from the request
             const errors = validationResult(req);
 
-            //create staff member object with escaped and trimmed info
             const crossLibraryFormSubmission = new CrossLibraryForm({
                 title: req.body.title,
                 author: req.body.author,
@@ -85,12 +84,10 @@ export function cross_library_submission_create() {
 
             //check for errors
             if (!errors.isEmpty()) {
-                //take staff information from the form
                 errors.array();
                 res.json(crossLibraryFormSubmission);
                 console.log(errors)
             } else {
-                //form data is valid, save the staff member
                 console.log(crossLibraryFormSubmission);
                 res.json(await crossLibraryFormSubmission.save());
             }
@@ -115,7 +112,6 @@ export function cross_library_submission_edit() {
         body("material_type", "Material type cannot be blank.")
             .trim()
             .isLength({ min: 1 })
-            .isLength({ max: 50 })
             .escape(),
         body("name", "Name cannot be blank.")
             .trim()

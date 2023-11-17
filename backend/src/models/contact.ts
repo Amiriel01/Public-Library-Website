@@ -20,7 +20,7 @@ const ContactSubmissionSchema = new Schema({
     help: {
         type: String,
         enum: ['Questions about my library card', 'Questions about programs', 'Quesitons about events', 'Questions about donations', 'Questions about Questions about volunteer opportunities', 'Issues with the website', 'Other Questions'],
-        required: true
+        required: true,
     },
     message: {
         type: String,

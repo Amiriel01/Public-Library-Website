@@ -94,6 +94,7 @@ export function library_card_submission_edit() {
         body("additional_information")
             .trim()
             .isLength({ min: 1 })
+            .isLength({ max: 250 })
             .escape(),
 
         asyncHandler(async (req, res, next) => {
