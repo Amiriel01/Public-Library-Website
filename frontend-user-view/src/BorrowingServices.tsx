@@ -2,6 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import CrossLibraryLoanForm from './CrossLibraryLoanForm';
 
 export default function BorrowingServices() {
 
@@ -50,7 +51,7 @@ export default function BorrowingServices() {
                     <Accordion.Body>
                         <p>Cross library loans is a service that allows patrons to request non-fiction print books that are not available in our collection to be borrowed from other libraries willing to send the books.</p>
                         <p id='bold-text'>A fee of $5.00 per book is required to handle processing and two-way shipping.</p>
-                        <p>To request a book, fill out the request form <Link id='library-card-form-link' to="/LibraryCardForm">here</Link>.</p>
+                        <p>To request a book, fill out the form <Link id='library-card-form-link' to="/CrossLibraryForm">here</Link>.</p>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
