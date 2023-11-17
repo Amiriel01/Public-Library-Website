@@ -10,7 +10,7 @@ export function contact_form_submissions_list() {
         console.log(contactFormSubmissionsList);
         res.json(contactFormSubmissionsList);
     })
-}
+};
 
 //GET single contact form submission with details
 export function contact_form_submission_get() {
@@ -20,7 +20,7 @@ export function contact_form_submission_get() {
         console.log(contactFormSubmissionDetails);
         res.json(contactFormSubmissionDetails);
     })
-}
+};
 
 //POST contact form submission create
 export function contact_form_submission_create() {

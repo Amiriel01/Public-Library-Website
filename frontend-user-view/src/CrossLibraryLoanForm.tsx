@@ -45,10 +45,10 @@ export default function CrossLibraryLoanForm() {
 
         setCrossLibraryFormInfo(initialValues);
 
-        // await axios.post("http://localhost:3000/libraryCard/libraryCardSubmission", libraryCardFormData).then((response) => {
-        //     console.log(response.status, response.data)
-        //     setAlertShow(true);
-        // })
+        await axios.post("http://localhost:3000/crossLibrary/crossLibraryFormList", crossLibraryFormData).then((response) => {
+            console.log(response.status, response.data)
+            setAlertShow(true);
+        })
 
     }
 
