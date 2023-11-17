@@ -14,6 +14,8 @@ import usersRouter from './routes/users.ts';
 import staffRouter from './routes/staff.ts';
 import contactRouter from './routes/contact.ts'
 import libraryCardRouter from './routes/libraryCard.ts';
+import crossLibraryRouter from './routes/crossLibrary.ts';
+
 
 const app = express();
 
@@ -23,7 +25,6 @@ const staff = multer({ storage: storage });
 
 // Set up mongoose connection
 import mongoose from 'mongoose';
-import libraryCard from './models/libraryCard.ts';
 mongoose.set("strictQuery", false);
 const mongoDB = process.env.SECRET_KEY;
 
@@ -47,6 +48,7 @@ app.use('/users', usersRouter);
 app.use('/contact', contactRouter);
 app.use('/staff', staffRouter);
 app.use('/libraryCard', libraryCardRouter);
+app.use('/crossLibrary', crossLibraryRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

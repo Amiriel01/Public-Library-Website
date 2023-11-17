@@ -38,18 +38,17 @@ export default function CrossLibraryLoanForm() {
             author: crossLibraryFormInfo.author,
             material_type: crossLibraryFormInfo.material_type,
             name: crossLibraryFormInfo.name,
+            library_card_number: crossLibraryFormInfo.library_card_number,
             phone: crossLibraryFormInfo.phone,
             email: crossLibraryFormInfo.email,
-            library_card_number: crossLibraryFormInfo.library_card_number,
         }
 
         setCrossLibraryFormInfo(initialValues);
 
-        await axios.post("http://localhost:3000/crossLibrary/crossLibraryFormList", crossLibraryFormData).then((response) => {
+        await axios.post("http://localhost:3000/crossLibrary/crossLibraryForm", crossLibraryFormData).then((response) => {
             console.log(response.status, response.data)
             setAlertShow(true);
         })
-
     }
 
     return (
@@ -69,7 +68,7 @@ export default function CrossLibraryLoanForm() {
                         <Form.Control
                             required
                             type="text"
-                            name='name'
+                            name='title'
                             placeholder="Type the title requested here."
                             value={crossLibraryFormInfo.title}
                             onChange={handleChange} />
@@ -79,7 +78,7 @@ export default function CrossLibraryLoanForm() {
                         <Form.Control
                             required
                             type="text"
-                            name='name'
+                            name='author'
                             placeholder="Type the author name here."
                             value={crossLibraryFormInfo.author}
                             onChange={handleChange} />
@@ -109,9 +108,9 @@ export default function CrossLibraryLoanForm() {
                         <Form.Control
                             required
                             type="text"
-                            name='name'
+                            name='library_card_number'
                             placeholder="Type your library card number here."
-                            value={crossLibraryFormInfo.name}
+                            value={crossLibraryFormInfo.library_card_number}
                             onChange={handleChange} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -138,9 +137,6 @@ export default function CrossLibraryLoanForm() {
                     </Form.Group>
                     <Form.Text id='form-text' className="text-muted">
                         We'll never share your phone number or email with anyone else.
-                    </Form.Text>
-                    <Form.Text id='form-text' className="text-muted">
-                        Please bring your proof of address document when you pick up your library card.
                     </Form.Text>
                     <div>
                         <MyButton id='contact-form-submit-button' title='Submit'></MyButton>
