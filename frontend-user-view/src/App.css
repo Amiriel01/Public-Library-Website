@@ -357,4 +357,11 @@ margin-right: 2rem;
   margin-right: auto;
 }
 
+/*Giving page and GivingInfo page*/
+#giving-page-link {
+  color: #f49fbc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 

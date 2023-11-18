@@ -1,6 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 export default function Giving() {
 
@@ -19,7 +20,7 @@ export default function Giving() {
                     <Accordion.Body>
                         <p>Another Page Library depends on donations from the generous businesses and individuals in the community.</p>
                         <p>Thank you for considering making a montetary donation!</p>
-                        <p>Visit the "Giving" page for more information.</p>
+                        <p>Visit the <Link id='giving-page-link' to="/GivingInfo">Giving</Link> page for more information.</p>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
