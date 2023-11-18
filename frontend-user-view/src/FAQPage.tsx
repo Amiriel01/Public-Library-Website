@@ -4,6 +4,7 @@ import HomepageLink from './HomepageLink';
 import { Link } from "react-router-dom";
 import LibraryCardQuestions from './LibraryCardQuestions';
 import BorrowingServices from './BorrowingServices';
+import TechnologyServices from './TechnologyServices';
 
 export default function FAQPage() {
     return (
@@ -19,6 +20,7 @@ export default function FAQPage() {
                 </Row>
                 <LibraryCardQuestions />
                 <BorrowingServices />
+                <TechnologyServices />
             </Row>
         </>
     )

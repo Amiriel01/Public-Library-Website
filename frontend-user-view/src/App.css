@@ -324,13 +324,19 @@ margin-right: 2rem;
   font-weight: bold;
 }
 
+#bold-flex-container {
+  display: flex;
+}
+
+#bold-text-underline {
+  font-weight: bold;
+  margin-right: .5rem;
+  text-decoration: underline;
+}
+
 #bold-text {
   font-weight: bold;
   margin-right: .5rem;
-}
-
-#bold-flex-container {
-  display: flex;
 }
 
 /*LibraryCardForm*/
