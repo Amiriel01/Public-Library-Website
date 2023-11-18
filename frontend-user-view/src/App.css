@@ -385,5 +385,40 @@ margin-right: 2rem;
 
 #give-information {
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
+#ways-to-give-header {
+  font-weight: bold;
+}
+
+#donate-button {
+  margin-top: 1rem;
+  background-color: #ffd9da;
+  width: 8rem;
+  padding: .5rem;
+  margin-right: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#donate-button:hover {
+  background-color: #f49fbc;
+  color: #474044;
+}
+
+#donate-button:active {
+  background-color: #ffd9da;
+  color: #474044;
+}
+
+#give-address-formatting {
+  margin-left: 2rem;
+  margin-bottom: 0px;
+}
+
+#give-address-bottom-formatting {
+  margin-left: 2rem;
+}
