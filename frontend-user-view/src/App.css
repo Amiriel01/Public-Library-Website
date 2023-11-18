@@ -364,4 +364,26 @@ margin-right: 2rem;
   font-weight: bold;
 }
 
+#giving-info-page-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#give-flex-container {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+#give-title-subtitle-container {
+  width: 60%;
+  margin-right: 10%;
+  margin-top: 5rem;
+  margin-left: 0;
+}
+
+#give-information {
+  margin-top: 1rem;
+}
 
