@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import LibraryCardQuestions from './LibraryCardQuestions';
 import BorrowingServices from './BorrowingServices';
 import TechnologyServices from './TechnologyServices';
+import Giving from './Giving';
 
 export default function FAQPage() {
     return (
@@ -21,6 +22,7 @@ export default function FAQPage() {
                 <LibraryCardQuestions />
                 <BorrowingServices />
                 <TechnologyServices />
+                <Giving />
             </Row>
         </>
     )
