@@ -55,6 +55,7 @@ export default function ContactForm() {
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Full Name:</Form.Label>
                     <Form.Control
+                        required
                         type="text"
                         name='name'
                         placeholder="Type your full name here."
@@ -64,6 +65,7 @@ export default function ContactForm() {
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Phone Number:</Form.Label>
                     <Form.Control
+                        required
                         type="text"
                         name='phone'
                         placeholder="Type your phone number here."
@@ -74,6 +76,7 @@ export default function ContactForm() {
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
+                        required
                         type="email"
                         name='email'
                         placeholder="name@example.com"
@@ -82,6 +85,7 @@ export default function ContactForm() {
                     />
                 </Form.Group>
                 <Form.Select aria-label="Default select example"
+                    required
                     value={contactForm.help}
                     name='help'
                     onChange={handleChange}
@@ -98,6 +102,7 @@ export default function ContactForm() {
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Label>Message:</Form.Label>
                     <Form.Control
+                        required
                         as="textarea"
                         rows={3}
                         name='message'

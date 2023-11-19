@@ -14,6 +14,7 @@ import CrossLibraryLoanForm from './CrossLibraryLoanForm';
 import GivingInfo from './GivingInfo';
 import Donate from './Donate';
 import MeetingRoom from './MeetingRoom';
+import VolunteerApplication from './VolunteerApplication';
 
 
 function App() {
@@ -46,6 +47,8 @@ function App() {
            <Route path='Donate' element={<Donate />}
           ></Route>
           <Route path='MeetingRoom' element={<MeetingRoom />}
+          ></Route>
+          <Route path='VolunteerApplication' element={<VolunteerApplication />}
           ></Route>
         </Routes>
       </div>
