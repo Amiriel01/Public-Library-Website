@@ -6,6 +6,7 @@ import LibraryCardQuestions from './LibraryCardQuestions';
 import BorrowingServices from './BorrowingServices';
 import TechnologyServices from './TechnologyServices';
 import Giving from './Giving';
+import MeetingRoom from './MeetingRoom';
 
 export default function FAQPage() {
     return (
@@ -23,6 +24,7 @@ export default function FAQPage() {
                 <BorrowingServices />
                 <TechnologyServices />
                 <Giving />
+                <MeetingRoom />
             </Row>
         </>
     )

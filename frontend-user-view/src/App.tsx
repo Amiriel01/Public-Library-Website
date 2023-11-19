@@ -13,6 +13,7 @@ import LibraryCardForm from './LibraryCardForm';
 import CrossLibraryLoanForm from './CrossLibraryLoanForm';
 import GivingInfo from './GivingInfo';
 import Donate from './Donate';
+import MeetingRoom from './MeetingRoom';
 
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
           <Route path='GivingInfo' element={<GivingInfo />}
           ></Route>
            <Route path='Donate' element={<Donate />}
+          ></Route>
+          <Route path='MeetingRoom' element={<MeetingRoom />}
           ></Route>
         </Routes>
       </div>

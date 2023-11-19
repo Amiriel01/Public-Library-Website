@@ -30,6 +30,13 @@ export default function Giving() {
                         <p>The library does not accept magazines, VHS tapes, textbooks, or damaged books.</p>
                     </Accordion.Body>
                 </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header>Volunteer Opportunities</Accordion.Header>
+                    <Accordion.Body>
+                        <p>Volunteers are the cornerstone of the library. They are retirees, students, working professionals, parents and grandparents. All share a love of the library and a desire to serve. We offer many volunteer opportunities, from shelving books, to helping patrons with computers, to hosting special events.</p>
+                        <p>Our goal is to match a volunteer's skills, interest and schedule with the library's needs. We want you to enjoy your volunteer experience. Please complete the <Link id='volunteer-page-link' to="/VolunteerApplication">volunteer application</Link> if you are interested in joining our wonderful volunteer team.</p>
+                    </Accordion.Body>
+                </Accordion.Item>
             </Accordion>
         </>
     )

@@ -357,7 +357,7 @@ margin-right: 2rem;
   margin-right: auto;
 }
 
-/*Giving page and GivingInfo page*/
+/*Giving accordion and GivingInfo page*/
 #giving-page-link {
   color: #f49fbc;
   text-decoration: none;
@@ -421,4 +421,10 @@ margin-right: 2rem;
 
 #give-address-bottom-formatting {
   margin-left: 2rem;
+}
+
+#volunteer-page-link {
+  color: #f49fbc;
+  text-decoration: none;
+  font-weight: bold;
 }
