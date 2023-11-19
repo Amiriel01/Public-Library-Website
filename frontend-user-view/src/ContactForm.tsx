@@ -20,7 +20,8 @@ export default function ContactForm() {
     const [alertShow, setAlertShow] = useState(false)
 
     const handleChange = (event: FormEvent) => {
-        const { name, value } = event.target;
+        const { name, value } = event.target as any;
+        console.log(event.target)
         setContactForm({
             ...contactForm,
             [name]: value

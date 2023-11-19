@@ -121,7 +121,7 @@ export function library_card_submission_edit() {
 //delete contact form submission
 export function library_card_submission_delete() {
     return asyncHandler(async (req, res, next) => {
-        const libraryCardSubmissionDelete = await LibraryCard.findByIdAndRemove(req.params.id).exec();
+        const libraryCardSubmissionDelete = await LibraryCard.findByIdAndDelete(req.params.id).exec();
         console.log("item deleted");
         res.json("item deleted");
     })

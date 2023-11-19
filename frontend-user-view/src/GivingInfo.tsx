@@ -77,7 +77,7 @@ export default function GivingInfo() {
                         <p id='give-address-bottom-formatting'>Library Town, LT 55555</p>
                         <div id='bold-flex-container'>
                             <p id='bold-text'> By Phone:</p>
-                            <p>Call <strong>(555) 555-5556</strong> to make a phone donation. </p>
+                            <p>Call <span id='bold-text'>(555) 555-5556</span> to make a phone donation. </p>
                         </div>
                         <div id='bold-flex-container'>
                             <p id='bold-text'> In-Person:</p>

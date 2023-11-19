@@ -324,6 +324,10 @@ margin-right: 2rem;
   font-weight: bold;
 }
 
+#root .accordion-button:focus {
+  box-shadow: none !important;
+}
+
 #bold-flex-container {
   display: flex;
 }

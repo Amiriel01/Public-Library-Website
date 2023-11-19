@@ -20,7 +20,7 @@ export default function LibraryCardForm() {
     const [alertShow, setAlertShow] = useState(false);
 
     const handleChange = (event: FormEvent) => {
-        const { name, value } = event.target;
+        const { name, value } = event.target as any;
         setLibraryCardFormInfo({
             ...libraryCardFormInfo,
             [name]: value
@@ -43,7 +43,6 @@ export default function LibraryCardForm() {
             console.log(response.status, response.data)
             setAlertShow(true);
         })
-
     }
 
     return (

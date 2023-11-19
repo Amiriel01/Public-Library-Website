@@ -23,7 +23,7 @@ export default function CrossLibraryLoanForm() {
     const [alertShow, setAlertShow] = useState(false);
 
     const handleChange = (event: FormEvent) => {
-        const { name, value } = event.target;
+        const { name, value } = event.target as any;
         setCrossLibraryFormInfo({
             ...crossLibraryFormInfo,
             [name]: value

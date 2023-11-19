@@ -136,7 +136,7 @@ export function staff_member_edit() {
 //delete staff member
 export function staff_member_delete() {
     return asyncHandler(async (req, res, next) => {
-        const staffMemberDelete = await Staff.findByIdAndRemove(req.params.id).exec();
+        const staffMemberDelete = await Staff.findByIdAndDelete(req.params.id).exec();
         res.json(staffMemberDelete);
     })
 }

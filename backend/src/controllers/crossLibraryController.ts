@@ -160,7 +160,7 @@ export function cross_library_submission_edit() {
 //delete cross library form submission
 export function cross_library_submission_delete() {
     return asyncHandler(async (req, res, next) => {
-        const crossLibrarySubmissionDelete = await CrossLibraryForm.findByIdAndRemove(req.params.id).exec();
+        const crossLibrarySubmissionDelete = await CrossLibraryForm.findByIdAndDelete(req.params.id).exec();
         console.log("item deleted");
         res.json("item deleted");
     })
