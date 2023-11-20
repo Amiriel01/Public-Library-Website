@@ -15,6 +15,7 @@ import staffRouter from './routes/staff.ts';
 import contactRouter from './routes/contact.ts'
 import libraryCardRouter from './routes/libraryCard.ts';
 import crossLibraryRouter from './routes/crossLibrary.ts';
+import volunteerRouter from './routes/volunteer.ts';
 
 
 const app = express();
@@ -48,7 +49,8 @@ app.use('/users', usersRouter);
 app.use('/contact', contactRouter);
 app.use('/staff', staffRouter);
 app.use('/libraryCard', libraryCardRouter);
-app.use('/crossLibrary', crossLibraryRouter)
+app.use('/crossLibrary', crossLibraryRouter);
+app.use('/volunteer', volunteerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
