@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 //define schema
 const Schema = mongoose.Schema;
 
-const VolunteerSchema = new Schema({
+const VolunteerFormSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -67,4 +67,4 @@ const VolunteerSchema = new Schema({
     },
 });
 
-export default mongoose.model("Volunteer", VolunteerSchema);
+export default mongoose.model("VolunteerForm", VolunteerFormSchema);
