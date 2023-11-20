@@ -26,10 +26,37 @@ export default function MeetingRoom() {
                     <Accordion.Header>What meeting rooms are available?</Accordion.Header>
                     <Accordion.Body>
                         <p>
-                            The library offers four types of meeting rooms. The meeting rooms are available during normal business hours only.
+                            The library offers three meeting rooms. The meeting rooms are available during normal business hours only.
                         </p>
+                        <p id='meeting-faq-bold-text'>Large Meeting Room:</p>
+                        <div id="bold-flex-container">
+                            <p id='bold-text'>Maximum Capacity:</p>
+                            <p>100</p>
+                        </div>
+                        <div id="bold-flex-container">
+                            <p id='bold-text'>Room Dimensions:</p>
+                            <p>30ft x 50ft</p>
+                        </div>
+                        <p id='meeting-faq-bold-text'>Medium Meeting Room:</p>
+                        <div id="bold-flex-container">
+                            <p id='bold-text'>Maximum Capacity:</p>
+                            <p>50</p>
+                        </div>
+                        <div id="bold-flex-container">
+                            <p id='bold-text'>Room Dimensions:</p>
+                            <p>20ft x 35ft</p>
+                        </div>
+                        <p id='meeting-faq-bold-text'>Small Meeting Room:</p>
+                        <div id="bold-flex-container">
+                            <p id='bold-text'>Maximum Capacity:</p>
+                            <p>20</p>
+                        </div>
+                        <div id="bold-flex-container">
+                            <p id='bold-text'>Room Dimensions:</p>
+                            <p>20ft x 25ft</p>
+                        </div>
                         <p>
-                            Click <Link id='meeting-room-information-page-link' to="/MeetingRoomInformation">here</Link> to view the meeting room types, seating arrangements available, and room capacity limits.
+                            Click <Link id='meeting-room-information-page-link' to="/MeetingRoomInformation">here</Link> to view meeting room pictures and available seating arrangements.
                         </p>
                         <p id='bold-text'>When making a room reservation please specify the seating arrangement if needed.</p>
                     </Accordion.Body>
