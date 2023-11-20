@@ -100,7 +100,7 @@
   },
   "include": [
     "src/**/*.ts"
-  ],
+, "src/models/volunteerForm.ts"  ],
   "ts-node": {
     "esm": true
   }
