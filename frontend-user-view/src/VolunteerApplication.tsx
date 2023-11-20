@@ -9,16 +9,6 @@ import HomepageLink from './HomepageLink';
 
 export default function VolunteerApplication() {
 
-    // const [workDays, setWorkDays] = useState({
-    //     monday: false,
-    //     tuesday: false,
-    //     wednesday: false,
-    //     thursday: false,
-    //     friday: false,
-    //     saturday: false,
-    //     sunday: false,
-    // })
-
     const [monday, setMonday] = useState<Boolean>(false);
     const [tuesday, setTuesday] = useState<Boolean>(false);
     const [wednesday, setWednesday] = useState<Boolean>(false);
