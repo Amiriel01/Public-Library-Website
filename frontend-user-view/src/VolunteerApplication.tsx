@@ -31,6 +31,17 @@ export default function VolunteerApplication() {
     const [afternoon, setAfternoon] = useState<Boolean>(false);
     const [evening, setEvening] = useState<Boolean>(false);
 
+    const [isCheckedMonday, setIsCheckedMonday] = useState(false);
+    const [isCheckedTuesday, setIsCheckedTuesday] = useState(false);
+    const [isCheckedWednesday, setIsCheckedWednesday] = useState(false);
+    const [isCheckedThursday, setIsCheckedThursday] = useState(false);
+    const [isCheckedFriday, setIsCheckedFriday] = useState(false);
+    const [isCheckedSaturday, setIsCheckedSaturday] = useState(false);
+    const [isCheckedSunday, setIsCheckedSunday] = useState(false);
+    const [isCheckedMorning, setIsCheckedMorning] = useState(false);
+    const [isCheckedAfternoon, setIsCheckedAfternoon] = useState(false);
+    const [isCheckedEvening, setIsCheckedEvening] = useState(false);
+
     const initialValues = {
         name: "",
         phone: "",
@@ -39,7 +50,6 @@ export default function VolunteerApplication() {
         education: "",
         work_experience: "",
         volunteer_experience: "",
-        work_times: {},
     }
 
     const [volunteerApplicationInfo, setVolunteerApplicationInfo] = useState(initialValues);
@@ -53,50 +63,54 @@ export default function VolunteerApplication() {
         })
     }
 
-    // const handleChangeWorkDays = () => {
-    //     setWorkDays({
-    //         ...workDays
-    //     })
-    // }
-
     const handleChangeMonday = () => {
-        setMonday(!monday)
+        setMonday(!monday);
+        setIsCheckedMonday(true);
     };
 
     const handleChangeTuesday = () => {
-        setTuesday(!tuesday)
+        setTuesday(!tuesday);
+        setIsCheckedTuesday(true);
     };
 
     const handleChangeWednesday = () => {
-        setWednesday(!wednesday)
+        setWednesday(!wednesday);
+        setIsCheckedWednesday(true);
     };
 
     const handleChangeThursday = () => {
-        setThursday(!thursday)
+        setThursday(!thursday);
+        setIsCheckedThursday(true);
     };
 
     const handleChangeFriday = () => {
-        setFriday(!friday)
+        setFriday(!friday);
+        setIsCheckedFriday(true);
     };
 
     const handleChangeSaturday = () => {
-        setSaturday(!saturday)
+        setSaturday(!saturday);
+        setIsCheckedSaturday(true);
     };
 
     const handleChangeSunday = () => {
-        setSunday(!sunday)
+        setSunday(!sunday);
+        setIsCheckedSunday(true);
     };
 
     const handleChangeMorning = () => {
-        setMorning(!morning)
+        setMorning(!morning);
+        setIsCheckedMorning(true);
     };
 
     const handleChangeAfternoon = () => {
-        setAfternoon(!afternoon)
+        setAfternoon(!afternoon);
+        setIsCheckedAfternoon(true);
     };
 
     const handleChangeEvening = () => {
         setEvening(!evening)
+        setIsCheckedEvening(true);
     };
 
     async function handleSubmit(event: FormEvent) {
@@ -124,18 +138,18 @@ export default function VolunteerApplication() {
         setVolunteerApplicationInfo(initialValues);
 
         await axios.post("http://localhost:3000/volunteer/volunteerForm", volunteerApplicationData).then((response) => {
-            console.log(response.status, response.data)
-            // setMonday(false);
-            // setTuesday(false);
-            // setWednesday(false);
-            // setThursday(false);
-            // setFriday(false);
-            // setSaturday(false);
-            // setSunday(false)
-            // setMorning(false);
-            // setAfternoon(false);
-            // setEvening(false);
-            setAlertShow(true)
+            console.log(response.status, response.data);
+            setIsCheckedMonday(false);
+            setIsCheckedTuesday(false);
+            setIsCheckedWednesday(false);
+            setIsCheckedThursday(false);
+            setIsCheckedFriday(false);
+            setIsCheckedSaturday(false);
+            setIsCheckedSunday(false);
+            setIsCheckedMorning(false);
+            setIsCheckedAfternoon(false);
+            setIsCheckedEvening(false);
+            setAlertShow(true);
         })
     }
 
@@ -238,17 +252,17 @@ export default function VolunteerApplication() {
                     <Form.Check
                         inline
                         label="Monday"
-                        // name="work_days"
-                        // value={workDays.monday}
                         type='checkbox'
                         id={`inline-checkbox-1`}
-                        onChange= {handleChangeMonday}
+                        checked={isCheckedMonday}
+                        onChange={handleChangeMonday}
                     />
                     <Form.Check
                         inline
                         label="Tuesday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedTuesday}
                         onChange={handleChangeTuesday}
                     />
                     <Form.Check
@@ -256,6 +270,7 @@ export default function VolunteerApplication() {
                         label="Wednesday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedWednesday}
                         onChange={handleChangeWednesday}
                     />
                     <Form.Check
@@ -263,6 +278,7 @@ export default function VolunteerApplication() {
                         label="Thursday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedThursday}
                         onChange={handleChangeThursday}
                     />
                     <Form.Check
@@ -270,6 +286,7 @@ export default function VolunteerApplication() {
                         label="Friday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedFriday}
                         onChange={handleChangeFriday}
                     />
                     <Form.Check
@@ -277,6 +294,7 @@ export default function VolunteerApplication() {
                         label="Saturday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedSaturday}
                         onChange={handleChangeSaturday}
                     />
                     <Form.Check
@@ -284,6 +302,7 @@ export default function VolunteerApplication() {
                         label="Sunday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedSunday}
                         onChange={handleChangeSunday}
                     />
                 </Form.Group>
@@ -294,6 +313,7 @@ export default function VolunteerApplication() {
                         label="Open-Noon"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedMorning}
                         onChange={handleChangeMorning}
                     />
                     <Form.Check
@@ -301,6 +321,7 @@ export default function VolunteerApplication() {
                         label="Noon-Four"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedAfternoon}
                         onChange={handleChangeAfternoon}
                     />
                     <Form.Check
@@ -308,6 +329,7 @@ export default function VolunteerApplication() {
                         label="Four-Close"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        checked={isCheckedEvening}
                         onChange={handleChangeEvening}
                     />
                 </Form.Group>
