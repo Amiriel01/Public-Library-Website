@@ -9,6 +9,28 @@ import HomepageLink from './HomepageLink';
 
 export default function VolunteerApplication() {
 
+    // const [workDays, setWorkDays] = useState({
+    //     monday: false,
+    //     tuesday: false,
+    //     wednesday: false,
+    //     thursday: false,
+    //     friday: false,
+    //     saturday: false,
+    //     sunday: false,
+    // })
+
+    const [monday, setMonday] = useState<Boolean>(false);
+    const [tuesday, setTuesday] = useState<Boolean>(false);
+    const [wednesday, setWednesday] = useState<Boolean>(false);
+    const [thursday, setThursday] = useState<Boolean>(false);
+    const [friday, setFriday] = useState<Boolean>(false);
+    const [saturday, setSaturday] = useState<Boolean>(false);
+    const [sunday, setSunday] = useState<Boolean>(false);
+
+    const [morning, setMorning] = useState<Boolean>(false);
+    const [afternoon, setAfternoon] = useState<Boolean>(false);
+    const [evening, setEvening] = useState<Boolean>(false);
+
     const initialValues = {
         name: "",
         phone: "",
@@ -17,8 +39,7 @@ export default function VolunteerApplication() {
         education: "",
         work_experience: "",
         volunteer_experience: "",
-        work_days: [],
-        work_times: [],
+        work_times: {},
     }
 
     const [volunteerApplicationInfo, setVolunteerApplicationInfo] = useState(initialValues);
@@ -32,6 +53,52 @@ export default function VolunteerApplication() {
         })
     }
 
+    // const handleChangeWorkDays = () => {
+    //     setWorkDays({
+    //         ...workDays
+    //     })
+    // }
+
+    const handleChangeMonday = () => {
+        setMonday(!monday)
+    };
+
+    const handleChangeTuesday = () => {
+        setTuesday(!tuesday)
+    };
+
+    const handleChangeWednesday = () => {
+        setWednesday(!wednesday)
+    };
+
+    const handleChangeThursday = () => {
+        setThursday(!thursday)
+    };
+
+    const handleChangeFriday = () => {
+        setFriday(!friday)
+    };
+
+    const handleChangeSaturday = () => {
+        setSaturday(!saturday)
+    };
+
+    const handleChangeSunday = () => {
+        setSunday(!sunday)
+    };
+
+    const handleChangeMorning = () => {
+        setMorning(!morning)
+    };
+
+    const handleChangeAfternoon = () => {
+        setAfternoon(!afternoon)
+    };
+
+    const handleChangeEvening = () => {
+        setEvening(!evening)
+    };
+
     async function handleSubmit(event: FormEvent) {
         event.preventDefault();
 
@@ -39,11 +106,19 @@ export default function VolunteerApplication() {
             name: volunteerApplicationInfo.name,
             phone: volunteerApplicationInfo.phone,
             email: volunteerApplicationInfo.email,
-            help: volunteerApplicationInfo.education,
+            education: volunteerApplicationInfo.education,
             work_experience: volunteerApplicationInfo.work_experience,
             volunteer_experience: volunteerApplicationInfo.volunteer_experience,
-            work_days: volunteerApplicationInfo.work_days,
-            work_times: volunteerApplicationInfo.work_times,
+            monday: monday,
+            tuesday: tuesday,
+            wednesday: wednesday,
+            thursday: thursday,
+            friday: friday,
+            saturday: saturday,
+            sunday: sunday,
+            morning: morning,
+            afternoon: afternoon,
+            evening: evening,
         }
 
         setVolunteerApplicationInfo(initialValues);
@@ -52,9 +127,7 @@ export default function VolunteerApplication() {
             console.log(response.status, response.data)
             setAlertShow(true)
         })
-
     }
-
 
     return (
         <Row id='library-card-form-container'>
@@ -155,85 +228,77 @@ export default function VolunteerApplication() {
                     <Form.Check
                         inline
                         label="Monday"
-                        name="work_days"
-                        value="Monday"
+                        // name="work_days"
+                        // value={workDays.monday}
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange= {handleChangeMonday}
                     />
                     <Form.Check
                         inline
                         label="Tuesday"
-                        name="work_days"
-                        value="Tuesday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeTuesday}
                     />
                     <Form.Check
                         inline
                         label="Wednesday"
-                        name="work_days"
-                        value="Wednesday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeWednesday}
                     />
                     <Form.Check
                         inline
                         label="Thursday"
-                        name="work_days"
-                        value="Thursday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeThursday}
                     />
                     <Form.Check
                         inline
                         label="Friday"
-                        name="work_days"
-                        value="Friday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeFriday}
                     />
                     <Form.Check
                         inline
                         label="Saturday"
-                        name="work_days"
-                        value="Saturday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeSaturday}
                     />
                     <Form.Check
                         inline
                         label="Sunday"
-                        name="work_days"
-                        value="Sunday"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeSunday}
                     />
                 </Form.Group>
                 <Form.Label>Prefferred Workdays: (check all that apply) </Form.Label>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Check
                         inline
-                        label="Open-Noon"
-                        name="work_times"
-                        value="Open-Noon"
+                        label="morning"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeMorning}
                     />
                     <Form.Check
                         inline
-                        label="Noon-Four"
-                        name="work_times"
-                        value="Noon-Four"
+                        label="afternoon"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeAfternoon}
                     />
                     <Form.Check
                         inline
-                        label="Four-Close"
-                        name="work_times"
-                        value="Four-Close"
+                        label="evening"
                         type='checkbox'
                         id={`inline-checkbox-1`}
+                        onChange={handleChangeEvening}
                     />
                 </Form.Group>
                 <div>
