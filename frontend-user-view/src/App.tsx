@@ -16,7 +16,6 @@ import Donate from './Donate';
 import MeetingRoom from './MeetingRoom';
 import VolunteerApplication from './VolunteerApplication';
 import MeetingRoomInformation from './MeetingRoomInformation';
-import StudyRoomInformation from './StudyRoomInformation';
 
 
 function App() {
@@ -53,8 +52,6 @@ function App() {
           <Route path='VolunteerApplication' element={<VolunteerApplication />}
           ></Route>
            <Route path='MeetingRoomInformation' element={<MeetingRoomInformation />}
-          ></Route>
-             <Route path='StudyRoomInformation' element={<StudyRoomInformation />}
           ></Route>
         </Routes>
       </div>

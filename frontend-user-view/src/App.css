@@ -480,3 +480,15 @@ html {
 #meeting-room-image {
   margin-bottom: 2rem;
 }
+
+#img-study-flex-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#study-room-image {
+  height: 12rem;
+  width: 12rem;
+  margin-right: 2rem;
+}

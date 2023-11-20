@@ -2,6 +2,9 @@ import Accordion from 'react-bootstrap/Accordion';
 import { Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import LargeStudy from "./images/largestudy.png";
+import MediumStudy from "./images/mediumstudy.png";
+import SmallStudy from "./images/smallstudy.png";
 
 export default function MeetingRoom() {
 
@@ -70,8 +73,52 @@ export default function MeetingRoom() {
                 <Accordion.Item eventKey="3">
                     <Accordion.Header>What study rooms are available?</Accordion.Header>
                     <Accordion.Body>
-                        <p>Click <Link id='meeting-room-information-page-link' to="/StudyRoomInformation">here</Link> to view the study room types and capacity limits.</p>
-                        <p id='bold-text'>Study room seating cannot be rearranged.</p>
+                        <p>
+                            The library offers three study/conference rooms. The study rooms are available during normal business hours only.
+                        </p>
+                        <div id='img-study-flex-container'>
+                            <img id="study-room-image" src={LargeStudy} alt='large study room' className='img-fluid'></img>
+                            <div>
+                                <p id='meeting-faq-bold-text'>Large Study/Conference Room:</p>
+                                <div id="bold-flex-container">
+                                    <p id='bold-text'>Maximum Capacity:</p>
+                                    <p>8</p>
+                                </div>
+                                <div id="bold-flex-container">
+                                    <p id='bold-text'>Room Dimensions:</p>
+                                    <p>15ft x 15ft</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id='img-study-flex-container'>
+                            <img id="study-room-image" src={MediumStudy} alt='medium study room' className='img-fluid'></img>
+                            <div>
+                                <p id='meeting-faq-bold-text'>Medium Study/Conference Room:</p>
+                                <div id="bold-flex-container">
+                                    <p id='bold-text'>Maximum Capacity:</p>
+                                    <p>4</p>
+                                </div>
+                                <div id="bold-flex-container">
+                                    <p id='bold-text'>Room Dimensions:</p>
+                                    <p>10ft x 12ft</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id='img-study-flex-container'>
+                            <img id="study-room-image" src={SmallStudy} alt='small study room' className='img-fluid'></img>
+                            <div>
+                                <p id='meeting-faq-bold-text'>Small Study/Conference Room:</p>
+                                <div id="bold-flex-container">
+                                    <p id='bold-text'>Maximum Capacity:</p>
+                                    <p>2</p>
+                                </div>
+                                <div id="bold-flex-container">
+                                    <p id='bold-text'>Room Dimensions:</p>
+                                    <p>8ft x 10ft</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p id='bold-text'>Study/Conference room seating cannot be rearranged. Contact the Information Desk to reserve a study/conference room.</p>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
