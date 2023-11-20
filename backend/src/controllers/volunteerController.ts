@@ -59,6 +59,16 @@ export function volunteer_form_submission_post() {
                 email: req.body.email,
                 work_experience: req.body.work_experience,
                 volunteer_experience: req.body.volunteer_experience,
+                monday: req.body.monday,
+                tuesday: req.body.tuesday,
+                wednesday: req.body.wednesday,
+                thursday: req.body.thursday,
+                friday: req.body.friday,
+                saturday: req.body.saturday,
+                sunday: req.body.sunday,
+                morning: req.body.morning,
+                afternoon: req.body.afternoon,
+                evening: req.body.evening,
                 interview_notes: req.body.interview_notes,
             });
 
@@ -121,7 +131,19 @@ export function volunteer_form_submission_edit() {
                     email: req.body.email,
                     work_experience: req.body.work_experience,
                     volunteer_experience: req.body.volunteer_experience,
+                    monday: req.body.monday,
+                    tuesday: req.body.tuesday,
+                    wednesday: req.body.wednesday,
+                    thursday: req.body.thursday,
+                    friday: req.body.friday,
+                    saturday: req.body.saturday,
+                    sunday: req.body.sunday,
+                    morning: req.body.morning,
+                    afternoon: req.body.afternoon,
+                    evening: req.body.evening,
+                    interviewed: req.body.interviewed,
                     interview_notes: req.body.interview_notes,
+                    approved: req.body.approved,
                 },
                     { new: true })
                     .exec()
@@ -135,7 +157,7 @@ export function volunteer_form_submission_edit() {
 
 //DELETE volunteer form submission
 export function volunteer_form_submission_delete() {
-    return asyncHandler(async(req, res, next) => {
+    return asyncHandler(async (req, res, next) => {
         const volunteerFormDelete = await VolunteerForm.findByIdAndDelete(req.params.id).exec();
         console.log("item deleted");
     });

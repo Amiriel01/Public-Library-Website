@@ -123,8 +123,18 @@ export default function VolunteerApplication() {
 
         setVolunteerApplicationInfo(initialValues);
 
-        await axios.post("http://localhost:3000/contact/contactForm", volunteerApplicationData).then((response) => {
+        await axios.post("http://localhost:3000/volunteer/volunteerForm", volunteerApplicationData).then((response) => {
             console.log(response.status, response.data)
+            // setMonday(false);
+            // setTuesday(false);
+            // setWednesday(false);
+            // setThursday(false);
+            // setFriday(false);
+            // setSaturday(false);
+            // setSunday(false)
+            // setMorning(false);
+            // setAfternoon(false);
+            // setEvening(false);
             setAlertShow(true)
         })
     }
@@ -281,21 +291,21 @@ export default function VolunteerApplication() {
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Check
                         inline
-                        label="morning"
+                        label="Open-Noon"
                         type='checkbox'
                         id={`inline-checkbox-1`}
                         onChange={handleChangeMorning}
                     />
                     <Form.Check
                         inline
-                        label="afternoon"
+                        label="Noon-Four"
                         type='checkbox'
                         id={`inline-checkbox-1`}
                         onChange={handleChangeAfternoon}
                     />
                     <Form.Check
                         inline
-                        label="evening"
+                        label="Four-Close"
                         type='checkbox'
                         id={`inline-checkbox-1`}
                         onChange={handleChangeEvening}
