@@ -18,6 +18,7 @@ import VolunteerApplication from './VolunteerApplication';
 import MeetingRoomInformation from './MeetingRoomInformation';
 import AuthorEvents from './AuthorEvents';
 import AboutLibrary from './AboutLibrary';
+import UpcomingEvents from './UpcomingEvents';
 
 
 function App() {
@@ -58,6 +59,8 @@ function App() {
            <Route path='AuthorEvents' element={<AuthorEvents />}
           ></Route>
            <Route path='AboutLibrary' element={<AboutLibrary />}
+          ></Route>
+           <Route path='UpcomingEvents' element={<UpcomingEvents />}
           ></Route>
         </Routes>
       </div>
