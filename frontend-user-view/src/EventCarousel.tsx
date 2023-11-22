@@ -17,7 +17,7 @@ export default function EventCarousel() {
 
   return (
     <div id='event-carousel-container'>
-      <Carousel fade id='event-carousel-container' indicators={indicatorVisible}>
+      <Carousel  id='event-carousel-container' indicators={indicatorVisible}>
         <Carousel.Item>
           <Link to="/AuthorEvents">
             <img className="img-fluid" src={AuthorEvent} alt='author event'></img>
