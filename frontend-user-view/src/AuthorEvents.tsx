@@ -34,13 +34,13 @@ export default function AuthorEvents() {
                         <Card.Text>
                             <div id='bold-flex-container'>
                                 <p id='bold-text'>Date:</p>
-                                <p>To Be Announced</p>
+                                <p>December 9th</p>
                             </div>
                         </Card.Text>
                         <Card.Text>
                             <div id='bold-flex-container'>
                                 <p id='bold-text'>Time:</p>
-                                <p>To Be Announced</p>
+                                <p>6:00pm-7:30pm</p>
                             </div>
                         </Card.Text>
                         <Card.Text>

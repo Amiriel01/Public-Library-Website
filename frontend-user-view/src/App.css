@@ -609,3 +609,51 @@ html {
 #about-image {
   width: 50%;
 }
+
+/*UpcomingEvents page*/
+#upcoming-events-page-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#event-section-container {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: #9bbec7 1px solid;
+  align-items: center;
+}
+
+#event-cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#event-card {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+#event-card-image {
+  width: 20rem;
+  height: 12rem;
+}
+
+#event-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#event-button {
+  background-color: #9bbec7;
+  padding: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#event-button:hover {
+  background-color: #f49fbc;
+}
