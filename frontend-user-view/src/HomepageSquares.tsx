@@ -12,7 +12,7 @@ export default function HomepageSquares() {
                             local_library
                         </span>
                         <p id='square-title'>
-                            About the 
+                            About the
                         </p>
                         <p id='square-title'>
                             Library
@@ -20,38 +20,47 @@ export default function HomepageSquares() {
                     </div>
                 </Link>
             </Col>
-            <Col  id='home-page-square'>
+            <Col id='home-page-square'>
                 <Link id='square-link' to="/UpcomingEvents">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
                             calendar_month
                         </span>
                         <p id='square-title'>
-                            Upcoming Events
+                            Upcoming
+                        </p>
+                        <p id='square-title'>
+                            Events
                         </p>
                     </div>
                 </Link>
             </Col>
-            <Col  id='home-page-square'>
+            <Col id='home-page-square'>
                 <Link id='square-link' to="/GivingInfo">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
                             volunteer_activism
                         </span>
                         <p id='square-title'>
-                            Give
+                            Give to
+                        </p>
+                        <p id='square-title'>
+                           the Library
                         </p>
                     </div>
                 </Link>
             </Col>
-            <Col  id='home-page-square'>
+            <Col id='home-page-square'>
                 <Link id='square-link' to="/FAQPage">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
-                            quiz
+                            school
                         </span>
                         <p id='square-title'>
-                            FAQs
+                            Student
+                        </p>
+                        <p id='square-title'>
+                            Resources
                         </p>
                     </div>
                 </Link>

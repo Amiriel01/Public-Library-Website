@@ -19,6 +19,7 @@ import MeetingRoomInformation from './MeetingRoomInformation';
 import AuthorEvents from './AuthorEvents';
 import AboutLibrary from './AboutLibrary';
 import UpcomingEvents from './UpcomingEvents';
+import StudentResources from './StudentResources';
 
 
 function App() {
@@ -61,6 +62,8 @@ function App() {
            <Route path='AboutLibrary' element={<AboutLibrary />}
           ></Route>
            <Route path='UpcomingEvents' element={<UpcomingEvents />}
+          ></Route>
+           <Route path='StudentResources' element={<StudentResources />}
           ></Route>
         </Routes>
       </div>
