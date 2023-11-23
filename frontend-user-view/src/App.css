@@ -586,5 +586,26 @@ html {
   margin-bottom: 0
 }
 
+/*AboutLibrary Page*/
+#about-page-container {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#author-event-card-container {}
 
+#about-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+#about-paragraph {
+  width: 50%;
+}
+
+#about-image {
+  width: 50%;
+}
