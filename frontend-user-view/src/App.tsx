@@ -29,6 +29,7 @@ import MathDigitalResources from './MathDigitalResources';
 import EnglishDigitalResources from './EnglishDigitalResources';
 import Staff from './Staff';
 import FirstFooter from './FirstFooter';
+import NewsletterSignUp from './NewsletterSignUp';
 
 function App() {
 
@@ -86,11 +87,14 @@ function App() {
           ></Route>
           <Route path='EnglishDigitalResources' element={<EnglishDigitalResources />}
           ></Route>
-             <Route path='Staff' element={<Staff />}
+          <Route path='Staff' element={<Staff />}
+          ></Route>
+          <Route path='NewsletterSignUp' element={<NewsletterSignUp />}
+          ></Route>
+          <Route path='FirstFooter' element={<FirstFooter />}
           ></Route>
         </Routes>
       </div>
-      <FirstFooter />
     </>
   )
 }

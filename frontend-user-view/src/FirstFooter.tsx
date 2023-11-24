@@ -1,6 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MyButton from './MyButton';
+import { Link } from 'react-router-dom';
 
 export default function FirstFooter() {
     return (
@@ -15,7 +16,9 @@ export default function FirstFooter() {
                     </p>
                 </Col>
                 <Col id='first-footer-right'>
-                    <MyButton id='newsletter-button' title='Sign Up Now!'></MyButton>
+                    <Link to='/NewsletterSignUp'>
+                        <MyButton id='newsletter-button' title='Sign Up Now!'></MyButton>
+                    </Link>
                 </Col>
             </Row>
         </Row>

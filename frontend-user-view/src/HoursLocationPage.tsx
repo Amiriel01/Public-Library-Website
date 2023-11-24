@@ -1,6 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
+import FirstFooter from './FirstFooter';
 import LibraryOutside from "./images/libraryoutside.png";
 import { Link } from "react-router-dom";
 import MyButton from './MyButton';
@@ -71,6 +72,7 @@ export default function HoursLocationPage() {
                     </Col>
                 </Row>
             </Row>
+            <FirstFooter />
         </>
     )
 

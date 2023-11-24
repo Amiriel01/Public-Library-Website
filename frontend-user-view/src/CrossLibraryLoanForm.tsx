@@ -3,6 +3,7 @@ import MyButton from './MyButton';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
+import FirstFooter from './FirstFooter';
 import axios from 'axios';
 import { FormEvent, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
@@ -150,6 +151,7 @@ export default function CrossLibraryLoanForm() {
                     </Col>
                 </Row>
             </Row>
+            <FirstFooter />
         </>
     );
 }

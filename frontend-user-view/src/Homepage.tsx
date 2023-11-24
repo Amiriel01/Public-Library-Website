@@ -1,6 +1,6 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from "react-router-dom";
+import FirstFooter from './FirstFooter';
 import EventCarousel from "./EventCarousel";
 import HomepageSquares from './HomepageSquares';
 import CrystalsGemstones1 from './images/crystalsandgemstones1.png';
@@ -35,10 +35,10 @@ export default function Homepage() {
                         <img className='img-fluid' id='homepage-event-image' src={CrystalsGemstones1} alt='event image'></img>
                     </Col>
                     <Col sm={12} md={4}>
-                        <img className='img-fluid'  id='homepage-event-image' src={RocsGemsEvent} alt='event image'></img>
+                        <img className='img-fluid' id='homepage-event-image' src={RocsGemsEvent} alt='event image'></img>
                     </Col>
                     <Col sm={12} md={4}>
-                        <img className='img-fluid'  id='homepage-event-image' src={CrystalsGemstones2} alt='event image'></img>
+                        <img className='img-fluid' id='homepage-event-image' src={CrystalsGemstones2} alt='event image'></img>
                     </Col>
                 </Row>
                 <Row>
@@ -47,6 +47,7 @@ export default function Homepage() {
                     </Col>
                 </Row>
             </Row>
+            <FirstFooter />
         </>
     )
 }

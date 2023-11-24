@@ -3,6 +3,7 @@ import MyButton from './MyButton';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
+import FirstFooter from './FirstFooter';
 import axios from 'axios';
 import { FormEvent, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
@@ -111,12 +112,13 @@ export default function LibraryCardForm() {
                 </Form>
                 <Row>
                     <Col>
-                            <Alert hidden={!alertShow} variant={"success"}>
-                                Your library card application was submitted successfully!
-                            </Alert>
+                        <Alert hidden={!alertShow} variant={"success"}>
+                            Your library card application was submitted successfully!
+                        </Alert>
                     </Col>
                 </Row>
             </Row>
+            <FirstFooter />
         </>
     );
 }

@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from "./HomepageLink";
+import FirstFooter from "./FirstFooter";
 
 export default function BookSearchResultsPage({ bookData, setBookData }: BookAPIProps) {
 
@@ -45,6 +46,7 @@ export default function BookSearchResultsPage({ bookData, setBookData }: BookAPI
                     </div>
                 })}
             </div >
+            <FirstFooter />
         </>
     )
 

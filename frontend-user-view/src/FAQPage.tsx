@@ -1,7 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
-import { Link } from "react-router-dom";
+import FirstFooter from './FirstFooter';
 import LibraryCardQuestions from './LibraryCardQuestions';
 import BorrowingServices from './BorrowingServices';
 import TechnologyServices from './TechnologyServices';
@@ -26,6 +26,7 @@ export default function FAQPage() {
                 <Giving />
                 <MeetingRoom />
             </Row>
+            <FirstFooter />
         </>
     )
 }

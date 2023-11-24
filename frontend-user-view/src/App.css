@@ -731,6 +731,12 @@ html {
   align-items: center;
 }
 
+#first-footer-left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #first-footer-right {
   display: flex;
   justify-content: center;
@@ -749,4 +755,14 @@ html {
 
 #newsletter-button:hover {
   background-color: #f49fbc;
+}
+
+/*Newsletter Form*/
+#newsletter-sign-up-container {
+  color: #474044;
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
 }

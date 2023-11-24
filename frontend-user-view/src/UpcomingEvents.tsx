@@ -1,4 +1,5 @@
 import HomepageLink from './HomepageLink';
+import FirstFooter from './FirstFooter';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import EveryoneEvents from './EveryoneEvents';
@@ -8,19 +9,22 @@ import ChildrenEvents from './ChildrenEvents';
 
 export default function UpcomingEvents() {
     return (
-        <Row id='upcoming-events-page-container'>
-            <HomepageLink />
-            <Row>
-                <Col>
-                    <h1 id='page-titles'>
-                        Upcoming Events
-                    </h1>
-                </Col>
+        <>
+            <Row id='upcoming-events-page-container'>
+                <HomepageLink />
+                <Row>
+                    <Col>
+                        <h1 id='page-titles'>
+                            Upcoming Events
+                        </h1>
+                    </Col>
+                </Row>
+                <EveryoneEvents />
+                <AdultEvents />
+                <TeenTweenEvents />
+                <ChildrenEvents />
             </Row>
-            <EveryoneEvents />
-            <AdultEvents />
-            <TeenTweenEvents />
-            <ChildrenEvents />
-        </Row>
+            <FirstFooter />
+        </>
     )
 }

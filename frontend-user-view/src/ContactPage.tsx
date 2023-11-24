@@ -1,6 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
+import FirstFooter from './FirstFooter';
 import { Link } from "react-router-dom";
 import ContactForm from './ContactForm';
 import Staff from './Staff';
@@ -55,6 +56,7 @@ export default function ContactPage() {
                 </Row>
                 <ContactForm />
             </Row>
+            <FirstFooter />
         </>
     )
 }
