@@ -706,3 +706,7 @@ html {
 #resource-button:hover {
   background-color: #f49fbc;
 }
+
+#resource-link {
+  text-decoration: none;
+}

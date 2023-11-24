@@ -24,6 +24,9 @@ import EveryoneEvents from './EveryoneEvents';
 import AdultEvents from './AdultEvents';
 import TeenTweenEvents from './TeenTweenEvents';
 import ChildrenEvents from './ChildrenEvents';
+import InLibraryResources from './InLibraryResources';
+import MathDigitalResources from './MathDigitalResources';
+import EnglishDigitalResources from './EnglishDigitalResources';
 
 function App() {
 
@@ -48,33 +51,38 @@ function App() {
           <Route path='FAQPage' element={<FAQPage />}></Route>
           <Route path='LibraryCardForm' element={<LibraryCardForm />}
           ></Route>
-           <Route path='CrossLibraryForm' element={<CrossLibraryLoanForm />}
+          <Route path='CrossLibraryForm' element={<CrossLibraryLoanForm />}
           ></Route>
           <Route path='GivingInfo' element={<GivingInfo />}
           ></Route>
-           <Route path='Donate' element={<Donate />}
+          <Route path='Donate' element={<Donate />}
           ></Route>
           <Route path='MeetingRoom' element={<MeetingRoom />}
           ></Route>
           <Route path='VolunteerApplication' element={<VolunteerApplication />}
           ></Route>
-           <Route path='MeetingRoomInformation' element={<MeetingRoomInformation />}
+          <Route path='MeetingRoomInformation' element={<MeetingRoomInformation />}
           ></Route>
-           <Route path='AuthorEvents' element={<AuthorEvents />}
+          <Route path='AuthorEvents' element={<AuthorEvents />}
           ></Route>
-           <Route path='AboutLibrary' element={<AboutLibrary />}
+          <Route path='AboutLibrary' element={<AboutLibrary />}
           ></Route>
-           <Route path='UpcomingEvents' element={<UpcomingEvents />}
+          <Route path='UpcomingEvents' element={<UpcomingEvents />}
           ></Route>
-           <Route path='StudentResources' element={<StudentResources />}
+          <Route path='StudentResources' element={<StudentResources />}
           ></Route>
-           <Route path='EveryoneEvents' element={<EveryoneEvents />}
+          <Route path='EveryoneEvents' element={<EveryoneEvents />}
           ></Route>
-           <Route path='AdultEvents' element={<AdultEvents />}
+          <Route path='AdultEvents' element={<AdultEvents />}
           ></Route>
-           <Route path='TeenTweenEvents' element={<TeenTweenEvents />}
+          <Route path='TeenTweenEvents' element={<TeenTweenEvents />}
           ></Route>
-            <Route path='ChildrenEvents' element={<ChildrenEvents />}
+          <Route path='ChildrenEvents' element={<ChildrenEvents />}
+          ></Route>
+          <Route path='InLibraryResources' element={<InLibraryResources />}></Route>
+          <Route path='MathDigitalResources' element={<MathDigitalResources />}
+          ></Route>
+            <Route path='EnglishDigitalResources' element={<EnglishDigitalResources />}
           ></Route>
         </Routes>
       </div>
