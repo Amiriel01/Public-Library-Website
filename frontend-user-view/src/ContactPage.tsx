@@ -64,9 +64,6 @@ export default function ContactPage() {
                 <TextExample />
                 <TextExample />
                 <TextExample />
-                <TextExample />
-                <TextExample />
-                <TextExample />
                 <Row>
                     <Col>
                         <h1 id='page-titles'>

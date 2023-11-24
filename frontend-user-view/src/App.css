@@ -123,7 +123,7 @@ html {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   margin-top: 2rem;
   border-bottom: 1px solid #474044;
   padding-bottom: 3rem;
@@ -691,5 +691,18 @@ html {
 }
 
 #event-button:hover {
+  background-color: #f49fbc;
+}
+
+/*Resources Page*/
+#resource-button {
+  background-color: #ffd9da;
+  padding: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#resource-button:hover {
   background-color: #f49fbc;
 }

@@ -51,7 +51,7 @@ export default function HomepageSquares() {
                 </Link>
             </Col>
             <Col id='home-page-square'>
-                <Link id='square-link' to="/FAQPage">
+                <Link id='square-link' to="/StudentResources">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
                             school

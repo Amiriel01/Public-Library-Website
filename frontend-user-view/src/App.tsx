@@ -20,7 +20,10 @@ import AuthorEvents from './AuthorEvents';
 import AboutLibrary from './AboutLibrary';
 import UpcomingEvents from './UpcomingEvents';
 import StudentResources from './StudentResources';
-
+import EveryoneEvents from './EveryoneEvents';
+import AdultEvents from './AdultEvents';
+import TeenTweenEvents from './TeenTweenEvents';
+import ChildrenEvents from './ChildrenEvents';
 
 function App() {
 
@@ -64,6 +67,14 @@ function App() {
            <Route path='UpcomingEvents' element={<UpcomingEvents />}
           ></Route>
            <Route path='StudentResources' element={<StudentResources />}
+          ></Route>
+           <Route path='EveryoneEvents' element={<EveryoneEvents />}
+          ></Route>
+           <Route path='AdultEvents' element={<AdultEvents />}
+          ></Route>
+           <Route path='TeenTweenEvents' element={<TeenTweenEvents />}
+          ></Route>
+            <Route path='ChildrenEvents' element={<ChildrenEvents />}
           ></Route>
         </Routes>
       </div>
