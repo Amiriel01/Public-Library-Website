@@ -3,29 +3,9 @@ import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
 import { Link } from "react-router-dom";
 import ContactForm from './ContactForm';
-import Card from 'react-bootstrap/Card';
-import StaffImage from "./images/director.png"
-import axios from 'axios';
+import Staff from './Staff';
 
 export default function ContactPage() {
-
-    function TextExample() {
-        return (
-            <Card id='staff-card'>
-                <Card.Body id='staff-card-flex-container'>
-                    <img id='staff-image' className='img-fluid' src={StaffImage}></img>
-                    <div>
-                        <Card.Title id='card-title'>Library Director</Card.Title>
-                        <Card.Subtitle id='card-subtitle' className="mb-2 text-muted">Sally Wright</Card.Subtitle>
-                        <Card.Text id='card-text'>
-                            <p>Phone: (555) 555-5552</p>
-                            <p>Email: director@page.com</p>
-                        </Card.Text>
-                    </div>
-                </Card.Body>
-            </Card>
-        );
-    }
 
     return (
         <>
@@ -34,7 +14,7 @@ export default function ContactPage() {
                 <Row>
                     <Col >
                         <h1 id='page-titles'>
-                            Departments
+                            Library Departments
                         </h1>
                     </Col>
                 </Row>
@@ -54,16 +34,11 @@ export default function ContactPage() {
                 <Row>
                     <Col >
                         <h1 id='page-titles'>
-                            Staff
+                            Department Librarians
                         </h1>
                     </Col>
                 </Row>
-                <TextExample />
-                <TextExample />
-                <TextExample />
-                <TextExample />
-                <TextExample />
-                <TextExample />
+                <Staff />
                 <Row>
                     <Col>
                         <h1 id='page-titles'>

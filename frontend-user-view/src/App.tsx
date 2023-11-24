@@ -27,6 +27,7 @@ import ChildrenEvents from './ChildrenEvents';
 import InLibraryResources from './InLibraryResources';
 import MathDigitalResources from './MathDigitalResources';
 import EnglishDigitalResources from './EnglishDigitalResources';
+import Staff from './Staff';
 
 function App() {
 
@@ -82,7 +83,9 @@ function App() {
           <Route path='InLibraryResources' element={<InLibraryResources />}></Route>
           <Route path='MathDigitalResources' element={<MathDigitalResources />}
           ></Route>
-            <Route path='EnglishDigitalResources' element={<EnglishDigitalResources />}
+          <Route path='EnglishDigitalResources' element={<EnglishDigitalResources />}
+          ></Route>
+             <Route path='Staff' element={<Staff />}
           ></Route>
         </Routes>
       </div>
