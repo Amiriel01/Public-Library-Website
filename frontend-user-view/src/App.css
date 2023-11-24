@@ -766,3 +766,27 @@ html {
   margin-right: auto;
   margin-bottom: 2rem;
 }
+
+#newsletter-form-submit-button {
+  width: 100%;
+  background-color: #474044;
+  padding: .5rem;
+  margin-right: .5rem;
+  color: #9bbec7;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+#newsletter-input {
+  padding: .75rem;
+  font-size: 1.1rem;
+}
+
+#newsletter-alert {
+  text-align: center;
+  margin-top: 2rem;
+  width: 103%;
+}
+
+/*SecondFooter*/
