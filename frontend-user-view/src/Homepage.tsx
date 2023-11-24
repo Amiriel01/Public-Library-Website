@@ -31,14 +31,14 @@ export default function Homepage() {
                     </Col>
                 </Row>
                 <Row id='homepage-image-container'>
-                    <Col>
-                        <img id='homepage-event-image' src={CrystalsGemstones1} alt='event image'></img>
+                    <Col sm={12} md={4}>
+                        <img className='img-fluid' id='homepage-event-image' src={CrystalsGemstones1} alt='event image'></img>
                     </Col>
-                    <Col>
-                        <img id='homepage-event-image' src={RocsGemsEvent} alt='event image'></img>
+                    <Col sm={12} md={4}>
+                        <img className='img-fluid'  id='homepage-event-image' src={RocsGemsEvent} alt='event image'></img>
                     </Col>
-                    <Col>
-                        <img id='homepage-event-image' src={CrystalsGemstones2} alt='event image'></img>
+                    <Col sm={12} md={4}>
+                        <img className='img-fluid'  id='homepage-event-image' src={CrystalsGemstones2} alt='event image'></img>
                     </Col>
                 </Row>
                 <Row>
