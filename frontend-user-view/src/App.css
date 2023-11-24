@@ -711,3 +711,42 @@ html {
 #resource-link {
   text-decoration: none;
 }
+
+/*FirstFooter*/
+#first-footer-container {
+  background-color: #474044;
+  color: #9bbec7;
+  padding: 3rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#first-footer-left-right {
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex;
+  justify-content: space-between; */
+  width: 70%;
+  align-items: center;
+}
+
+#first-footer-right {
+  display: flex;
+  justify-content: center;
+}
+
+#newsletter-button {
+  background-color: #9bbec7;
+  width: 12rem;
+  padding: 1rem;
+  margin-right: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+#newsletter-button:hover {
+  background-color: #f49fbc;
+}

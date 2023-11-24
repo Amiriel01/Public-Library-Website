@@ -28,6 +28,7 @@ import InLibraryResources from './InLibraryResources';
 import MathDigitalResources from './MathDigitalResources';
 import EnglishDigitalResources from './EnglishDigitalResources';
 import Staff from './Staff';
+import FirstFooter from './FirstFooter';
 
 function App() {
 
@@ -89,6 +90,7 @@ function App() {
           ></Route>
         </Routes>
       </div>
+      <FirstFooter />
     </>
   )
 }
