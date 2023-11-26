@@ -31,6 +31,7 @@ import Staff from './Staff';
 import FirstFooter from './FirstFooter';
 import NewsletterSignUp from './NewsletterSignUp';
 import SecondFooter from './SecondFooter';
+import EventPage from './EventPage';
 
 function App() {
 
@@ -93,6 +94,8 @@ function App() {
           <Route path='NewsletterSignUp' element={<NewsletterSignUp />}
           ></Route>
           <Route path='FirstFooter' element={<FirstFooter />}
+          ></Route>
+          <Route path='EventPage' element={<EventPage />}
           ></Route>
         </Routes>
         <SecondFooter />

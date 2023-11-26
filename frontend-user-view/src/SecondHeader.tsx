@@ -29,7 +29,7 @@ export default function SecondHeader({ bookData, setBookData }: BookAPIProps) {
                     {/* <Col id='search-container'> */}
                     <Form  onSubmit={handleSubmit}>
                         <Form.Group id='search-container' className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label id='bold-text'>Search:</Form.Label>
+                            <Form.Label id='search-title'>Search:</Form.Label>
                             <Form.Control
                                 required
                                 type="text"

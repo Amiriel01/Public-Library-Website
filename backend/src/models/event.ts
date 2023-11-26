@@ -13,7 +13,7 @@ const EventSchema = new Schema({
     },
     age_group: {
         type: String,
-        enum: ['Everyone', 'Adult', 'Teen_Tween', 'Children'],
+        enum: ['All Ages', 'Adult', 'Teen_Tween', 'Children'],
         required: true,
     },
     date: {
