@@ -7,8 +7,17 @@ import MaryShelley from "./images/maryshelley.png";
 import ArthurConanDoyle from "./images/arthurconandoyle.png";
 import AgathaChristie from "./images/agathachristie.png";
 import CSLewis from "./images/cslewis.png";
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function AuthorEvents() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
+
     return (
         <>
             <Row id='visiting-author-page-container'>

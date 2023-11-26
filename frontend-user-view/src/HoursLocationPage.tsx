@@ -5,8 +5,16 @@ import FirstFooter from './FirstFooter';
 import LibraryOutside from "./images/libraryoutside.png";
 import { Link } from "react-router-dom";
 import MyButton from './MyButton';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function HoursLocationPage() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
 
     return (
         <>

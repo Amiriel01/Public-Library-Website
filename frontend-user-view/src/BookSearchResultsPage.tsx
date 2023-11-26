@@ -4,8 +4,16 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from "./HomepageLink";
 import FirstFooter from "./FirstFooter";
+import { useLocation } from 'react-router-dom';
+import { useEffect } from "react";
 
 export default function BookSearchResultsPage({ bookData, setBookData }: BookAPIProps) {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
 
     return (
         <>

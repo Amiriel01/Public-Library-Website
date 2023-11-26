@@ -7,8 +7,16 @@ import FirstFooter from './FirstFooter';
 import axios from 'axios';
 import { FormEvent, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function LibraryCardForm() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
 
     const initialValues = {
         name: "",

@@ -7,8 +7,16 @@ import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
 import HomepageLink from './HomepageLink';
 import FirstFooter from './FirstFooter';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function VolunteerApplication() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
 
     const [monday, setMonday] = useState<Boolean>(false);
     const [tuesday, setTuesday] = useState<Boolean>(false);

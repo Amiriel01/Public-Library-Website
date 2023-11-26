@@ -7,8 +7,17 @@ import BorrowingServices from './BorrowingServices';
 import TechnologyServices from './TechnologyServices';
 import Giving from './Giving';
 import MeetingRoom from './MeetingRoom';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function FAQPage() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
+    
     return (
         <>
             <Row id='faq-page-container'>

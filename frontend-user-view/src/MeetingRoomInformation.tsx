@@ -13,8 +13,17 @@ import Horseshoe from "./images/horseshoe.png";
 import Meeting from "./images/meeting.png";
 import MyButton from './MyButton';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function MeetingRoomInformation() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
+    
     return (
         <>
             <Row id='meeting-room-info-page-container'>

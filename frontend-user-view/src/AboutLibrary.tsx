@@ -4,8 +4,17 @@ import HomepageLink from './HomepageLink';
 import OldLibrary from "./images/oldlibrary.png";
 import MidLibrary from "./images/midlibrary.png";
 import NewLibrary from "./images/newlibrary.png";
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function AboutLibrary() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
+
     return (
         <Row id='about-page-container'>
             <HomepageLink />

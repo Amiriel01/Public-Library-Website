@@ -5,8 +5,17 @@ import Col from 'react-bootstrap/Col';
 import InLibraryResources from './InLibraryResources';
 import MathDigitalResources from './MathDigitalResources';
 import EnglishDigitalResources from './EnglishDigitalResources';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function StudentResources() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
+    
     return (
         <>
             <Row id='upcoming-events-page-container'>

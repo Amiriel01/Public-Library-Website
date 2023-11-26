@@ -6,8 +6,17 @@ import HomepageSquares from './HomepageSquares';
 import CrystalsGemstones1 from './images/crystalsandgemstones1.png';
 import CrystalsGemstones2 from './images/crystalsandgemstones2.png';
 import RocsGemsEvent from './images/rockandgemstones.png';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Homepage() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
+    
     return (
         <>
             <Row id='homepage-container'>
