@@ -79,7 +79,7 @@ export default function MeetingRoom() {
                         <div id='img-study-flex-container'>
                             <img id="study-room-image" src={LargeStudy} alt='large study room' className='img-fluid'></img>
                             <div>
-                                <p id='meeting-faq-bold-text'>Large Study/Conference Room:</p>
+                                <p id='meeting-faq-bold-text'>Large Study Room:</p>
                                 <div id="bold-flex-container">
                                     <p id='bold-text'>Maximum Capacity:</p>
                                     <p>8</p>
@@ -93,7 +93,7 @@ export default function MeetingRoom() {
                         <div id='img-study-flex-container'>
                             <img id="study-room-image" src={MediumStudy} alt='medium study room' className='img-fluid'></img>
                             <div>
-                                <p id='meeting-faq-bold-text'>Medium Study/Conference Room:</p>
+                                <p id='meeting-faq-bold-text'>Medium Study Room:</p>
                                 <div id="bold-flex-container">
                                     <p id='bold-text'>Maximum Capacity:</p>
                                     <p>4</p>
@@ -107,7 +107,7 @@ export default function MeetingRoom() {
                         <div id='img-study-flex-container'>
                             <img id="study-room-image" src={SmallStudy} alt='small study room' className='img-fluid'></img>
                             <div>
-                                <p id='meeting-faq-bold-text'>Small Study/Conference Room:</p>
+                                <p id='meeting-faq-bold-text'>Small Study Room:</p>
                                 <div id="bold-flex-container">
                                     <p id='bold-text'>Maximum Capacity:</p>
                                     <p>2</p>

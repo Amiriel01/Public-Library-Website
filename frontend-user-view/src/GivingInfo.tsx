@@ -107,7 +107,8 @@ export default function GivingInfo() {
                             </div>
                             <div id='bold-flex-container'>
                                 <p id='bold-text'>Special Projects:</p>
-                                <p>Legacy gifts can provide the funding to embark on a special project or purchase equipment/technology that could not otherwise be afforded.</p>
+                                <p>Legacy gifts help provide the funding for special projects or purchasing equipment and technology that could not otherwise be afforded.</p>
+                                {/* <p>Legacy gifts can provide the funding to embark on a special project or purchase equipment/technology that could not otherwise be afforded.</p> */}
                             </div>
                             <h4 id='ways-to-give-header'>How you benefit from your legacy gift:</h4>
                             <div id='bold-flex-container'>

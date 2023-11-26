@@ -10,7 +10,6 @@ html {
   background-color: #474044;
   display: flex;
   justify-content: center;
-  width: 101vw;
   padding-bottom: 1rem
 }
 
@@ -45,13 +44,15 @@ html {
   background-color: #9bbec7;
   display: flex;
   justify-content: center;
-  width: 101vw;
   padding: 1rem;
 }
 
 #search-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  color: #474044;
+  align-items: center;
 }
 
 #search-form-container {
@@ -62,10 +63,8 @@ html {
 
 #search-text {
   font-size: 1.5rem;
-  margin-bottom: 0;
   font-weight: bold;
   color: #474044;
-  margin-left: 1rem;
 }
 
 #search-input {
@@ -220,9 +219,9 @@ html {
 }
 
 #staff-card {
-  width: 25rem;
+  width: 20rem;
   color: #474044;
-  margin-right: 1rem;
+  margin-right: 3rem;
   margin-bottom: 1rem;
   /* padding: .5rem; */
 
@@ -230,13 +229,15 @@ html {
 
 #staff-card-flex-container {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   margin-right: 1rem;
+  flex-wrap: wrap;
 }
 
 #staff-image {
-  width: 40%;
-  height: 60%;
+  width: 8rem;
+  height: 8rem;
   margin-right: 1rem;
 }
 
@@ -308,6 +309,7 @@ html {
   display: flex;
   align-items: center;
   color: #474044;
+  flex-wrap: wrap;
 }
 
 #book-image {
@@ -366,6 +368,7 @@ html {
 
 #bold-flex-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #bold-text-underline {
@@ -522,6 +525,7 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 #study-room-image {
@@ -714,12 +718,13 @@ html {
 
 /*FirstFooter*/
 #first-footer-container {
-  background-color: #474044;
-  color: #9bbec7;
-  padding: 3rem;
+  background-color: #9bbec7;
+  color: #474044;
+  padding: 1rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 #first-footer-left-right {
@@ -743,11 +748,11 @@ html {
 }
 
 #newsletter-button {
-  background-color: #9bbec7;
+  background-color: #474044;
   width: 12rem;
   padding: 1rem;
   margin-right: .5rem;
-  color: #474044;
+  color: #9bbec7;
   font-weight: bold;
   font-size: 1rem;
   margin-left: 1rem;
@@ -755,6 +760,7 @@ html {
 
 #newsletter-button:hover {
   background-color: #f49fbc;
+  color: #474044;
 }
 
 /*Newsletter Form*/
@@ -790,3 +796,87 @@ html {
 }
 
 /*SecondFooter*/
+#second-footer-container {
+  background-color: #474044;
+  padding: 3rem;
+}
+
+#second-footer-flex-container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#second-footer-logo-container {
+  margin-bottom: 2rem;
+  
+}
+
+#second-footer-logo {
+  width: 20rem;
+  text-align: center;
+}
+
+#second-footer-logo-container {
+  margin-bottom: 2rem;
+}
+
+/* .connected-title {
+
+} */
+
+#social-icon-text-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#social-media-icon {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+#social-media-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+#second-footer-link {
+  text-decoration: none;
+  color: #9bbec7;
+}
+
+@media(min-width: 992px) {
+  #second-footer-connected-info-container {
+    border-left: 1px solid #9bbec7;
+    color: #9bbec7;
+    padding-left: 1rem;
+  }
+
+  #second-footer-links-container {
+    border-left: 1px solid #9bbec7;
+  }
+}
+
+@media(max-width: 991px) {
+  #second-footer-connected-info-container {
+    border-top: 1px solid #9bbec7;
+    color: #9bbec7;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #second-footer-links-container {
+    border-top: 1px solid #9bbec7;
+    padding-top: 1rem;
+  }
+}
+
+/*Donate page*/
+#donate-page-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}

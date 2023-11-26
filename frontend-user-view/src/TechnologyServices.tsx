@@ -44,7 +44,7 @@ export default function TechnologyServices() {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
-                    <Accordion.Header>Scanning/Printer/Copies</Accordion.Header>
+                    <Accordion.Header>Scanning, Printing, & Copies</Accordion.Header>
                     <Accordion.Body>
                         <p>The library has three public printers that are available for printing, scanning, and copying.</p>
                         <p>The printers have the capability of printing from the library computers or a flash drive.</p>

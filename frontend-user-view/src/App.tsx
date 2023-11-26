@@ -30,6 +30,7 @@ import EnglishDigitalResources from './EnglishDigitalResources';
 import Staff from './Staff';
 import FirstFooter from './FirstFooter';
 import NewsletterSignUp from './NewsletterSignUp';
+import SecondFooter from './SecondFooter';
 
 function App() {
 
@@ -94,6 +95,7 @@ function App() {
           <Route path='FirstFooter' element={<FirstFooter />}
           ></Route>
         </Routes>
+        <SecondFooter />
       </div>
     </>
   )
