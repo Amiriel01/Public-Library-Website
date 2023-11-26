@@ -16,7 +16,8 @@ import contactRouter from './routes/contact.ts'
 import libraryCardRouter from './routes/libraryCard.ts';
 import crossLibraryRouter from './routes/crossLibrary.ts';
 import volunteerRouter from './routes/volunteer.ts';
-import newsletterRouter from './routes/newsletter.ts'
+import newsletterRouter from './routes/newsletter.ts';
+import eventRouter from './routes/event.ts';
 
 
 const app = express();
@@ -53,7 +54,7 @@ app.use('/libraryCard', libraryCardRouter);
 app.use('/crossLibrary', crossLibraryRouter);
 app.use('/volunteer', volunteerRouter);
 app.use('/newsletter', newsletterRouter);
-
+app.use('/event', eventRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
