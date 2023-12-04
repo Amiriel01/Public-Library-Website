@@ -7,10 +7,28 @@ import HomepageLink from "./HomepageLink";
 import HotCocoa from "./images/hotcocoa.png";
 import FirstFooter from "./FirstFooter";
 
+interface EventInterface {
+    title: string,
+    date: string,
+    time: string,
+    program_type: string,
+    age_group: string,
+    description1: string,
+    description2: string, 
+}
+
 export default function EventPage() {
     const { id } = useParams();
     const { pathname } = useLocation();
-    const [event, setEvent] = useState({});
+    const [event, setEvent] = useState<EventInterface>({
+        title: "",
+        date: "",
+        time: "",
+        program_type: "",
+        age_group: "",
+        description1: "",
+        description2: "",
+    });
 
     useEffect(() => {
         window.scrollTo(0, 0)

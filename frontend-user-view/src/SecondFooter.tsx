@@ -24,17 +24,22 @@ export default function SecondFooter() {
                 <Col md={12} lg={4}  id='second-footer-links-container'>
                     <Link id='second-footer-link' to='/FAQPage'>
                         <p id='bold-text'>
-                            FAQ Page
+                            FAQ
                         </p>
                     </Link>
                     <Link id='second-footer-link' to='/ContactPage'>
                         <p id='bold-text'>
-                            Contact Page
+                            Contact
                         </p>
                     </Link>
                     <Link id='second-footer-link' to='/HoursLocationPage'>
                         <p id='bold-text'>
-                            Hours & Location Page
+                            Hours & Location
+                        </p>
+                    </Link>
+                    <Link id='second-footer-link' to='/LibraryLogin'>
+                        <p id='bold-text'>
+                            Library Login 
                         </p>
                     </Link>
                 </Col>

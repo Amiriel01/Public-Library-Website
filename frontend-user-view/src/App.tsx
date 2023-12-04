@@ -32,10 +32,16 @@ import FirstFooter from './FirstFooter';
 import NewsletterSignUp from './NewsletterSignUp';
 import SecondFooter from './SecondFooter';
 import EventPage from './EventPage';
+import LibraryLogin from './LibraryLogin';
 
 function App() {
 
   const [bookData, setBookData] = useState<BookAPIData>({ items: [] })
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
+  const [showAdmin, setShowAdmin] = useState<boolean>(false);
+
+  console.log(loggedIn)
+  console.log(showAdmin)
 
   return (
     <>
@@ -96,6 +102,11 @@ function App() {
           <Route path='FirstFooter' element={<FirstFooter />}
           ></Route>
           <Route path='EventPage' element={<EventPage />}
+          ></Route>
+          <Route path='LibraryLogin' element={<LibraryLogin
+            setLoggedIn={setLoggedIn}
+            setShowAdmin={setShowAdmin}
+          />}
           ></Route>
         </Routes>
         <SecondFooter />
