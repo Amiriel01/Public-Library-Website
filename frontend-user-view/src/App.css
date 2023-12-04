@@ -930,3 +930,34 @@ html {
 .event-description {
   font-size: 1.5rem;
 }
+
+/*LibraryLogin*/
+#login-form-container {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  color: #474044;
+}
+
+#login-form-submit-button {
+  margin-top: 1rem;
+  background-color: #ffd9da;
+  width: 10rem;
+  padding: .5rem;
+  margin-right: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#login-form-submit-button:hover {
+  background-color: #f49fbc;
+  color: #474044;
+}
+
+#login-form-submit-button:active {
+  background-color: #ffd9da;
+  color: #474044;
+}

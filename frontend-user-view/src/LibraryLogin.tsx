@@ -86,7 +86,7 @@ export default function LibraryLogin({ setLoggedIn,  setShowAdmin }) {
                         />
                     </Form.Group>
                     <div>
-                        <MyButton id='lgoin-form-submit-button' title='Submit'></MyButton>
+                        <MyButton id='login-form-submit-button' title='Submit'></MyButton>
                     </div>
                 </Form>
             </Row>
