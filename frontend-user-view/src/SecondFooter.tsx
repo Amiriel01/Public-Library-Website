@@ -3,14 +3,38 @@ import Col from 'react-bootstrap/Col';
 import Logo from './images/logo.png';
 import { Link } from 'react-router-dom';
 
-export default function SecondFooter() {
+export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }) {
+
+    const renderLibraryLogin = () => {
+        if (showAdmin === false) {
+            return <Link id='second-footer-link' to='/LibraryLogin'>
+                <p id='bold-text'>
+                    Library Login
+                </p>
+            </Link>
+        }
+    }
+
+    const renderLibraryLogout = () => {
+        if (showAdmin === true) {
+            return <button id='library-logout-button' onClick={() => loggedInAndShowAdminValueReset()}>
+                Library Logout
+            </button>
+        }
+    }
+
+    const loggedInAndShowAdminValueReset = () => {
+        setLoggedIn(false);
+        setShowAdmin(false);
+    }
+
     return (
         <Row id='second-footer-container'>
             <Row id='second-footer-flex-container'>
                 <Col md={12} lg={4} id='second-footer-logo-container'>
-                    <img className='img-fluid'  id='second-footer-logo' src={Logo} alt='library-logo'></img>
+                    <img className='img-fluid' id='second-footer-logo' src={Logo} alt='library-logo'></img>
                 </Col>
-                <Col md={12} lg={4}  id='second-footer-connected-info-container'>
+                <Col md={12} lg={4} id='second-footer-connected-info-container'>
                     <h3 id='bold-text' className='connected-title'>
                         Stay Connected
                     </h3>
@@ -21,7 +45,7 @@ export default function SecondFooter() {
                         </p>
                     </div>
                 </Col>
-                <Col md={12} lg={4}  id='second-footer-links-container'>
+                <Col md={12} lg={4} id='second-footer-links-container'>
                     <Link id='second-footer-link' to='/FAQPage'>
                         <p id='bold-text'>
                             FAQ
@@ -37,11 +61,8 @@ export default function SecondFooter() {
                             Hours & Location
                         </p>
                     </Link>
-                    <Link id='second-footer-link' to='/LibraryLogin'>
-                        <p id='bold-text'>
-                            Library Login 
-                        </p>
-                    </Link>
+                    {renderLibraryLogin()}
+                    {renderLibraryLogout()}
                 </Col>
             </Row>
         </Row>

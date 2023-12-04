@@ -109,7 +109,11 @@ function App() {
           />}
           ></Route>
         </Routes>
-        <SecondFooter />
+        <SecondFooter
+          showAdmin={showAdmin}
+          setShowAdmin={setShowAdmin}
+          setLoggedIn={setLoggedIn}
+        />
       </div>
     </>
   )

@@ -848,6 +848,22 @@ html {
   color: #9bbec7;
 }
 
+#second-footer-link:hover {
+  text-decoration: underline;
+}
+
+#library-logout-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #9bbec7;
+  font-weight: bold;
+}
+
+#library-logout-button:hover {
+  text-decoration: underline;
+}
+
 @media(min-width: 992px) {
   #second-footer-connected-info-container {
     border-left: 1px solid #9bbec7;

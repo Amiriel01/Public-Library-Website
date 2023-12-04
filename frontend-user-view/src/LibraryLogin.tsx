@@ -9,7 +9,7 @@ import FirstFooter from './FirstFooter';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function LibraryLogin({ loggedIn, setLoggedIn, showAdmin, setShowAdmin }) {
+export default function LibraryLogin({ setLoggedIn,  setShowAdmin }) {
 
     const { pathname } = useLocation();
 
@@ -43,16 +43,9 @@ export default function LibraryLogin({ loggedIn, setLoggedIn, showAdmin, setShow
         setUserLogin(initialValues);
 
         await axios.get("http://localhost:3000/users/user/656d2207092df7c8443fd310").then((response) => {
-            console.log(response.status, response.data)
-            console.log(userLoginData.username)
-            console.log(userLoginData.password)
-            console.log(response.data.username)
-            console.log(response.data.password)
             if (response.data.username === userLoginData.username && response.data.password === userLoginData.password) {
                 setLoggedIn(true);
                 setShowAdmin(true);
-                // console.log(loggedIn)
-                // console.log(showAdmin)
             } else {
                 return
             }
