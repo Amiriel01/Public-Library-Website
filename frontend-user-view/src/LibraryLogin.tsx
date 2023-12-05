@@ -8,10 +8,12 @@ import { FormEvent, useState } from 'react';
 import FirstFooter from './FirstFooter';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useNavigate } from "react-router";
 
-export default function LibraryLogin({ setLoggedIn,  setShowAdmin }) {
+export default function LibraryLogin({ setLoggedIn, setShowAdmin }) {
 
     const { pathname } = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -46,6 +48,7 @@ export default function LibraryLogin({ setLoggedIn,  setShowAdmin }) {
             if (response.data.username === userLoginData.username && response.data.password === userLoginData.password) {
                 setLoggedIn(true);
                 setShowAdmin(true);
+                navigate("/Homepage");
             } else {
                 return
             }

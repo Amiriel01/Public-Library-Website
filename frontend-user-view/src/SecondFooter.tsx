@@ -18,8 +18,8 @@ export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }) {
     const renderLibraryLogout = () => {
         if (showAdmin === true) {
             return <button id='library-logout-button' onClick={() => loggedInAndShowAdminValueReset()}>
-                Library Logout
-            </button>
+                    Library Logout
+                </button>
         }
     }
 
