@@ -33,6 +33,7 @@ import NewsletterSignUp from './NewsletterSignUp';
 import SecondFooter from './SecondFooter';
 import EventPage from './EventPage';
 import LibraryLogin from './LibraryLogin';
+import AllContactRequests from './AllContactRequests';
 
 function App() {
 
@@ -40,8 +41,8 @@ function App() {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
   const [showAdmin, setShowAdmin] = useState<boolean>(false);
 
-  console.log(loggedIn)
-  console.log(showAdmin)
+  // console.log(loggedIn)
+  // console.log(showAdmin)
 
   return (
     <>
@@ -54,7 +55,9 @@ function App() {
         <Routes>
           <Route path="*" element={<Homepage />}></Route>
           <Route path='/HoursLocationPage' element={<HoursLocationPage />}></Route>
-          <Route path='/ContactPage' element={<ContactPage />}></Route>
+          <Route path='/ContactPage' element={<ContactPage
+            showAdmin={showAdmin}
+          />}></Route>
           <Route path='/BookSearchResultsPage' element={<BookSearchResultsPage
             bookData={bookData}
             setBookData={setBookData}
@@ -107,6 +110,8 @@ function App() {
             setLoggedIn={setLoggedIn}
             setShowAdmin={setShowAdmin}
           />}
+          ></Route>
+          <Route path='AllContactRequests' element={<AllContactRequests />}
           ></Route>
         </Routes>
         <SecondFooter

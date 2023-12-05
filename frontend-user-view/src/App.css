@@ -224,6 +224,21 @@ html {
   margin-right: auto;
 }
 
+#all-contact-requests-link {
+  color: #474044;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#all-contact-requests-link:hover {
+  color: #f49fbc;
+}
+
+#all-contact-requests-link:active {
+  color: #ffd9da;
+}
+
 #staff-card {
   width: 20rem;
   color: #474044;
@@ -285,6 +300,24 @@ html {
   font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+/*AllContactRequests*/
+#all-contact-requests-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#contact-request-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#contact-request-link {
+  text-decoration: none;
 }
 
 /*BookSearchResultsPage*/

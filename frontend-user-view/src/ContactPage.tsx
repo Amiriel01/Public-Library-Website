@@ -8,7 +8,7 @@ import Staff from './Staff';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function ContactPage() {
+export default function ContactPage({ showAdmin }) {
 
     const { pathname } = useLocation();
 
@@ -16,10 +16,25 @@ export default function ContactPage() {
         window.scrollTo(0, 0)
     }, [pathname]);
 
+    const allContactRequestsLink = () => {
+        if (showAdmin === true) {
+            return <Row id='all-contact-requests-container'>
+                    <Col>
+                    <Link id='all-contact-requests-link' to='/AllContactRequests'>
+                        <p>
+                            All Contact Requests
+                        </p>
+                    </Link>
+                    </Col>
+                </Row>
+        }
+    }
+
     return (
         <>
             <Row id='contact-page-container'>
                 <HomepageLink />
+                {allContactRequestsLink()}
                 <Row>
                     <Col >
                         <h1 id='page-titles'>
