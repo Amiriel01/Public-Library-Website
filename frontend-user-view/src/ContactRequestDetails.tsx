@@ -76,6 +76,11 @@ export default function ContactRequestDetails() {
         })
     }
 
+    const handleDeleteContactRequest = () => {
+
+        axios.delete(`http://localhost:3000/contact/contactForm/${id}`);
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [pathname]);
@@ -140,6 +145,9 @@ export default function ContactRequestDetails() {
                 </Form.Group>
                 <Link to='/AllContactRequests'>
                     <MyButton id="contact-request-update-button" title="Update Contact Request"></MyButton>
+                </Link>
+                <Link to='/AllContactRequests'>
+                    <MyButton onClick={handleDeleteContactRequest} id="contact-request-update-button" title="Delete Contact Request"></MyButton>
                 </Link>
                 <Link to='/AllContactRequests'>
                     <MyButton id="contact-request-update-button" title="View All Contact Requests"></MyButton>
