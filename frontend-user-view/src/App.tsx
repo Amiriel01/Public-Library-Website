@@ -34,6 +34,7 @@ import SecondFooter from './SecondFooter';
 import EventPage from './EventPage';
 import LibraryLogin from './LibraryLogin';
 import AllContactRequests from './AllContactRequests';
+import ContactRequestDetails from './ContactRequestDetails';
 
 function App() {
 
@@ -62,56 +63,58 @@ function App() {
             bookData={bookData}
             setBookData={setBookData}
           />}></Route>
-          <Route path='FAQPage' element={<FAQPage />}></Route>
-          <Route path='LibraryCardForm' element={<LibraryCardForm />}
+          <Route path='/FAQPage' element={<FAQPage />}></Route>
+          <Route path='/LibraryCardForm' element={<LibraryCardForm />}
           ></Route>
-          <Route path='CrossLibraryForm' element={<CrossLibraryLoanForm />}
+          <Route path='/CrossLibraryForm' element={<CrossLibraryLoanForm />}
           ></Route>
-          <Route path='GivingInfo' element={<GivingInfo />}
+          <Route path='/GivingInfo' element={<GivingInfo />}
           ></Route>
-          <Route path='Donate' element={<Donate />}
+          <Route path='/Donate' element={<Donate />}
           ></Route>
-          <Route path='MeetingRoom' element={<MeetingRoom />}
+          <Route path='/MeetingRoom' element={<MeetingRoom />}
           ></Route>
-          <Route path='VolunteerApplication' element={<VolunteerApplication />}
+          <Route path='/VolunteerApplication' element={<VolunteerApplication />}
           ></Route>
-          <Route path='MeetingRoomInformation' element={<MeetingRoomInformation />}
+          <Route path='/MeetingRoomInformation' element={<MeetingRoomInformation />}
           ></Route>
-          <Route path='AuthorEvents' element={<AuthorEvents />}
+          <Route path='/AuthorEvents' element={<AuthorEvents />}
           ></Route>
-          <Route path='AboutLibrary' element={<AboutLibrary />}
+          <Route path='/AboutLibrary' element={<AboutLibrary />}
           ></Route>
-          <Route path='UpcomingEvents' element={<UpcomingEvents />}
+          <Route path='/UpcomingEvents' element={<UpcomingEvents />}
           ></Route>
-          <Route path='StudentResources' element={<StudentResources />}
+          <Route path='/StudentResources' element={<StudentResources />}
           ></Route>
-          <Route path='EveryoneEvents' element={<EveryoneEvents />}
+          <Route path='/EveryoneEvents' element={<EveryoneEvents />}
           ></Route>
-          <Route path='AdultEvents' element={<AdultEvents />}
+          <Route path='/AdultEvents' element={<AdultEvents />}
           ></Route>
-          <Route path='TeenTweenEvents' element={<TeenTweenEvents />}
+          <Route path='/TeenTweenEvents' element={<TeenTweenEvents />}
           ></Route>
-          <Route path='ChildrenEvents' element={<ChildrenEvents />}
+          <Route path='/ChildrenEvents' element={<ChildrenEvents />}
           ></Route>
-          <Route path='InLibraryResources' element={<InLibraryResources />}></Route>
-          <Route path='MathDigitalResources' element={<MathDigitalResources />}
+          <Route path='/InLibraryResources' element={<InLibraryResources />}></Route>
+          <Route path='/MathDigitalResources' element={<MathDigitalResources />}
           ></Route>
-          <Route path='EnglishDigitalResources' element={<EnglishDigitalResources />}
+          <Route path='/EnglishDigitalResources' element={<EnglishDigitalResources />}
           ></Route>
-          <Route path='Staff' element={<Staff />}
+          <Route path='/Staff' element={<Staff />}
           ></Route>
-          <Route path='NewsletterSignUp' element={<NewsletterSignUp />}
+          <Route path='/NewsletterSignUp' element={<NewsletterSignUp />}
           ></Route>
-          <Route path='FirstFooter' element={<FirstFooter />}
+          <Route path='/FirstFooter' element={<FirstFooter />}
           ></Route>
-          <Route path='EventPage' element={<EventPage />}
+          <Route path='/EventPage' element={<EventPage />}
           ></Route>
-          <Route path='LibraryLogin' element={<LibraryLogin
+          <Route path='/LibraryLogin' element={<LibraryLogin
             setLoggedIn={setLoggedIn}
             setShowAdmin={setShowAdmin}
           />}
           ></Route>
-          <Route path='AllContactRequests' element={<AllContactRequests />}
+          <Route path='/AllContactRequests' element={<AllContactRequests />}
+          ></Route>
+          <Route path='/contact/contactForm/:id' element={<ContactRequestDetails />}
           ></Route>
         </Routes>
         <SecondFooter
