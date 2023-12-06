@@ -18,15 +18,15 @@ export default function ContactPage({ showAdmin }) {
 
     const allContactRequestsLink = () => {
         if (showAdmin === true) {
-            return <Row id='all-contact-requests-container'>
-                    <Col>
-                    <Link id='all-contact-requests-link' to='/AllContactRequests'>
-                        <p>
+            return <Row>
+                <Col>
+                    <p>
+                        <Link id='all-contacts-page-link' to='/AllContactRequests'>
                             All Contact Requests
-                        </p>
-                    </Link>
-                    </Col>
-                </Row>
+                        </Link>
+                    </p>
+                </Col>
+            </Row>
         }
     }
 

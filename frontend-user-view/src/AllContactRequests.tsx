@@ -30,7 +30,7 @@ export default function AllContactRequests() {
         <Row id='all-contact-requests-container'>
             <HomepageLink />
             {contactRequestsList.map((contactRequest) => {
-                return <NavLink to={"/ContactRequestDetails/" + contactRequest._id}
+                return <NavLink to={"/contact/contactForm/" + contactRequest._id}
                     key={contactRequest._id}
                     id='contact-request-link'>
                     <Card id='contact-request-container'>
