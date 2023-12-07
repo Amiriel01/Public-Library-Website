@@ -64,7 +64,7 @@ export default function AllContactRequests() {
                             <Card.Text>
                                 <div id='bold-flex-container'>
                                     <p id='bold-text'>Email:</p>
-                                    <p>{contactRequest.email}</p>
+                                    <p id='all-contact-email'>{contactRequest.email}</p>
                                 </div>
                             </Card.Text>
                             <Card.Text>
@@ -117,7 +117,7 @@ export default function AllContactRequests() {
                             <Card.Text>
                                 <div id='bold-flex-container'>
                                     <p id='bold-text'>Email:</p>
-                                    <p>{contactRequest.email}</p>
+                                    <p id='all-contact-email'>{contactRequest.email}</p>
                                 </div>
                             </Card.Text>
                             <Card.Text>

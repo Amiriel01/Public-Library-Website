@@ -322,6 +322,12 @@ html {
   color: #474044;
 }
 
+@media(max-width: 300px) {
+  #all-contact-email {
+    word-break: break-all;
+  }
+}
+
 #contact-request-link {
   text-decoration: none;
 }
