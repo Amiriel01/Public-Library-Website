@@ -29,7 +29,74 @@ export default function AllContactRequests() {
     return (
         <Row id='all-contact-requests-container'>
             <HomepageLink />
-            {contactRequestsList.map((contactRequest) => {
+            <Row>
+                <Col>
+                <h1 id='bold-text'>
+                    Contact Requests
+                </h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                <h2 className='all-contact-subheader'>
+                    Not Completed:
+                </h2>
+                </Col>
+            </Row>
+            {contactRequestsList.filter(value => value.completed === false).map((contactRequest) => {
+                return <NavLink to={"/contact/contactForm/" + contactRequest._id}
+                    key={contactRequest._id}
+                    id='contact-request-link'>
+                    <Card id='contact-request-container'>
+                        <Card.Body>
+                            <Card.Text>
+                                <div id='bold-flex-container'>
+                                    <p id='bold-text'>Name:</p>
+                                    <p>{contactRequest.name}</p>
+                                </div>
+                            </Card.Text>
+                            <Card.Text>
+                                <div id='bold-flex-container'>
+                                    <p id='bold-text'>Phone:</p>
+                                    <p>{contactRequest.phone}</p>
+                                </div>
+                            </Card.Text>
+                            <Card.Text>
+                                <div id='bold-flex-container'>
+                                    <p id='bold-text'>Email:</p>
+                                    <p>{contactRequest.email}</p>
+                                </div>
+                            </Card.Text>
+                            <Card.Text>
+                                <div id='bold-flex-container'>
+                                    <p id='bold-text'>Help:</p>
+                                    <p>{contactRequest.help}</p>
+                                </div>
+                            </Card.Text>
+                            <Card.Text>
+                                <div id='bold-flex-container'>
+                                    <p id='bold-text'>Message:</p>
+                                    <p>{contactRequest.message}</p>
+                                </div>
+                            </Card.Text>
+                            <Card.Text>
+                                <div id='bold-flex-container'>
+                                    <p id='bold-text'>Admin Notes:</p>
+                                    <p>{contactRequest.admin_notes}</p>
+                                </div>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </NavLink>
+            })}
+            <Row>
+                <Col>
+                <h2 className='all-contact-subheader'>
+                    Completed:
+                </h2>
+                </Col>
+            </Row>
+            {contactRequestsList.filter(value => value.completed === true).map((contactRequest) => {
                 return <NavLink to={"/contact/contactForm/" + contactRequest._id}
                     key={contactRequest._id}
                     id='contact-request-link'>

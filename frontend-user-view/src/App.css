@@ -304,16 +304,22 @@ html {
 
 /*AllContactRequests*/
 #all-contact-requests-container {
-  width: 80%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: #474044;
+}
+
+.all-contact-subheader {
+  margin-top: 2rem;
 }
 
 #contact-request-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: #474044;
 }
 
 #contact-request-link {
