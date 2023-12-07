@@ -231,6 +231,13 @@ html {
   font-size: 1.25rem;
 }
 
+#all-library-card-page-link {
+  color: #474044;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
 #all-contacts-page-link:hover {
   color: #f49fbc;
 }
@@ -468,6 +475,21 @@ html {
   margin-left: auto;
 }
 
+#all-library-card-page-link {
+  color: #474044;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#all-library-card-page-link:hover {
+  color: #f49fbc;
+}
+
+#all-library-card-page-link:active {
+  color: #ffd9da;
+}
+
 .form-label {
   margin-top: .5rem;
 }
@@ -477,6 +499,65 @@ html {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/*AllLibraryCardRequest*/
+#all-library-card-requests-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #474044;
+}
+
+.all-library-card-subheader {
+  margin-top: 2rem;
+}
+
+#library-card-request-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #474044;
+}
+
+@media(max-width: 300px) {
+  #all-library-card-email {
+    word-break: break-all;
+  }
+}
+
+#library-card-request-link {
+  text-decoration: none;
+}
+
+/*LibraryCardDetails page*/
+/*ContactRequestDetails page*/
+#library-card-request-container-page {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+#library-card-request-update-button {
+  background-color: #ffd9da;
+  padding: .5rem;
+  color: #474044;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+#library-card-request-update-button:hover {
+  background-color: #f49fbc;
+  color: #474044;
+}
+
+#library-card-request-update-button:active {
+  background-color: #ffd9da;
+  color: #474044;
 }
 
 /*Giving accordion and GivingInfo page*/

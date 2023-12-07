@@ -20,9 +20,11 @@ export default function ContactRequestDetails() {
         message: '',
         admin_notes: '',
     });
+
     const [contactRequestDetailUpdate, setContactRequestDetailUpdate] = useState({
         admin_notes: '',
     });
+
     const [completed, setCompleted] = useState<boolean>(false);
     const [isCheckedCompleted, setIsCheckedCompleted] = useState(false);
 
@@ -143,9 +145,9 @@ export default function ContactRequestDetails() {
                         onChange={handleChangeCompleted}
                     />
                 </Form.Group>
-                <Link to='/AllContactRequests'>
+                {/* <Link to='/AllContactRequests'> */}
                     <MyButton id="contact-request-update-button" title="Update Contact Request"></MyButton>
-                </Link>
+                {/* </Link> */}
                 <Link to='/AllContactRequests'>
                     <MyButton onClick={handleDeleteContactRequest} id="contact-request-update-button" title="Delete Contact Request"></MyButton>
                 </Link>

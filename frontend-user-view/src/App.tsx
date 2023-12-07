@@ -35,6 +35,8 @@ import EventPage from './EventPage';
 import LibraryLogin from './LibraryLogin';
 import AllContactRequests from './AllContactRequests';
 import ContactRequestDetails from './ContactRequestDetails';
+import AllLibraryCardRequests from './AllLibraryCardRequests';
+import LibraryCardRequestDetails from './LibraryCardRequestDetails';
 
 function App() {
 
@@ -64,7 +66,9 @@ function App() {
             setBookData={setBookData}
           />}></Route>
           <Route path='/FAQPage' element={<FAQPage />}></Route>
-          <Route path='/LibraryCardForm' element={<LibraryCardForm />}
+          <Route path='/LibraryCardForm' element={<LibraryCardForm
+            showAdmin={showAdmin}
+          />}
           ></Route>
           <Route path='/CrossLibraryForm' element={<CrossLibraryLoanForm />}
           ></Route>
@@ -115,6 +119,10 @@ function App() {
           <Route path='/AllContactRequests' element={<AllContactRequests />}
           ></Route>
           <Route path='/contact/contactForm/:id' element={<ContactRequestDetails />}
+          ></Route>
+           <Route path='/AllLibraryCardRequests' element={<AllLibraryCardRequests />}
+          ></Route>
+            <Route path='/libraryCard/libraryCardSubmission/:id' element={<LibraryCardRequestDetails />}
           ></Route>
         </Routes>
         <SecondFooter
