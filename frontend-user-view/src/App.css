@@ -1119,3 +1119,46 @@ html {
   background-color: #ffd9da;
   color: #474044;
 }
+
+/*AllCrossLibraryLoanRequests*/
+#all-cross-library-page-link {
+  color: #474044;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#all-cross-library-page-link:hover {
+  color: #f49fbc;
+}
+
+#all-cross-library-page-link:active {
+  color: #ffd9da;
+}
+
+#cross-library-request-link {
+  text-decoration: none;
+}
+
+#all-cross-library-loan-requests-container {
+  color: #474044;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.all-cross-library-loan-requests-subheader {
+  margin-top: 1rem;
+}
+
+#cross-library-request-container {
+  color: #474044;
+  margin-top: 1rem;
+}
+
+#card-flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

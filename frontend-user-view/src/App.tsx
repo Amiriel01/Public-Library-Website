@@ -37,6 +37,8 @@ import AllContactRequests from './AllContactRequests';
 import ContactRequestDetails from './ContactRequestDetails';
 import AllLibraryCardRequests from './AllLibraryCardRequests';
 import LibraryCardRequestDetails from './LibraryCardRequestDetails';
+import AllCrossLibraryLoanRequests from './AllCrossLibraryLoanRequests';
+import CrossLibraryLoanDetails from './CrossLibraryLoanDetails';
 
 function App() {
 
@@ -70,7 +72,9 @@ function App() {
             showAdmin={showAdmin}
           />}
           ></Route>
-          <Route path='/CrossLibraryForm' element={<CrossLibraryLoanForm />}
+          <Route path='/CrossLibraryForm' element={<CrossLibraryLoanForm
+            showAdmin={showAdmin}
+          />}
           ></Route>
           <Route path='/GivingInfo' element={<GivingInfo />}
           ></Route>
@@ -120,9 +124,14 @@ function App() {
           ></Route>
           <Route path='/contact/contactForm/:id' element={<ContactRequestDetails />}
           ></Route>
-           <Route path='/AllLibraryCardRequests' element={<AllLibraryCardRequests />}
+          <Route path='/AllLibraryCardRequests' element={<AllLibraryCardRequests />}
           ></Route>
-            <Route path='/libraryCard/libraryCardSubmission/:id' element={<LibraryCardRequestDetails />}
+          <Route path='/libraryCard/libraryCardSubmission/:id' element={<LibraryCardRequestDetails />}
+          ></Route>
+          <Route path='/AllCrossLibraryLoanRequests' element={<AllCrossLibraryLoanRequests
+          />}
+          ></Route>
+          <Route path='/crossLibrary/crossLibraryForm/:id' element={<CrossLibraryLoanDetails />}
           ></Route>
         </Routes>
         <SecondFooter

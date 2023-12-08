@@ -7,10 +7,10 @@ import FirstFooter from './FirstFooter';
 import axios from 'axios';
 import { FormEvent, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function CrossLibraryLoanForm() {
+export default function CrossLibraryLoanForm({showAdmin}) {
 
     const { pathname } = useLocation();
 
@@ -60,10 +60,25 @@ export default function CrossLibraryLoanForm() {
         })
     }
 
+    const allCrossLibraryLoanLink = () => {
+        if (showAdmin === true) {
+            return <Row>
+                <Col>
+                    <p>
+                        <Link id='all-cross-library-page-link' to='/AllCrossLibraryLoanRequests'>
+                            All Cross Library Loan Requests
+                        </Link>
+                    </p>
+                </Col>
+            </Row>
+        }
+    }
+
     return (
         <>
             <Row id='library-card-form-container'>
                 <HomepageLink />
+                {allCrossLibraryLoanLink()}
                 <Row>
                     <Col>
                         <h1 id='page-titles'>
