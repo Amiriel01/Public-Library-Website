@@ -55,6 +55,12 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }) {
         })
     }
 
+    // const asyncUpdate = () => {
+    //     setTimeout(() => {
+    //       setCount((currentCount) => currentCount + 1);
+    //     }, 2000);
+    //   };
+
     return (
         <>
             <Row id='login-form-container'>

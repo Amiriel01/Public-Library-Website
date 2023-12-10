@@ -40,6 +40,8 @@ import LibraryCardRequestDetails from './LibraryCardRequestDetails';
 import AllCrossLibraryLoanRequests from './AllCrossLibraryLoanRequests';
 import CrossLibraryLoanDetails from './CrossLibraryLoanDetails';
 import AllVolunteerApplications from './AllVolunteerApplications';
+import { useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
 
@@ -47,8 +49,81 @@ function App() {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
   const [showAdmin, setShowAdmin] = useState<boolean>(false);
 
-  // console.log(loggedIn)
-  // console.log(showAdmin)
+  const [monday, setMonday] = useState<string>('');
+  const [tuesday, setTuesday] = useState<string>('');
+  const [wednesday, setWednesday] = useState<string>('');
+  const [thursday, setThursday] = useState<string>('');
+  const [friday, setFriday] = useState<string>('');
+  const [saturday, setSaturday] = useState<string>('');
+  const [sunday, setSunday] = useState<string>('');
+
+  const [morning, setMorning] = useState<string>('');
+  const [afternoon, setAfternoon] = useState<string>('');
+  const [evening, setEvening] = useState<string>('');
+
+  const [volunteerApplicationsList, setVolunteerApplicationsList] = useState([]);
+
+  // const [count, setCount] = useState(0);
+
+
+  async function getVolunteerApplications() {
+    await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
+      setVolunteerApplicationsList(response.data);
+      console.log(response.status, response.data);
+    })
+  }
+
+  useEffect(() => {
+    getVolunteerApplications();
+  }, []);
+
+  const getVolunteerDays = () => {
+    volunteerApplicationsList.map((volunteerApplication) => {
+      if (volunteerApplication.monday === true) {
+        setMonday("Monday")
+      }
+
+      if (volunteerApplication.tuesday === true) {
+        setTuesday("Tuesday")
+      }
+
+      if (volunteerApplication.wednesday === true) {
+        setWednesday("Wednesday")
+      }
+
+      if (volunteerApplication.thursday === true) {
+        setThursday("Thursday")
+      }
+
+      if (volunteerApplication.friday === true) {
+        setFriday("Friday")
+      }
+
+      if (volunteerApplication.saturday === true) {
+        setSaturday("Saturday")
+      }
+
+      if (volunteerApplication.sunday === true) {
+        setSunday("Sunday")
+      }
+
+      if (volunteerApplication.morning === true) {
+        setMorning("Open to Noon")
+      }
+
+      if (volunteerApplication.afternoon === true) {
+        setAfternoon("Noon to Four")
+      }
+
+      if (volunteerApplication.evening === true) {
+        setEvening("Four to Close")
+      }
+    })
+  }
+
+  useEffect(() => {
+    getVolunteerDays();
+  }, [volunteerApplicationsList])
 
   return (
     <>
@@ -137,6 +212,17 @@ function App() {
           <Route path='/crossLibrary/crossLibraryForm/:id' element={<CrossLibraryLoanDetails />}
           ></Route>
           <Route path='/AllVolunteerApplications' element={<AllVolunteerApplications
+            volunteerApplicationsList={volunteerApplicationsList}
+            monday={monday}
+            tuesday={tuesday}
+            wednesday={wednesday}
+            thursday={thursday}
+            friday={friday}
+            saturday={saturday}
+            sunday={sunday}
+            morning={morning}
+            afternoon={afternoon}
+            evening={evening}
           />}
           ></Route>
         </Routes>

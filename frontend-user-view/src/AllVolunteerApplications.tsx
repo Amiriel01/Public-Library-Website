@@ -5,86 +5,89 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import HomepageLink from './HomepageLink';
-import VolunteerApplication from './VolunteerApplication';
 
-export default function AllVolunteerApplications() {
+export default function AllVolunteerApplications( {monday, tuesday, wednesday, thursday, friday, saturday, sunday, morning, afternoon, evening, volunteerApplicationsList }) {
 
     const { pathname } = useLocation();
-    const [volunteerApplicationsList, setVolunteerApplicationsList] = useState([]);
+    // const [volunteerApplicationsList, setVolunteerApplicationsList] = useState([]);
 
-    const [monday, setMonday] = useState<string>('');
-    const [tuesday, setTuesday] = useState<string>('');
-    const [wednesday, setWednesday] = useState<string>('');
-    const [thursday, setThursday] = useState<string>('');
-    const [friday, setFriday] = useState<string>('');
-    const [saturday, setSaturday] = useState<string>('');
-    const [sunday, setSunday] = useState<string>('');
+    // const [monday, setMonday] = useState<string>('');
+    // const [tuesday, setTuesday] = useState<string>('');
+    // const [wednesday, setWednesday] = useState<string>('');
+    // const [thursday, setThursday] = useState<string>('');
+    // const [friday, setFriday] = useState<string>('');
+    // const [saturday, setSaturday] = useState<string>('');
+    // const [sunday, setSunday] = useState<string>('');
 
-    const [morning, setMorning] = useState<string>('');
-    const [afternoon, setAfternoon] = useState<string>('');
-    const [evening, setEvening] = useState<string>('');
+    // const [morning, setMorning] = useState<string>('');
+    // const [afternoon, setAfternoon] = useState<string>('');
+    // const [evening, setEvening] = useState<string>('');
 
     const [interviewed, setInterviewed] = useState<string>('');
+    console.log(monday)
     // const [insterviewNotes, setInterviewNotes] = useState<string>('');
 
 
-    async function getVolunteerApplications() {
-        await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
-            setVolunteerApplicationsList(response.data);
-            console.log(response.status, response.data);
-        })
+    // async function getVolunteerApplications() {
+    //     await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
+    //         setVolunteerApplicationsList(response.data);
+    //         console.log(response.status, response.data);
+    //     })
+    // }
 
-        volunteerApplicationsList.map((volunteerApplication) => {
-            if (volunteerApplication.monday === true) {
-                setMonday("Monday")
-                console.log(monday)
-            }
+    // const volunteerDays = () => {
+    //     volunteerApplicationsList.map((volunteerApplication) => {
+    //         if (volunteerApplication.monday === true) {
+    //             setMonday("Monday")
+    //             console.log(monday)
+    //         }
 
-            if (volunteerApplication.tuesday === true) {
-                setTuesday("Tuesday")
-            }
+    //         if (volunteerApplication.tuesday === true) {
+    //             setTuesday("Tuesday")
+    //         }
 
-            if (volunteerApplication.wednesday === true) {
-                setWednesday("Wednesday")
-            }
+    //         if (volunteerApplication.wednesday === true) {
+    //             setWednesday("Wednesday")
+    //         }
 
-            if (volunteerApplication.thursday === true) {
-                setThursday("Thursday")
-            }
+    //         if (volunteerApplication.thursday === true) {
+    //             setThursday("Thursday")
+    //         }
 
-            if (volunteerApplication.friday === true) {
-                setFriday("Friday")
-            }
+    //         if (volunteerApplication.friday === true) {
+    //             setFriday("Friday")
+    //         }
 
-            if (volunteerApplication.saturday === true) {
-                setSaturday("Saturday")
-            }
+    //         if (volunteerApplication.saturday === true) {
+    //             setSaturday("Saturday")
+    //         }
 
-            if (volunteerApplication.sunday === true) {
-                setSunday("Sunday")
-            }
+    //         if (volunteerApplication.sunday === true) {
+    //             setSunday("Sunday")
+    //         }
 
-            if (volunteerApplication.morning === true) {
-                setMorning("Open to Noon")
-            }
+    //         if (volunteerApplication.morning === true) {
+    //             setMorning("Open to Noon")
+    //         }
 
-            if (volunteerApplication.afternoon === true) {
-                setAfternoon("Noon to Four")
-            }
+    //         if (volunteerApplication.afternoon === true) {
+    //             setAfternoon("Noon to Four")
+    //         }
 
-            if (volunteerApplication.evening === true) {
-                setEvening("Four to Close")
-            }
+    //         if (volunteerApplication.evening === true) {
+    //             setEvening("Four to Close")
+    //         }
 
-            if (volunteerApplication.interviewed === true) {
-                setInterviewed("Interviewed")
-            }
-        })
-    }
+    //         if (volunteerApplication.interviewed === true) {
+    //             setInterviewed("Interviewed")
+    //         }
+    //     })
+    // }
 
-    useEffect(() => {
-        getVolunteerApplications();
-    }, []);
+    // useEffect(() => {
+    //     getVolunteerApplications();
+    //     volunteerDays();
+    // }, []);
 
     useEffect(() => {
         window.scrollTo(0, 0)
