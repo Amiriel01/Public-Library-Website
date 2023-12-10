@@ -147,7 +147,7 @@ export default function AllVolunteerApplications() {
                             </div>
                             <div>
                                 <Card.Text>
-                                    <p id='bold-text'>Dates Available</p>
+                                    <p id='bold-text'>Dates Available:</p>
                                 </Card.Text>
                                 <Card.Text>
                                     <p>{monday}</p>
@@ -159,7 +159,7 @@ export default function AllVolunteerApplications() {
                                     <p>{sunday}</p>
                                 </Card.Text>
                                 <Card.Text>
-                                    <p id='bold-text'>Times Available</p>
+                                    <p id='bold-text'>Times Available:</p>
                                 </Card.Text>
                                 <Card.Text>
                                     <p>{morning}</p>
@@ -224,7 +224,7 @@ export default function AllVolunteerApplications() {
                             </div>
                             <div>
                                 <Card.Text>
-                                    <p id='bold-text'>Dates Available</p>
+                                    <p id='bold-text'>Dates Available:</p>
                                 </Card.Text>
                                 <Card.Text>
                                     <p>{monday}</p>
@@ -236,7 +236,7 @@ export default function AllVolunteerApplications() {
                                     <p>{sunday}</p>
                                 </Card.Text>
                                 <Card.Text>
-                                    <p id='bold-text'>Times Available</p>
+                                    <p id='bold-text'>Times Available:</p>
                                 </Card.Text>
                                 <Card.Text>
                                     <p>{morning}</p>
