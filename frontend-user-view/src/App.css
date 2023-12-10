@@ -1162,3 +1162,62 @@ html {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+/*Volunteer Form page*/
+#all-volunteer-applications-link {
+    color: #474044;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#all-volunteer-applications-link:hover {
+  color: #f49fbc;
+}
+
+#all-volunteer-applications-link:active {
+  color: #ffd9da;
+}
+
+#volunteer-application-link {
+  text-decoration: none;
+}
+
+/*AllVolunteerApplications*/
+#all-volunteer-applications-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  color: #474044;
+}
+
+#all-volunteer-applications-subheader {
+  margin-top: 2rem;
+}
+
+#volunteer-application-container {
+  margin-bottom: 2rem;
+  color: #474044;
+  margin-top: 1rem;
+}
+
+#dates-flex-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+#all-volunteer-flex-availability {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#interview-notes-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+

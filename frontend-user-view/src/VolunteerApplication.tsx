@@ -7,10 +7,10 @@ import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
 import HomepageLink from './HomepageLink';
 import FirstFooter from './FirstFooter';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function VolunteerApplication() {
+export default function VolunteerApplication({showAdmin}) {
 
     const { pathname } = useLocation();
 
@@ -152,10 +152,25 @@ export default function VolunteerApplication() {
         })
     }
 
+    const allVolunteerApplicationsLink = () => {
+        if (showAdmin === true) {
+            return <Row>
+                <Col>
+                    <p>
+                        <Link id='all-volunteer-applications-link' to='/AllVolunteerApplications'>
+                            All Volunteer Applications
+                        </Link>
+                    </p>
+                </Col>
+            </Row>
+        }
+    }
+
     return (
         <>
             <Row id='library-card-form-container'>
                 <HomepageLink />
+                {allVolunteerApplicationsLink()}
                 <Row>
                     <Col>
                         <h1 id='page-titles'>

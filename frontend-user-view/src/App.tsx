@@ -39,6 +39,7 @@ import AllLibraryCardRequests from './AllLibraryCardRequests';
 import LibraryCardRequestDetails from './LibraryCardRequestDetails';
 import AllCrossLibraryLoanRequests from './AllCrossLibraryLoanRequests';
 import CrossLibraryLoanDetails from './CrossLibraryLoanDetails';
+import AllVolunteerApplications from './AllVolunteerApplications';
 
 function App() {
 
@@ -82,7 +83,9 @@ function App() {
           ></Route>
           <Route path='/MeetingRoom' element={<MeetingRoom />}
           ></Route>
-          <Route path='/VolunteerApplication' element={<VolunteerApplication />}
+          <Route path='/VolunteerApplication' element={<VolunteerApplication
+            showAdmin={showAdmin}
+          />}
           ></Route>
           <Route path='/MeetingRoomInformation' element={<MeetingRoomInformation />}
           ></Route>
@@ -132,6 +135,9 @@ function App() {
           />}
           ></Route>
           <Route path='/crossLibrary/crossLibraryForm/:id' element={<CrossLibraryLoanDetails />}
+          ></Route>
+          <Route path='/AllVolunteerApplications' element={<AllVolunteerApplications
+          />}
           ></Route>
         </Routes>
         <SecondFooter
