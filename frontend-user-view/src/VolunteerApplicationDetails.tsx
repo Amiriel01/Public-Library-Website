@@ -20,17 +20,17 @@ export default function VolunteerApplicationDetails() {
         volunteer_experience: '',
     });
 
-    // const [monday, setMonday] = useState<string>('');
-    // const [tuesday, setTuesday] = useState<string>('');
-    // const [wednesday, setWednesday] = useState<string>('');
-    // const [thursday, setThursday] = useState<string>('');
-    // const [friday, setFriday] = useState<string>('');
-    // const [saturday, setSaturday] = useState<string>('');
-    // const [sunday, setSunday] = useState<string>('');
+    const [monday, setMonday] = useState<string>('');
+    const [tuesday, setTuesday] = useState<string>('');
+    const [wednesday, setWednesday] = useState<string>('');
+    const [thursday, setThursday] = useState<string>('');
+    const [friday, setFriday] = useState<string>('');
+    const [saturday, setSaturday] = useState<string>('');
+    const [sunday, setSunday] = useState<string>('');
 
-    // const [morning, setMorning] = useState<string>('');
-    // const [afternoon, setAfternoon] = useState<string>('');
-    // const [evening, setEvening] = useState<string>('');
+    const [morning, setMorning] = useState<string>('');
+    const [afternoon, setAfternoon] = useState<string>('');
+    const [evening, setEvening] = useState<string>('');
 
     const [volunteerApplicationDetailsUpdate, setVolunteerApplicationDetailsUpdate] = useState({
         interview_notes: '',
@@ -44,58 +44,57 @@ export default function VolunteerApplicationDetails() {
             setVolunteerApplicationDetails(response.data);
             console.log(response.status, response.data);
         })
-
-        volunteerApplicationsList.map((volunteerApplication) => {
-            if (volunteerApplication.monday === true) {
-                setMonday("Monday")
-                console.log(monday)
-            }
-
-            if (volunteerApplication.tuesday === true) {
-                setTuesday("Tuesday")
-            }
-
-            if (volunteerApplication.wednesday === true) {
-                setWednesday("Wednesday")
-            }
-
-            if (volunteerApplication.thursday === true) {
-                setThursday("Thursday")
-            }
-
-            if (volunteerApplication.friday === true) {
-                setFriday("Friday")
-            }
-
-            if (volunteerApplication.saturday === true) {
-                setSaturday("Saturday")
-            }
-
-            if (volunteerApplication.sunday === true) {
-                setSunday("Sunday")
-            }
-
-            if (volunteerApplication.morning === true) {
-                setMorning("Open to Noon")
-            }
-
-            if (volunteerApplication.afternoon === true) {
-                setAfternoon("Noon to Four")
-            }
-
-            if (volunteerApplication.evening === true) {
-                setEvening("Four to Close")
-            }
-
-            // if (volunteerApplication.interviewed === true) {
-            //     setInterviewed("Interviewed")
-            // }
-        })
     }
 
     useEffect(() => {
         getVolunteerApplicationDetails();
     }, []);
+
+    const getScheduleInformation = () => {
+        if (volunteerApplicationDetails.monday === true) {
+            setMonday("Monday")
+        }
+
+        if (volunteerApplicationDetails.tuesday === true) {
+            setTuesday("Tuesday")
+        }
+
+        if (volunteerApplicationDetails.wednesday === true) {
+            setWednesday("Wednesday")
+        }
+
+        if (volunteerApplicationDetails.thursday === true) {
+            setThursday("Thursday")
+        }
+
+        if (volunteerApplicationDetails.friday === true) {
+            setFriday("Friday")
+        }
+
+        if (volunteerApplicationDetails.saturday === true) {
+            setSaturday("Saturday")
+        }
+
+        if (volunteerApplicationDetails.sunday === true) {
+            setSunday("Sunday")
+        }
+
+        if (volunteerApplicationDetails.morning === true) {
+            setMorning("Open to Noon")
+        }
+
+        if (volunteerApplicationDetails.afternoon === true) {
+            setAfternoon("Noon to Four")
+        }
+
+        if (volunteerApplicationDetails.evening === true) {
+            setEvening("Four to Close")
+        }
+    }
+
+    useEffect(() => {
+        getScheduleInformation();
+    }, [volunteerApplicationDetails])
 
     useEffect(() => {
         const formData = {
@@ -126,16 +125,16 @@ export default function VolunteerApplicationDetails() {
             email: volunteerApplicationDetails.email,
             work_experience: volunteerApplicationDetails.work_experience,
             volunteer_experience: volunteerApplicationDetails.volunteer_experience,
-            monday: monday,
-            tuesday: tuesday,
-            wednesday: wednesday,
-            thursday: thursday,
-            friday: friday,
-            saturday: saturday,
-            sunday: sunday,
-            morning: morning,
-            afternoon: afternoon,
-            evening: evening,
+            monday: volunteerApplicationDetails.monday,
+            tuesday: volunteerApplicationDetails.tuesday,
+            wednesday: volunteerApplicationDetails.wednesday,
+            thursday: volunteerApplicationDetails.thursday,
+            friday: volunteerApplicationDetails.friday,
+            saturday: volunteerApplicationDetails.saturday,
+            sunday: volunteerApplicationDetails.sunday,
+            morning: volunteerApplicationDetails.morning,
+            afternoon: volunteerApplicationDetails.afternoon,
+            evening: volunteerApplicationDetails.evening,
             interview_notes: volunteerApplicationDetailsUpdate.interview_notes,
             approved: approved,
         }
@@ -156,7 +155,7 @@ export default function VolunteerApplicationDetails() {
     }, [pathname]);
 
     return (
-        <Row id="contact-request-container-page">
+        <Row id="volunteer-details-container-page">
             <HomepageLink />
             <Card id='contact-request-container'>
                 <Card.Body id='card-flex-container'>
@@ -218,10 +217,10 @@ export default function VolunteerApplicationDetails() {
             </Card>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Order Notes</Form.Label>
+                    <Form.Label>Interview Notes:</Form.Label>
                     <Form.Control
                         type="text"
-                        name="order_notes"
+                        name="interview_notes"
                         placeholder="Type notes here."
                         // defaultValue={volunteerApplicationDetails.interview_notes}
                         value={volunteerApplicationDetailsUpdate.interview_notes}
@@ -237,9 +236,7 @@ export default function VolunteerApplicationDetails() {
                         onChange={handleChangeCompleted}
                     />
                 </Form.Group>
-                {/* <Link to='/AllContactRequests'> */}
                 <MyButton id="contact-request-update-button" title="Update Volunteer Application"></MyButton>
-                {/* </Link> */}
                 <Link to='/AllVolunteerApplications'>
                     <MyButton onClick={handleDeleteVolunteerApplication} id="contact-request-update-button" title="Delete Volunteer Application"></MyButton>
                 </Link>

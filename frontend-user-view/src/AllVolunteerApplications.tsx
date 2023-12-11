@@ -6,88 +6,23 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import HomepageLink from './HomepageLink';
 
-export default function AllVolunteerApplications( {monday, tuesday, wednesday, thursday, friday, saturday, sunday, morning, afternoon, evening, volunteerApplicationsList }) {
+export default function AllVolunteerApplications() {
 
     const { pathname } = useLocation();
-    // const [volunteerApplicationsList, setVolunteerApplicationsList] = useState([]);
-
-    // const [monday, setMonday] = useState<string>('');
-    // const [tuesday, setTuesday] = useState<string>('');
-    // const [wednesday, setWednesday] = useState<string>('');
-    // const [thursday, setThursday] = useState<string>('');
-    // const [friday, setFriday] = useState<string>('');
-    // const [saturday, setSaturday] = useState<string>('');
-    // const [sunday, setSunday] = useState<string>('');
-
-    // const [morning, setMorning] = useState<string>('');
-    // const [afternoon, setAfternoon] = useState<string>('');
-    // const [evening, setEvening] = useState<string>('');
 
     const [interviewed, setInterviewed] = useState<string>('');
-    console.log(monday)
-    // const [insterviewNotes, setInterviewNotes] = useState<string>('');
+    const [volunteerApplicationsList, setVolunteerApplicationsList] = useState([]);
 
+    async function getVolunteerApplications() {
+        await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
+            setVolunteerApplicationsList(response.data);
+            console.log(response.status, response.data);
+        })
+    }
 
-    // async function getVolunteerApplications() {
-    //     await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
-    //         setVolunteerApplicationsList(response.data);
-    //         console.log(response.status, response.data);
-    //     })
-    // }
-
-    // const volunteerDays = () => {
-    //     volunteerApplicationsList.map((volunteerApplication) => {
-    //         if (volunteerApplication.monday === true) {
-    //             setMonday("Monday")
-    //             console.log(monday)
-    //         }
-
-    //         if (volunteerApplication.tuesday === true) {
-    //             setTuesday("Tuesday")
-    //         }
-
-    //         if (volunteerApplication.wednesday === true) {
-    //             setWednesday("Wednesday")
-    //         }
-
-    //         if (volunteerApplication.thursday === true) {
-    //             setThursday("Thursday")
-    //         }
-
-    //         if (volunteerApplication.friday === true) {
-    //             setFriday("Friday")
-    //         }
-
-    //         if (volunteerApplication.saturday === true) {
-    //             setSaturday("Saturday")
-    //         }
-
-    //         if (volunteerApplication.sunday === true) {
-    //             setSunday("Sunday")
-    //         }
-
-    //         if (volunteerApplication.morning === true) {
-    //             setMorning("Open to Noon")
-    //         }
-
-    //         if (volunteerApplication.afternoon === true) {
-    //             setAfternoon("Noon to Four")
-    //         }
-
-    //         if (volunteerApplication.evening === true) {
-    //             setEvening("Four to Close")
-    //         }
-
-    //         if (volunteerApplication.interviewed === true) {
-    //             setInterviewed("Interviewed")
-    //         }
-    //     })
-    // }
-
-    // useEffect(() => {
-    //     getVolunteerApplications();
-    //     volunteerDays();
-    // }, []);
+    useEffect(() => {
+        getVolunteerApplications();
+    }, []);
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -135,6 +70,8 @@ export default function AllVolunteerApplications( {monday, tuesday, wednesday, t
                                         <p id='all-library-card-email'>{volunteerApplication.email}</p>
                                     </div>
                                 </Card.Text>
+                            </div>
+                            <div>
                                 <Card.Text>
                                     <div id='bold-flex-container'>
                                         <p id='bold-text'>Work Experience:</p>
@@ -148,35 +85,7 @@ export default function AllVolunteerApplications( {monday, tuesday, wednesday, t
                                     </div>
                                 </Card.Text>
                             </div>
-                            <div>
-                                <Card.Text>
-                                    <p id='bold-text'>Dates Available:</p>
-                                </Card.Text>
-                                <Card.Text>
-                                    <p>{monday}</p>
-                                    <p>{tuesday}</p>
-                                    <p>{wednesday}</p>
-                                    <p>{thursday}</p>
-                                    <p>{friday}</p>
-                                    <p>{saturday}</p>
-                                    <p>{sunday}</p>
-                                </Card.Text>
-                                <Card.Text>
-                                    <p id='bold-text'>Times Available:</p>
-                                </Card.Text>
-                                <Card.Text>
-                                    <p>{morning}</p>
-                                    <p>{afternoon}</p>
-                                    <p>{evening}</p>
-                                </Card.Text>
-                            </div>
                         </Card.Body>
-                        <Card.Text id='interview-notes-container'>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Interview Notes:</p>
-                                        <p>{volunteerApplication.interview_notes}</p>
-                                    </div>
-                                </Card.Text>
                     </Card>
                 </NavLink>
             })}
@@ -212,6 +121,8 @@ export default function AllVolunteerApplications( {monday, tuesday, wednesday, t
                                         <p id='all-library-card-email'>{volunteerApplication.email}</p>
                                     </div>
                                 </Card.Text>
+                            </div>
+                            <div>
                                 <Card.Text>
                                     <div id='bold-flex-container'>
                                         <p id='bold-text'>Work Experience:</p>
@@ -225,34 +136,6 @@ export default function AllVolunteerApplications( {monday, tuesday, wednesday, t
                                     </div>
                                 </Card.Text>
                             </div>
-                            <div>
-                                <Card.Text>
-                                    <p id='bold-text'>Dates Available:</p>
-                                </Card.Text>
-                                <Card.Text>
-                                    <p>{monday}</p>
-                                    <p>{tuesday}</p>
-                                    <p>{wednesday}</p>
-                                    <p>{thursday}</p>
-                                    <p>{friday}</p>
-                                    <p>{saturday}</p>
-                                    <p>{sunday}</p>
-                                </Card.Text>
-                                <Card.Text>
-                                    <p id='bold-text'>Times Available:</p>
-                                </Card.Text>
-                                <Card.Text>
-                                    <p>{morning}</p>
-                                    <p>{afternoon}</p>
-                                    <p>{evening}</p>
-                                </Card.Text>
-                            </div>
-                            <Card.Text id='interview-notes-container'>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Interview Notes:</p>
-                                        <p>{volunteerApplication.interview_notes}</p>
-                                    </div>
-                                </Card.Text>
                         </Card.Body>
                     </Card>
                 </NavLink>
