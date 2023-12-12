@@ -6,16 +6,30 @@ import EveryoneEvents from './EveryoneEvents';
 import AdultEvents from './AdultEvents';
 import TeenTweenEvents from './TeenTweenEvents';
 import ChildrenEvents from './ChildrenEvents';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function UpcomingEvents() {
+export default function UpcomingEvents({showAdmin}) {
 
     const { pathname } = useLocation();
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [pathname]);
+
+    const createEventLink = () => {
+        if (showAdmin === true) {
+            return <Row>
+                <Col>
+                    <p>
+                        <Link id='create-event-link' to='/CreateEventForm'>
+                            Create New Event
+                        </Link>
+                    </p>
+                </Col>
+            </Row>
+        }
+    }
     
     return (
         <>
@@ -28,6 +42,7 @@ export default function UpcomingEvents() {
                         </h1>
                     </Col>
                 </Row>
+                {createEventLink()}
                 <EveryoneEvents />
                 <AdultEvents />
                 <TeenTweenEvents />

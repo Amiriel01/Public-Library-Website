@@ -124,6 +124,10 @@ html {
   margin-bottom: 1rem;
 }
 
+/* #carousel-container {
+  height: 21.25rem;
+} */
+
 #homepage-image-container {
   width: 80%;
   margin-left: auto;
@@ -816,6 +820,21 @@ html {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#create-event-link {
+  color: #474044;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#create-event-link:hover {
+  color: #f49fbc;
+}
+
+#create-event-link:active {
+  color: #ffd9da;
 }
 
 #event-section-container {

@@ -20,7 +20,7 @@ export default function Homepage() {
     return (
         <>
             <Row id='homepage-container'>
-                <Row>
+                <Row id='carousel-container'>
                     <Col>
                         <EventCarousel />
                     </Col>
