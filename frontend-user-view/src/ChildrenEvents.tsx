@@ -31,10 +31,10 @@ export default function ChildrenEvents() {
                             10:00am-11:00am
                         </Card.Text>
                         <Card.Text>
-                            Winter storytime will feature a different winter storybook every Saturday! Stories will be read by our Children's Librarian.
+                            Winter story time will feature a different winter storybook every Saturday! Stories will be read by our Children's Librarian.
                         </Card.Text>
                         <Card.Text>
-                            Each Saturday will also feature a different winter craft for children to make. Children will also recive a winter themed snack!
+                            Each Saturday will also feature a different winter craft for children to make. Children will also receive a winter themed snack!
                         </Card.Text>
                         <div id='event-button-container'>
                             <MyButton id='event-button' title='Learn More About the Event'></MyButton>
@@ -44,7 +44,7 @@ export default function ChildrenEvents() {
                 <Card id='event-card' style={{ width: '20rem' }}>
                     <Card.Img className="img-fluid" variant="top" id='event-card-image' src={SnowFlakeCraft} />
                     <Card.Body>
-                        <Card.Title id='bold-text'>Make a SnowFlake</Card.Title>
+                        <Card.Title id='bold-text'>Make a Snow Flake</Card.Title>
                         <Card.Text>
                             December 16th
                         </Card.Text>

@@ -23,7 +23,7 @@ export default function AdultEvents() {
                 <Card id='event-card' style={{ width: '20rem' }}>
                     <Card.Img className="img-fluid" id='event-card-image' variant="top" src={AuthorEventSmall} alt='decorative hot cocoa mug'></Card.Img>
                     <Card.Body>
-                        <Card.Title id='bold-text'>Arthur Conan Doyle:</Card.Title>
+                        <Card.Title id='bold-text'>Arthur Conan Doyle</Card.Title>
                         <Card.Text>
                             December 9th
                         </Card.Text>
@@ -55,7 +55,7 @@ export default function AdultEvents() {
                             The watercolor class, participants will create a beautiful snowy scene. Participants will be able to choose from two designs, one will feature a cardinal and the other a red barn.
                         </Card.Text>
                         <Card.Text>
-                            Space for this event is limited. Contact the Information Desk to reserve your seat! All supplies are included
+                            Space for this event is limited. Contact the Information Desk to reserve your seat! All supplies are included.
                         </Card.Text>
                         <div id='event-button-container'>
                             <MyButton id='event-button' title='Learn More About the Event'></MyButton>

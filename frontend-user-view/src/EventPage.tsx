@@ -70,25 +70,25 @@ export default function EventPage() {
                     <Col id="details-container">
                         <Col id="event-date">
                             <div id='bold-flex-container'>
-                                <p className='page-detail-bold'>Date:</p>
+                                {/* <p className='page-detail-bold'>Date & Time:</p> */}
                                 <p className="page-detail">{event.date}</p>
                             </div>
                         </Col>
                         <Col id="event-time">
                             <div id='bold-flex-container'>
-                                <p className='page-detail-bold'>Time:</p>
+                                {/* <p className='page-detail-bold'>Time:</p> */}
                                 <p className="page-detail">{event.time}</p>
                             </div>
                         </Col>
                         <Col id="event-program-type">
                             <div id='bold-flex-container'>
-                                <p className='page-detail-bold'>Program Type:</p>
+                                {/* <p className='page-detail-bold'>Program Type:</p> */}
                                 <p className="page-detail">{event.program_type} Event</p>
                             </div>
                         </Col>
                         <Col id="event-age-group">
                             <div id='bold-flex-container'>
-                                <p className='page-detail-bold'>Age Group:</p>
+                                {/* <p className='page-detail-bold'>Age Group:</p> */}
                                 <p className="page-detail">{event.age_group}</p>
                             </div>
                         </Col>

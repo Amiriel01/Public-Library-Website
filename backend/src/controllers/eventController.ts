@@ -125,12 +125,12 @@ export function event_edit() {
             } else {
                 const eventEdit = await Event.findByIdAndUpdate(req.params.id, {
                     title: req.body.title,
-                program_type: req.body.program_type,
-                age_group: req.body.age_group,
-                date: req.body.date,
-                time: req.body.time,
-                description1: req.body.description1,
-                description2: req.body.description2,
+                    program_type: req.body.program_type,
+                    age_group: req.body.age_group,
+                    date: req.body.date,
+                    time: req.body.time,
+                    description1: req.body.description1,
+                    description2: req.body.description2,
                 },
                     { new: true })
                     .exec()
