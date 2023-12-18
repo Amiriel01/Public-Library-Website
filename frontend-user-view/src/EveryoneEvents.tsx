@@ -28,7 +28,7 @@ export default function EveryoneEvents() {
                             December 2nd
                         </Card.Text>
                         <Card.Text>
-                            2pm-6pm
+                            2:00pm-6:00pm
                         </Card.Text>
                         <Card.Text>
                             Join the community for a Hot Cocoa Social. Hot cocoa, apple cider, coffee, and baked goods will be provided.
@@ -49,7 +49,7 @@ export default function EveryoneEvents() {
                             December 10th
                         </Card.Text>
                         <Card.Text>
-                            10am-4pm
+                            10:00am-4:00pm
                         </Card.Text>
                         <Card.Text>
                             The annual Winter Used Book Sale is a favorite of all library patrons. During this event families and individuals can purchase a paper bag for $5 to fill with used books. The library sale is open to the public.

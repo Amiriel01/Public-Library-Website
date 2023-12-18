@@ -76,7 +76,7 @@ export default function CreateEventForm() {
 
         await axios.post("http://localhost:3000/event/eventDetail", eventFormData).then((response) => {
             console.log(response.status, response.data)
-
+            
         })
     }
 
@@ -147,9 +147,9 @@ export default function CreateEventForm() {
                     onChange={handleChange}
                 >
                     <option>Age Group:</option>
-                    <option value="All Ages">All Ages</option>
+                    <option value="All">All Ages</option>
                     <option value="Adult">Adult</option>
-                    <option value="Teen Tween">Teen Tween</option>
+                    <option value="Teen">Teen Tween</option>
                     <option value="Children">Children</option>
                 </Form.Select>
                 <Form.Group className="mb-3">
