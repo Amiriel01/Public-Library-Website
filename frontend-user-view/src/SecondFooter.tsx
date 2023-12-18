@@ -18,8 +18,8 @@ export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }) {
     const renderLibraryLogout = () => {
         if (showAdmin === true) {
             return <button id='library-logout-button' onClick={() => loggedInAndShowAdminValueReset()}>
-                    Library Logout
-                </button>
+                Library Logout
+            </button>
         }
     }
 
@@ -32,7 +32,10 @@ export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }) {
         <Row id='second-footer-container'>
             <Row id='second-footer-flex-container'>
                 <Col md={12} lg={4} id='second-footer-logo-container'>
-                    <img className='img-fluid' id='second-footer-logo' src={Logo} alt='library-logo'></img>
+                    <Link to='/Homepage'>
+                        <img className='img-fluid' id='second-footer-logo' src={Logo}
+                            alt='library-logo'></img>
+                    </Link>
                 </Col>
                 <Col md={12} lg={4} id='second-footer-connected-info-container'>
                     <h3 id='bold-text' className='connected-title'>

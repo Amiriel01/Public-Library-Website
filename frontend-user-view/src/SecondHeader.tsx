@@ -15,7 +15,7 @@ export default function SecondHeader({ bookData, setBookData }: BookAPIProps) {
     async function handleSubmit(event: FormEvent) {
         event.preventDefault();
         await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}`).then((response) => {
-            console.log(response)
+            // console.log(response)
             setBookData(response.data)
             setSearchInput('')
             nav("/BookSearchResultsPage")

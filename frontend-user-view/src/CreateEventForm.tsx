@@ -5,17 +5,20 @@ import axios from "axios";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from "./HomepageLink";
+import Alert from 'react-bootstrap/Alert';
 
 export default function CreateEventForm() {
 
     const [image, setImage] = useState(null);
     const [imageURL, setImageURL] = useState(null);
+    const [alertImageShow, setAlertImageShow] = useState(false);
+    const [alertFormShow, setAlertFormShow] = useState(false);
 
     const onInputChange = (event: FormEvent) => {
         console.log(event.target.files[0]);
         setImage(event.target.files[0]);
     };
-    
+
     async function submitImage(event: FormEvent) {
         event.preventDefault();
 
@@ -24,13 +27,14 @@ export default function CreateEventForm() {
 
         try {
             const result = await axios.post("http://localhost:3000/upload-image", formData, {
-                headers: { 
-                    'Content-Type': 'multipart/form-data' 
+                headers: {
+                    'Content-Type': 'multipart/form-data'
                 }
             })
             console.log(result.data)
             setImageURL(result.data)
             console.log(formData)
+            setAlertImageShow(true)
         } catch (err) {
             console.log(err)
         }
@@ -76,15 +80,9 @@ export default function CreateEventForm() {
 
         await axios.post("http://localhost:3000/event/eventDetail", eventFormData).then((response) => {
             console.log(response.status, response.data)
-
+            setAlertFormShow(true);
         })
     }
-
-    // async function handleSubmit() {
-    //     submitImage();
-    //     formSubmit();
-    // }
-
 
     return (
         <Row id="event-form-page-container">
@@ -104,15 +102,18 @@ export default function CreateEventForm() {
                         accept="image/*"
                         onChange={onInputChange}
                     />
-                    {/* <Form.Control
-                        type="text"
-                        onChange={e => setImgDescription(e.target.value)}
-                    /> */}
                 </Form.Group>
                 <div>
                     <MyButton id='event-form-submit-button' title='Submit'></MyButton>
                 </div>
             </Form>
+            <Row>
+                <Col>
+                    <Alert hidden={!alertImageShow} variant={"success"}>
+                        Image selected. Complete the form to post the event.
+                    </Alert>
+                </Col>
+            </Row>
             <Form onSubmit={formSubmit}>
                 <Form.Group className="mb-3">
                     <Form.Label id="event-form-color">Event Name:</Form.Label>
@@ -204,6 +205,13 @@ export default function CreateEventForm() {
                     <MyButton id='event-form-submit-button' title='Submit'></MyButton>
                 </div>
             </Form>
+            <Row>
+                <Col>
+                    <Alert hidden={!alertFormShow} variant={"success"}>
+                        Event submitted.
+                    </Alert>
+                </Col>
+            </Row>
         </Row>
 
     )

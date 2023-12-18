@@ -49,7 +49,7 @@ export default function LibraryCardForm({ showAdmin }) {
         setLibraryCardFormInfo(initialValues);
 
         await axios.post("http://localhost:3000/libraryCard/libraryCardSubmission", libraryCardFormData).then((response) => {
-            console.log(response.status, response.data)
+            // console.log(response.status, response.data)
             setAlertShow(true);
         })
     }
