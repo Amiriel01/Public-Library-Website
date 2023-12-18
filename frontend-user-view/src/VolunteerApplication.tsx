@@ -179,7 +179,7 @@ export default function VolunteerApplication({showAdmin}) {
                     </Col>
                 </Row>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Full Name:</Form.Label>
                         <Form.Control
                             required
@@ -189,7 +189,7 @@ export default function VolunteerApplication({showAdmin}) {
                             value={volunteerApplicationInfo.name}
                             onChange={handleChange} />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Phone Number:</Form.Label>
                         <Form.Control
                             required
@@ -200,7 +200,7 @@ export default function VolunteerApplication({showAdmin}) {
                             onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Address:</Form.Label>
                         <Form.Control
                             required
@@ -211,7 +211,7 @@ export default function VolunteerApplication({showAdmin}) {
                             onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
                             required
@@ -240,7 +240,7 @@ export default function VolunteerApplication({showAdmin}) {
                         <option value="PHD">PHD</option>
                         <option value="Other">Other</option>
                     </Form.Select>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Work Experience:</Form.Label>
                         <Form.Control
                             required
@@ -251,7 +251,7 @@ export default function VolunteerApplication({showAdmin}) {
                             onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Volunteer Experience:</Form.Label>
                         <Form.Control
                             required
@@ -263,7 +263,7 @@ export default function VolunteerApplication({showAdmin}) {
                         />
                     </Form.Group>
                     <Form.Label>Prefferred Workdays: (check all that apply) </Form.Label>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group className="mb-3">
                         <Form.Check
                             inline
                             label="Monday"
@@ -322,7 +322,7 @@ export default function VolunteerApplication({showAdmin}) {
                         />
                     </Form.Group>
                     <Form.Label>Prefferred Workdays: (check all that apply) </Form.Label>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group className="mb-3">
                         <Form.Check
                             inline
                             label="Open-Noon"

@@ -5,6 +5,8 @@ import { event_list, event_get, event_create, event_edit, event_delete } from '.
 //GET all events list
 router.get("/eventList", event_list());
 
+router.get("/eventList/:age_group", event_list());
+
 //GET single event
 router.get("/eventDetail/:id", event_get());
 

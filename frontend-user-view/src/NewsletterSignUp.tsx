@@ -60,7 +60,7 @@ export default function NewsletterSignUp() {
                 </Col>
             </Row>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Group className="mb-3">
                     <Form.Label id='bold-text'>Email Address:</Form.Label>
                     <Form.Control
                         required

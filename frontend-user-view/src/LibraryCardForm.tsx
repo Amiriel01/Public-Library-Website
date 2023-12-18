@@ -81,7 +81,7 @@ export default function LibraryCardForm({ showAdmin }) {
                     </Col>
                 </Row>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Full Name:</Form.Label>
                         <Form.Control
                             required
@@ -91,7 +91,7 @@ export default function LibraryCardForm({ showAdmin }) {
                             value={libraryCardFormInfo.name}
                             onChange={handleChange} />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Phone Number:</Form.Label>
                         <Form.Control
                             required
@@ -102,7 +102,7 @@ export default function LibraryCardForm({ showAdmin }) {
                             onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
                             required
@@ -116,7 +116,7 @@ export default function LibraryCardForm({ showAdmin }) {
                     <Form.Text id='form-text' className="text-muted">
                         We'll never share your phone number or email with anyone else.
                     </Form.Text>
-                    <Form.Group id='library-card-form-spacing' className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group id='library-card-form-spacing' className="mb-3">
                         <Form.Label>Additional Information: (use only if needed) </Form.Label>
                         <Form.Control
                             as="textarea"

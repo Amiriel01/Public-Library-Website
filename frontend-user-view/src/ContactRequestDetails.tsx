@@ -125,7 +125,7 @@ export default function ContactRequestDetails() {
                 </Card.Body>
             </Card>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3">
                     <Form.Label>Admin Notes</Form.Label>
                     <Form.Control
                         type="text"
@@ -135,7 +135,7 @@ export default function ContactRequestDetails() {
                         value={contactRequestDetailUpdate.admin_notes}
                         onChange={handleChange} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Group className="mb-3">
                     <Form.Check
                         inline
                         label="Completed"

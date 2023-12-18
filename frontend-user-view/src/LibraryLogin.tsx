@@ -73,7 +73,7 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }) {
                     </Col>
                 </Row>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Username:</Form.Label>
                         <Form.Control
                             required
@@ -83,7 +83,7 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }) {
                             value={userLogin.username}
                             onChange={handleChange} />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Password:</Form.Label>
                         <Form.Control
                             required

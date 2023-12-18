@@ -87,7 +87,7 @@ export default function CrossLibraryLoanForm({showAdmin}) {
                     </Col>
                 </Row>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Title:</Form.Label>
                         <Form.Control
                             required
@@ -97,7 +97,7 @@ export default function CrossLibraryLoanForm({showAdmin}) {
                             value={crossLibraryFormInfo.title}
                             onChange={handleChange} />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Author Name:</Form.Label>
                         <Form.Control
                             required
@@ -117,7 +117,7 @@ export default function CrossLibraryLoanForm({showAdmin}) {
                         <option value="Audio_Book">Audio Book</option>
                         <option value="DVD">DVD</option>
                     </Form.Select>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Full Name:</Form.Label>
                         <Form.Control
                             required
@@ -127,7 +127,7 @@ export default function CrossLibraryLoanForm({showAdmin}) {
                             value={crossLibraryFormInfo.name}
                             onChange={handleChange} />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Library Card Number:</Form.Label>
                         <Form.Control
                             required
@@ -137,7 +137,7 @@ export default function CrossLibraryLoanForm({showAdmin}) {
                             value={crossLibraryFormInfo.library_card_number}
                             onChange={handleChange} />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Phone Number:</Form.Label>
                         <Form.Control
                             required
@@ -148,7 +148,7 @@ export default function CrossLibraryLoanForm({showAdmin}) {
                             onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
                             required

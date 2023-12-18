@@ -52,7 +52,7 @@ export default function ContactForm() {
     return (
         <>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Group className="mb-3">
                     <Form.Label>Full Name:</Form.Label>
                     <Form.Control
                         required
@@ -62,7 +62,7 @@ export default function ContactForm() {
                         value={contactForm.name}
                         onChange={handleChange} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Group className="mb-3">
                     <Form.Label>Phone Number:</Form.Label>
                     <Form.Control
                         required
@@ -73,7 +73,7 @@ export default function ContactForm() {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Group className="mb-3">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
                         required
@@ -99,7 +99,7 @@ export default function ContactForm() {
                     <option value="Issues with the website">Issues with the website</option>
                     <option value="Other Questions">Other Questions</option>
                 </Form.Select>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Group className="mb-3">
                     <Form.Label>Message:</Form.Label>
                     <Form.Control
                         required

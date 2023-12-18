@@ -5,14 +5,11 @@ import path from "path";
 import cookieParser from 'cookie-parser';
 import logger from "morgan";
 import cors from 'cors';
-import multer from 'multer';
 import passport from 'passport';
 import LocalStrategy from 'passport-local';
 import bcrypt from 'bcrypt';
 import User from './models/user.ts';
 
-//import schema file
-import Staff from "./models/staff"
 import indexRouter from './routes/index.ts';
 import usersRouter from './routes/users.ts';
 import staffRouter from './routes/staff.ts';
@@ -47,7 +44,7 @@ app.use('/crossLibrary', crossLibraryRouter);
 app.use('/volunteer', volunteerRouter);
 app.use('/newsletter', newsletterRouter);
 app.use('/event', eventRouter);
-app.use('/images', express.static('images'))
+app.use('/public', express.static('public'))
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -64,19 +61,6 @@ app.use(function(err, req, res, next) {
   res.json(err);
   console.log(err)
 });
-
-//setting up mutler options
-const upload = multer({ dest: 'images/'});
-
-app.post('/event/images', upload.single('image'), (req, res) => {
-  const imageName = req.file.filename
-  const description = req.body.description
-
-  console.log(imageName, description)
-  res.send({imageName, description})
-})
-
-
 
 app.listen(3000, "localhost", () => {
   console.log("listening")

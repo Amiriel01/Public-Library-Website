@@ -31,10 +31,10 @@ const EventSchema = new Schema({
     description2: {
         type: String,
     },
-    // imageURL: {
-    //     type: String,
-    //     required: true,
-    // },
+    imageURL: {
+        type: String,
+        required: true,
+    },
 });
 
 export default mongoose.model("Event", EventSchema);

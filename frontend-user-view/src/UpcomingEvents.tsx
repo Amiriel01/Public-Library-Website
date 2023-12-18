@@ -35,6 +35,7 @@ export default function UpcomingEvents({showAdmin}) {
         <>
             <Row id='upcoming-events-page-container'>
                 <HomepageLink />
+                {createEventLink()}
                 <Row>
                     <Col>
                         <h1 id='page-titles'>
@@ -42,7 +43,6 @@ export default function UpcomingEvents({showAdmin}) {
                         </h1>
                     </Col>
                 </Row>
-                {createEventLink()}
                 <EveryoneEvents />
                 <AdultEvents />
                 <TeenTweenEvents />

@@ -15,6 +15,7 @@ interface EventInterface {
     age_group: string,
     description1: string,
     description2: string, 
+    imageURL: string,
 }
 
 export default function EventPage() {
@@ -28,21 +29,15 @@ export default function EventPage() {
         age_group: "",
         description1: "",
         description2: "",
+        imageURL:"",
     });
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [pathname]);
 
-    // async function getEvent() {
-    //     await axios.get(`http://localhost:3000/event/eventDetail/${id}`).then((response) => {
-    //         console.log(response)
-    //         setEvent(response.data)
-    //     });
-    // };
-
     async function getEvent() {
-        await axios.get(`http://localhost:3000/event/eventDetail/65636ea6c975a4744fada3e9`).then((response) => {
+        await axios.get(`http://localhost:3000/event/eventDetail/657f4244babfe6dfde60c7d5`).then((response) => {
             console.log(response)
             setEvent(response.data)
         });
@@ -65,7 +60,7 @@ export default function EventPage() {
                 </Row>
                 <Row id="image-details-container">
                     <Col id="event-image">
-                        <img className="img-fluid" id='event-page-image' src={HotCocoa} alt="hot cocoa picture"></img>
+                        <img className="img-fluid" id='event-page-image' src={`http://localhost:3000/public/${event.imageURL}`} alt="hot cocoa picture"></img>
                     </Col>
                     <Col id="details-container">
                         <Col id="event-date">

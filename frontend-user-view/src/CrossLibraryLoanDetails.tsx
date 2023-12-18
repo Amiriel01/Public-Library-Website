@@ -145,7 +145,7 @@ export default function CrossLibraryLoanDetails() {
                 </Card.Body>
             </Card>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3">
                     <Form.Label>Order Notes</Form.Label>
                     <Form.Control
                         type="text"
@@ -155,7 +155,7 @@ export default function CrossLibraryLoanDetails() {
                         value={crossLibraryLoanDetailsUpdate.order_notes}
                         onChange={handleChange} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Group className="mb-3">
                     <Form.Check
                         inline
                         label="Ordered"

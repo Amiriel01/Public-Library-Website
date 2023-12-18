@@ -51,6 +51,9 @@ export function event_create() {
         body("description2")
             .trim()
             .escape(),
+        body("imageURL")
+            .trim()
+            .escape(),
 
         asyncHandler(async (req, res, next) => {
             // take out validation errors from the request
@@ -64,6 +67,7 @@ export function event_create() {
                 time: req.body.time,
                 description1: req.body.description1,
                 description2: req.body.description2,
+                imageURL: req.body.imageURL,
             });
 
             console.log(req.body)

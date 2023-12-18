@@ -94,7 +94,7 @@ export default function LibraryCardRequestDetails() {
         <Row id="library-card-request-container-page">
             <HomepageLink />
             <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
                     <Form.Label>Name:</Form.Label>
                     <Form.Control
                         type="text"
@@ -103,7 +103,7 @@ export default function LibraryCardRequestDetails() {
                         value={libraryCardRequestDetailsUpdate.name}
                         onChange={handleChange} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3">
                     <Form.Label>Phone: </Form.Label>
                     <Form.Control
                         type="text"
@@ -112,7 +112,7 @@ export default function LibraryCardRequestDetails() {
                         value={libraryCardRequestDetailsUpdate.phone}
                         onChange={handleChange} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3">
                     <Form.Label>Email:</Form.Label>
                     <Form.Control
                         type="text"
@@ -121,7 +121,7 @@ export default function LibraryCardRequestDetails() {
                         value={libraryCardRequestDetailsUpdate.email}
                         onChange={handleChange} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3">
                     <Form.Label>Additional Information:</Form.Label>
                     <Form.Control
                         type="text"
@@ -131,7 +131,7 @@ export default function LibraryCardRequestDetails() {
                         value={libraryCardRequestDetailsUpdate.additional_information}
                         onChange={handleChange} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Group className="mb-3">
                     <Form.Check
                         inline
                         label="Issued"

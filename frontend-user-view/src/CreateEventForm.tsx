@@ -2,21 +2,38 @@ import { useState, FormEvent } from "react";
 import Form from 'react-bootstrap/Form';
 import MyButton from "./MyButton";
 import axios from "axios";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import HomepageLink from "./HomepageLink";
 
 export default function CreateEventForm() {
 
-    const [imgFile, setImgFile] = useState();
-    const [imgDescription, setImgDescription] = useState('');
+    const [image, setImage] = useState(null);
+    const [imageURL, setImageURL] = useState(null);
 
+    const onInputChange = (event: FormEvent) => {
+        console.log(event.target.files[0]);
+        setImage(event.target.files[0]);
+    };
+    
     async function submitImage(event: FormEvent) {
         event.preventDefault();
 
-        const imgFormData = new imgFormData()
-        imgFormData.append("image", imgFile)
-        imgFormData.append("description", imgDescription)
+        const formData = new FormData();
+        formData.append("image", image)
 
-        const result = await axios.post('/event/images', imgFormData, { headers: {'Content-Type': 'multipart/form-data'}})
-        console.log(result.data)
+        try {
+            const result = await axios.post("http://localhost:3000/upload-image", formData, {
+                headers: { 
+                    'Content-Type': 'multipart/form-data' 
+                }
+            })
+            console.log(result.data)
+            setImageURL(result.data)
+            console.log(formData)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     const initialValues = {
@@ -27,6 +44,7 @@ export default function CreateEventForm() {
         time: "",
         description1: "",
         description2: "",
+        imageURL: "",
     }
 
     const [eventForm, setEventForm] = useState(initialValues);
@@ -51,6 +69,7 @@ export default function CreateEventForm() {
             time: eventForm.time,
             description1: eventForm.description1,
             description2: eventForm.description2,
+            imageURL: imageURL,
         }
 
         setEventForm(initialValues);
@@ -68,28 +87,37 @@ export default function CreateEventForm() {
 
 
     return (
-        <>
-            <Form onSubmit={submitImage}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Row id="event-form-page-container">
+            <HomepageLink />
+            <Row>
+                <Col>
+                    <h1 id="event-form-title">
+                        Create New Event
+                    </h1>
+                </Col>
+            </Row>
+            <Form onSubmit={submitImage} id="event-form-">
+                <Form.Group className="mb-3" >
                     <Form.Control
-                        filename={imgFile}
+                        // id="event-form-color"
                         type="file"
-                        placeholder="Upload File Here"
-                        onChange={e => setImgFile(e.target.files[0])}
                         accept="image/*"
+                        onChange={onInputChange}
                     />
-                    <Form.Control
+                    {/* <Form.Control
                         type="text"
                         onChange={e => setImgDescription(e.target.value)}
-                    />
+                    /> */}
                 </Form.Group>
-                <MyButton id="image-upload-button" title="Submit">
-                </MyButton>
+                <div>
+                    <MyButton id='event-form-submit-button' title='Submit'></MyButton>
+                </div>
             </Form>
             <Form onSubmit={formSubmit}>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Event Name:</Form.Label>
+                <Form.Group className="mb-3">
+                    <Form.Label id="event-form-color">Event Name:</Form.Label>
                     <Form.Control
+                        id="event-input"
                         required
                         type="text"
                         name='title'
@@ -98,6 +126,7 @@ export default function CreateEventForm() {
                         onChange={handleChange} />
                 </Form.Group>
                 <Form.Select aria-label="Default select example"
+                    id="event-form-select"
                     required
                     value={eventForm.program_type}
                     name='program_type'
@@ -123,9 +152,10 @@ export default function CreateEventForm() {
                     <option value="Teen Tween">Teen Tween</option>
                     <option value="Children">Children</option>
                 </Form.Select>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Date:</Form.Label>
+                <Form.Group className="mb-3">
+                    <Form.Label id="event-form-color">Date:</Form.Label>
                     <Form.Control
+                        id="event-input"
                         required
                         type="text"
                         name='date'
@@ -134,9 +164,10 @@ export default function CreateEventForm() {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Time:</Form.Label>
+                <Form.Group className="mb-3">
+                    <Form.Label id="event-form-color">Time:</Form.Label>
                     <Form.Control
+                        id="event-input"
                         required
                         type="text"
                         name='time'
@@ -145,9 +176,10 @@ export default function CreateEventForm() {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Description 1:</Form.Label>
+                <Form.Group className="mb-3">
+                    <Form.Label id="event-form-color">Description 1:</Form.Label>
                     <Form.Control
+                        id="event-input"
                         required
                         as="textarea"
                         rows={3}
@@ -156,9 +188,10 @@ export default function CreateEventForm() {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Description 2:</Form.Label>
+                <Form.Group className="mb-3">
+                    <Form.Label id="event-form-color">Description 2:</Form.Label>
                     <Form.Control
+                        id="event-input"
                         required
                         as="textarea"
                         rows={3}
@@ -168,10 +201,10 @@ export default function CreateEventForm() {
                     />
                 </Form.Group>
                 <div>
-                    <MyButton id='contact-form-submit-button' title='Submit'></MyButton>
+                    <MyButton id='event-form-submit-button' title='Submit'></MyButton>
                 </div>
             </Form>
-        </>
+        </Row>
 
     )
 
