@@ -42,6 +42,7 @@ import CrossLibraryLoanDetails from './CrossLibraryLoanDetails';
 import AllVolunteerApplications from './AllVolunteerApplications';
 import VolunteerApplicationDetails from './VolunteerApplicationDetails';
 import CreateEventForm from './CreateEventForm';
+import RescueEvent from './RescueEvent';
 
 function App() {
 
@@ -144,6 +145,9 @@ function App() {
           />}
           ></Route>
            <Route path='/CreateEventForm' element={<CreateEventForm
+          />}
+          ></Route>
+             <Route path='/RescueEvent' element={<RescueEvent
           />}
           ></Route>
         </Routes>

@@ -17,8 +17,7 @@ interface EventInterface {
     imageURL: string,
 }
 
-export default function EventPage() {
-    const { id } = useParams();
+export default function RescueEvent() {
     const { pathname } = useLocation();
     const [event, setEvent] = useState<EventInterface>({
         title: "",
@@ -36,7 +35,7 @@ export default function EventPage() {
     }, [pathname]);
 
     async function getEvent() {
-        await axios.get(`http://localhost:3000/event/eventDetail/${id}`).then((response) => {
+        await axios.get(`http://localhost:3000/event/eventDetail/657f9525e1f010728bdeb78b`).then((response) => {
             console.log(response)
             setEvent(response.data)
         });

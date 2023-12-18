@@ -42,7 +42,7 @@ export default function AdultEvents() {
                 </div>
             </Col>
             <Col md={12} lg={9} id='event-cards-container'>
-                {eventDetails.filter(value => value.age_group === "Adult").map((ageEventDetail) => {
+                {eventDetails.filter(value => value.age_group === "Adults").map((ageEventDetail) => {
                     return <div key={ageEventDetail._id}>
                         <Card id='event-card' style={{ width: '20rem' }}>
                             <Card.Img className="img-fluid" id='event-card-image' variant="top" src={`http://localhost:3000/public/${ageEventDetail.imageURL}`}
