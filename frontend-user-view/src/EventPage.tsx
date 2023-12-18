@@ -4,7 +4,6 @@ import { useParams, useLocation } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from "./HomepageLink";
-import HotCocoa from "./images/hotcocoa.png";
 import FirstFooter from "./FirstFooter";
 
 interface EventInterface {
@@ -37,7 +36,7 @@ export default function EventPage() {
     }, [pathname]);
 
     async function getEvent() {
-        await axios.get(`http://localhost:3000/event/eventDetail/657f4244babfe6dfde60c7d5`).then((response) => {
+        await axios.get(`http://localhost:3000/event/eventDetail/${id}`).then((response) => {
             console.log(response)
             setEvent(response.data)
         });

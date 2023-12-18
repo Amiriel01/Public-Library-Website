@@ -173,12 +173,13 @@ html {
   color: #474044;
 }
 
-#page-titles {
+#h1-page-titles {
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 2rem;
   color: #474044;
   padding-top: .5rem;
+  font-size: 2em;
 }
 
 #hours-location-library-image-container {
@@ -721,19 +722,57 @@ html {
   color: #474044 !important;
 }
 
+@media(min-width: 1201px) {
+  #author-event-info-card {
+    display: flex;
+    align-items: center;
+    color: #474044;
+    /* flex-wrap: wrap; */
+  }
+
+  #author-name-image {
+    margin-right: 2rem;
+  }
+
+  #author-image {
+    width: 15rem;
+    height: 15rem;
+    border: 6px solid #9bbec7;
+    outline: 2px solid #474044;
+  }
+}
+
+@media(max-width: 1200px) {
+  #author-event-info-card {
+    display: flex;
+    align-items: center;
+    color: #474044;
+    flex-wrap: wrap;
+  }
+
+  #author-name-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #author-image {
+    width: 8rem;
+    height: 8rem;
+    border: 6px solid #9bbec7;
+    outline: 2px solid #474044;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#second-footer-links-container {
+  border-left: 1px solid #9bbec7;
+}
+
 #author-event-card-container {
   margin-bottom: 2rem;
   border: 1px solid #f49fbc;
-}
-
-#author-event-info-card {
-  display: flex;
-  align-items: center;
-  color: #474044;
-}
-
-#author-name-image {
-  margin-right: 2rem;
 }
 
 #author-title {
@@ -742,11 +781,10 @@ html {
   margin-top: 1rem;
 }
 
-#author-image {
-  width: 15rem;
-  height: 15rem;
-  border: 6px solid #9bbec7;
-  outline: 2px solid #474044;
+
+
+#margin-top {
+  margin-top: 1rem;
 }
 
 /*Homepage blue buttons*/
@@ -1184,10 +1222,10 @@ html {
 
 /*Volunteer Form page*/
 #all-volunteer-applications-link {
-    color: #474044;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.25rem;
+  color: #474044;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 #all-volunteer-applications-link:hover {
@@ -1271,5 +1309,3 @@ html {
 #event-input::placeholder {
   color: #474044;
 }
-
-

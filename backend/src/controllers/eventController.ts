@@ -11,6 +11,15 @@ export function event_list() {
     });
 };
 
+//GET event by age group
+export function event_list_age_group() {
+    return asyncHandler(async (req, res, next) => {
+        const eventAgeGroupDetails = await Event.find(req.body.age_group).exec();
+        console.log(eventAgeGroupDetails);
+        res.json(eventAgeGroupDetails);
+    });
+};
+
 //GET single event
 export function event_get() {
     return asyncHandler(async (req, res, next) => {

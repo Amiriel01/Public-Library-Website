@@ -23,45 +23,47 @@ export default function AuthorEvents() {
             <Row id='visiting-author-page-container'>
                 <HomepageLink />
                 <Row>
-                    <Col>
-                        <h1 id='page-titles'>
-                            Author Events
-                        </h1>
+                    <Col id='h1-page-titles'>
+                        Author Events
                     </Col>
                 </Row>
                 <Card id="author-event-card-container">
                     <Card.Body id="author-event-info-card">
                         <div id='author-name-image'>
                             <img src={ArthurConanDoyle} id='author-image'></img>
-                            <Card.Title>
-                                <div id="author-title">
-                                    <p>
-                                        Arthur Conan Doyle
-                                    </p>
-                                </div>
+                            <Card.Title id="author-title">
+                                Arthur Conan Doyle
                             </Card.Title>
                         </div>
                         <div>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Date:</p>
-                                    <p>December 9th</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Time:</p>
-                                    <p>6:00pm-7:30pm</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Event:</p>
-                                    <p>This exciting event will focus on the author Arthur Conan Doyle and his over 300 works of fiction. Hear about the author's life during this presentation. Time will be allotted for questions & answers.</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text id="book-question">Want to know more about this author? </Card.Text>
-                            <Card.Link target="_blank" id="book-info-link" href="https://www.arthur-conan-doyle.com/index.php/Main_Page">Click here to visit the The Arthur Conan Doyle Encyclopedia website.</Card.Link>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Date:
+                                </Card.Text>
+                                <Card.Text>
+                                    December 9th
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Time:
+                                </Card.Text>
+                                <Card.Text>
+                                    6:00pm-7:30pm
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id="bold-text">
+                                    Event:
+                                </Card.Text>
+                                <Card.Text>
+                                    This exciting event will focus on the author Arthur Conan Doyle and his over 300 works of fiction. Hear about the author's life during this presentation. Time will be allotted for questions & answers.
+                                </Card.Text>
+                            </div>
+                            <div id='margin-top'>
+                                <Card.Text id="book-question">Want to know more about this author? </Card.Text>
+                                <Card.Link target="_blank" id="book-info-link" href="https://www.arthur-conan-doyle.com/index.php/Main_Page">Click here to visit the The Arthur Conan Doyle Encyclopedia website.</Card.Link>
+                            </div>
                         </div>
                     </Card.Body>
                 </Card>
@@ -69,33 +71,39 @@ export default function AuthorEvents() {
                     <Card.Body id="author-event-info-card">
                         <div id='author-name-image'>
                             <img src={AgathaChristie} id='author-image'></img>
-                            <Card.Title>
-                                <div id="author-title">
-                                    <p>Agatha Christie</p>
-                                </div>
+                            <Card.Title id="author-title">
+                                Agatha Christie
                             </Card.Title>
                         </div>
                         <div>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Date:</p>
-                                    <p>To Be Announced</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Time:</p>
-                                    <p>To Be Announced</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Event:</p>
-                                    <p>This exciting event will focus on the author Agatha Christie and her seventy-five novels. Hear about the author's life during this presentation. Time will be allotted for questions & answers.</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text id="book-question">Want to know more about this author? </Card.Text>
-                            <Card.Link target="_blank" id="book-info-link" href="https://www.agathachristie.com/">Click here to visit The Home of Agatha Christie webpage.</Card.Link>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Date:
+                                </Card.Text>
+                                <Card.Text>
+                                    To Be Announced
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Time:
+                                </Card.Text>
+                                <Card.Text>
+                                    To Be Announced
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id="bold-text">
+                                    Event:
+                                </Card.Text>
+                                <Card.Text>
+                                    This exciting event will focus on the author Agatha Christie and her seventy-five novels. Hear about the author's life during this presentation. Time will be allotted for questions & answers.
+                                </Card.Text>
+                            </div>
+                            <div id='margin-top'>
+                                <Card.Text id="book-question">Want to know more about this author? </Card.Text>
+                                <Card.Link target="_blank" id="book-info-link" href="https://www.agathachristie.com/">Click here to visit The Home of Agatha Christie webpage.</Card.Link>
+                            </div>
                         </div>
                     </Card.Body>
                 </Card>
@@ -103,33 +111,39 @@ export default function AuthorEvents() {
                     <Card.Body id="author-event-info-card">
                         <div id='author-name-image'>
                             <img src={CSLewis} id='author-image'></img>
-                            <Card.Title>
-                                <div id="author-title">
-                                    <p>CS Lewis</p>
-                                </div>
+                            <Card.Title id="author-title">
+                                CS Lewis
                             </Card.Title>
                         </div>
                         <div>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Date:</p>
-                                    <p>To Be Announced</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Time:</p>
-                                    <p>To Be Announced</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Event:</p>
-                                    <p>This exciting event will focus on the author CS Lewis and his almost 40 books. Hear about the author's life during this presentation. Time will be allotted for questions & answers.</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text id="book-question">Want to know more about this author? </Card.Text>
-                            <Card.Link target="_blank" id="book-info-link" href="https://www.cslewis.com/us/">Click here to visit the official CS Lewis webpage.</Card.Link>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Date:
+                                </Card.Text>
+                                <Card.Text>
+                                    To Be Announced
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Time:
+                                </Card.Text>
+                                <Card.Text>
+                                    To Be Announced
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id="bold-text">
+                                    Event:
+                                </Card.Text>
+                                <Card.Text>
+                                    This exciting event will focus on the author CS Lewis and his almost 40 books. Hear about the author's life during this presentation. Time will be allotted for questions & answers.
+                                </Card.Text>
+                            </div>
+                            <div id='margin-top'>
+                                <Card.Text id="book-question">Want to know more about this author? </Card.Text>
+                                <Card.Link target="_blank" id="book-info-link" href="https://www.cslewis.com/us/">Click here to visit the official CS Lewis webpage.</Card.Link>
+                            </div>
                         </div>
                     </Card.Body>
                 </Card>
@@ -137,37 +151,43 @@ export default function AuthorEvents() {
                     <Card.Body id="author-event-info-card">
                         <div id='author-name-image'>
                             <img src={MaryShelley} id='author-image'></img>
-                            <Card.Title>
-                                <div id="author-title">
-                                    <p>Mary Shelley</p>
-                                </div>
+                            <Card.Title id="author-title">
+                            Mary Shelley
                             </Card.Title>
                         </div>
                         <div>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Date:</p>
-                                    <p>To Be Announced</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Time:</p>
-                                    <p>To Be Announced</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Event:</p>
-                                    <p>This exciting event will focus on the author Mary Shelley and her eight published works. Hear about the author's life during this presentation. Time will be allotted for questions & answers.</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text id="book-question">Want to know more about this author? </Card.Text>
-                            <Card.Link target="_blank" id="book-info-link" href="https://www.biography.com/authors-writers/mary-shelley">Click here to visit the author's Biography page.</Card.Link>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Date:
+                                </Card.Text>
+                                <Card.Text>
+                                    To Be Announced
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Time:
+                                </Card.Text>
+                                <Card.Text>
+                                    To Be Announced
+                                </Card.Text>
+                            </div>
+                            <div id='bold-flex-container'>
+                                <Card.Text id="bold-text">
+                                    Event:
+                                </Card.Text>
+                                <Card.Text>
+                                This exciting event will focus on the author Mary Shelley and her eight published works. Hear about the author's life during this presentation. Time will be allotted for questions & answers.
+                                </Card.Text>
+                            </div>
+                            <div id='margin-top'>
+                                <Card.Text id="book-question">Want to know more about this author? </Card.Text>
+                                <Card.Link target="_blank" id="book-info-link" href="https://www.biography.com/authors-writers/mary-shelley">Click here to visit the author's Biography page.</Card.Link>
+                            </div>
                         </div>
                     </Card.Body>
                 </Card>
-            </Row>
+            </Row >
             <FirstFooter />
         </>
     )

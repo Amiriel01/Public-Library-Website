@@ -117,7 +117,7 @@ function App() {
           ></Route>
           <Route path='/FirstFooter' element={<FirstFooter />}
           ></Route>
-          <Route path='/EventPage' element={<EventPage />}
+          <Route path='/event/eventDetail/:id' element={<EventPage />}
           ></Route>
           <Route path='/LibraryLogin' element={<LibraryLogin
             setLoggedIn={setLoggedIn}

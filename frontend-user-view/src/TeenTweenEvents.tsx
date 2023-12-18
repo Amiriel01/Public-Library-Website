@@ -2,11 +2,33 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import MyButton from './MyButton';
-import ReadingRescuesSmall from "./images/readingtorescuessmall.png";
-import WinterHatCraft from "./images/winterhatcraft.png";
-import WinterPhotographyContest from "./images/winterphotographycontest.png";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function TeenTweenEvents() {
+
+    const [eventDetails, setEventDetails] = useState([{
+        title: '',
+        date: '',
+        time: '',
+        description1: '',
+        description2: '',
+        imageURL: '',
+    }]);
+
+    async function getEventDetails() {
+        await axios.get("http://localhost:3000/event/eventList").then((response) => {
+            // console.log(response.data);
+            setEventDetails(response.data);
+        })
+    }
+
+    useEffect(() => {
+        getEventDetails();
+    }, []);
+
+
     return (
         <Row id='event-section-container'>
             <Col>
@@ -20,69 +42,37 @@ export default function TeenTweenEvents() {
                 </div>
             </Col>
             <Col md={12} lg={9} id='event-cards-container'>
-                <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={ReadingRescuesSmall} alt='decorative hot cocoa mug'></Card.Img>
-                    <Card.Body>
-                        <Card.Title id='bold-text'>Reading to Rescues</Card.Title>
-                        <Card.Text>
-                            December 22nd
-                        </Card.Text>
-                        <Card.Text>
-                            10:00am-2:00pm
-                        </Card.Text>
-                        <Card.Text>
-                            Tweens and Teens will have a chance to volunteer at our seasonal Reading to Rescues event. During this event several local rescue dogs and cats will be visiting the library.
-                        </Card.Text>
-                        <Card.Text>
-                            All area residents are welcome to come to this event an adopt these well-mannered pets!
-                        </Card.Text>
-                        <div id='event-button-container'>
-                            <MyButton id='event-button' title='Learn More About the Event'></MyButton>
-                        </div>
-                    </Card.Body>
-                </Card>
-                <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" variant="top" id='event-card-image' src={WinterHatCraft} />
-                    <Card.Body>
-                        <Card.Title id='bold-text'>Make a Winter Hat</Card.Title>
-                        <Card.Text>
-                            December 6th
-                        </Card.Text>
-                        <Card.Text>
-                            4:00pm-7:00pm
-                        </Card.Text>
-                        <Card.Text>
-                            Create a warm winter hat at this December crafting event! This is a great time to learn a new skill.
-                        </Card.Text>
-                        <Card.Text>
-                            Tweens and Teens should register for this event. Space is limited. When registering please specify a color of yarn. All supplies and snacks will be provided.
-                        </Card.Text>
-                        <div id='event-button-container'>
-                            <MyButton id='event-button' title='Learn More About the Event'></MyButton>
-                        </div>
-                    </Card.Body>
-                </Card>
-                <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={WinterPhotographyContest} />
-                    <Card.Body>
-                        <Card.Title id='bold-text'>Winter Art Contest</Card.Title>
-                        <Card.Text>
-                            Begins: December 1st
-                        </Card.Text>
-                        <Card.Text>
-                            Ends: December: 21st
-                        </Card.Text>
-                        <Card.Text>
-                            Join the library for our first ever Winter Art Contest!
-                        </Card.Text>
-                        <Card.Text>
-                            Participants are allowed to choose whichever art medium they would like. The art piece must be dropped off at the library no later than 6pm on December 21st. Art will be displayed in the gallery through January.
-                        </Card.Text>
-                        <div id='event-button-container'>
-                            <MyButton id='event-button' title='Learn More About the Event'></MyButton>
-                        </div>
-                    </Card.Body>
-                </Card>
+            {eventDetails.filter(value => value.age_group === "Teen").map((ageEventDetail) => {
+                    return <div key={ageEventDetail._id}>
+                        <Card id='event-card' style={{ width: '20rem' }}>
+                            <Card.Img className="img-fluid" id='event-card-image' variant="top" src={`http://localhost:3000/public/${ageEventDetail.imageURL}`}
+                            alt='decorative image'
+                            ></Card.Img>
+                            <Card.Body>
+                                <Card.Title id='bold-text'>
+                                    {ageEventDetail.title}
+                                </Card.Title>
+                                <Card.Text>
+                                    {ageEventDetail.date}
+                                </Card.Text>
+                                <Card.Text>
+                                    {ageEventDetail.time}
+                                </Card.Text>
+                                <Card.Text>
+                                    {ageEventDetail.description1}
+                                </Card.Text>
+                                <Card.Text>
+                                    {ageEventDetail.description2}
+                                </Card.Text>
+                                <div id='event-button-container'>
+                                    <NavLink to={"/event/eventDetail/" + ageEventDetail._id}>
+                                        <MyButton id='event-button' title='Learn More About the Event'></MyButton>
+                                    </NavLink>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                })}
             </Col>
         </Row>
     )
