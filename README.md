@@ -1,4 +1,4 @@
-updating readme
+updated readme
 
 <!-- **Credits**
 Pexels
