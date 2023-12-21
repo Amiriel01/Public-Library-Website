@@ -185,6 +185,41 @@ The traveling exhibit section showcases the current exhibit on display at the li
 
 ![Traveling Exhibit Image](ReadMeImages/travelingexhibit.png)
 
+**Square Buttons**
+
+The homepage has four square button, each link has an icon. The links route the user to the page specified. 
+
+![Square Links Image](ReadMeImages/squarelinks.png)
+
+The About the Library square button routes to a page that gives facts about the library and images. 
+
+![About the Library Image](ReadMeImages/aboutlibrary1.png)
+
+![About the Library Image](ReadMeImages/aboutlibrary2.png)
+
+The Upcoming Events square button routes to another page that shows the four age group categories for events and GETs the event information from the database. Each event section is in its own component and imported to the upcoming events page. 
+
+![Upcoming Events Page](ReadMeImages/events1.png).
+
+![Upcoming Events Page](ReadMeImages/events2.png)
+
+![Upcoming Events Page](ReadMeImages/events3.png)
+
+![Upcoming Events Page](ReadMeImages/events4.png)
+
+Each event has a button that GETs that specific event details from the database and routes the user to the event page for the event on click.
+
+![Event Details Page](ReadMeImages/eventpage.png)
+
+The Give to Library square button links to the same Giving page that is linked in the FAQs section.
+
+The Student Resources square button links the to student resources page. This page has three sections, each section is its own component. The Math and Reading resources sections offer links to outside helpful resources that students can use for free.
+
+![Students Resource Page Image](ReadMeImages/studentresources1.png)
+
+![Students Resource Page Image](ReadMeImages/studentresources2.png)
+
+![Students Resource Page Image](ReadMeImages/studentresources3.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
