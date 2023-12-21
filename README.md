@@ -91,7 +91,7 @@ The "Cross Library Loans" section has a link to the cross library loans form and
 
 The cross library loan form takes a users information and PUTs it in the database. The user will enter the title, author, material type (from a select menu), name, library card number, phone number, and email address. Once the user submits the information they will recieve an alert letting them know it has been successfully submitted.
 
-![Cross Library Loan Form Image](ReadMeImages/librarycardform.png)
+![Cross Library Loan Form Image](ReadMeImages/crosslibraryloanpage.png)
 
 ***Technology Services FAQs***
 
@@ -111,11 +111,19 @@ The "Monatary Donations" section has a link to the Giving page. The Giving page 
 
 The "Ways to Give" FAQ accordion has five topics. Two of the topics, the "Give Now" and "Make a Monthly Gift" sections have a button to route to the donations page. Donations are not set up, because this is a demo site, and users will be routed to a page that tells them this. The other three sections also give information to the user.
 
-![Ways to Give FAQ Image](ReadMeImages/givingpage.png)
+![Ways to Give FAQ Image](ReadMeImages/waystogivefaq.png)
 
 ![Donation Page Image](ReadMeImages/donationpage.png)
 
-![Cross Library Loan Form Image](ReadMeImages/librarycardform.png)
+***Meeting and Study Rooms FAQ***
+
+The Meeting and Study Rooms FAQ section has five topics. The "What meeting rooms are available?" section gives information and also routes to another page where users can see images and possible layout suggestions for the rooms. The "What study rooms are available?" section shows images and gives descriptions of the study rooms. The other three topics give information to the user.
+
+![Meeting Room FAQs Image](ReadMeImages/meetingfaq.png)
+
+![Meeting Room Information Page Image](ReadMeImages/meetingroompage.png)
+
+![Study Room FAQ Image](ReadMeImages/meetingfaq2.png)
 
 
 **Second HeaderSection**
