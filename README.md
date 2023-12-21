@@ -120,7 +120,7 @@ The "Ways to Give" FAQ accordion has five topics. Two of the topics, the "Give N
 
 ***Meeting and Study Rooms FAQ***
 
-The Meeting and Study Rooms FAQ section has five topics. The "What meeting rooms are available?" section gives information and also routes to another page where users can see images and possible layout suggestions for the rooms. The "What study rooms are available?" section shows images and gives descriptions of the study rooms. The other three topics give information to the user.
+The Meeting and Study Rooms FAQ section has five topics. The "What meeting rooms are available?" section gives information and also routes to another page where users can see images and possible layout suggestions for the rooms. The "What study rooms are available?" section shows images and gives descriptions of the study rooms. The other three topics give information to the user. (Second image zoomed to show the whole page in one screenshot)
 
 ![Meeting Room FAQs Image](ReadMeImages/meetingfaq.png)
 
@@ -220,6 +220,20 @@ The Student Resources square button links the to student resources page. This pa
 ![Students Resource Page Image](ReadMeImages/studentresources2.png)
 
 ![Students Resource Page Image](ReadMeImages/studentresources3.png)
+
+**Newsletter Sign Up (First Footer)**
+
+All pages, except the newsletter sign up form page, have the Newsletter Sign Up footer. Users click the Sign Up Now button and are routed to the Newsletter Sign Up form page. Users will enter their email and be notified that they have successfully signed up using an alert.
+
+![Newsletter Sign Up Image](ReadMeImages/firstfooter.png)
+
+![Newsletter Sign Up Form Image](ReamMeImages/newsletterpage.png)
+
+**Second Footer**
+
+The second footer had the logo and library name, this footer will route user to the homepage like in the header. It also has a social media section that is not linked because this is a fictional library. If the library was a real business this is the section where social media links would be found. The last section of the second footer links to important pages and also has the admin library login link.
+
+![Second Footer Image](ReadMeImages/secondfooter.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
