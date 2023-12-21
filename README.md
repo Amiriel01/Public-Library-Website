@@ -65,9 +65,9 @@ The first header, which can be seen at the top of every page in the project feat
 
 The Frequently Asked Questions page has five sections. Each section has an accordion that drops down when clicked. 
 
-***Library Card FAQ***
+***Library Card FAQs***
 
-The Library Card FAQ section has eight topics. Each topic provides information to users. Some of the topics also link to other pages.
+The Library Card FAQ section has eight topics. Each topic provides information, with one topic linking to an additional page.
 
 ![Library Card FAQs Image](ReadMeImages/faqlibrarycard.png)
 
@@ -79,6 +79,43 @@ The library card application form takes a users information and PUTs it in the d
 
 ![Library Card Form Image](ReadMeImages/librarycardform.png)
 
+***Borrowing Services FAQs***
+
+The Borrowing Services FAQ section has five topics. Each topic provides information, with one topic linking to an additional page.
+
+![Borrowing Services FAQs Image](ReadMeImages/borrowingservicesfaq.png)
+
+The "Cross Library Loans" section has a link to the cross library loans form and provides cross library loan information.
+
+![Cross Library Loan FAQ Image](ReadMeImages/borrowingservicesfaq2.png)
+
+The cross library loan form takes a users information and PUTs it in the database. The user will enter the title, author, material type (from a select menu), name, library card number, phone number, and email address. Once the user submits the information they will recieve an alert letting them know it has been successfully submitted.
+
+![Cross Library Loan Form Image](ReadMeImages/librarycardform.png)
+
+***Technology Services FAQs***
+
+The technology services section has six informtaional sections in the accordion dropdown menu. 
+
+![Technology Services FAQ Image](ReadMeImages/techservices.png)
+
+***Giving FAQs***
+
+The Giving FAQ section has three topics. Each topic provides information, with two topics linking to an additional page.
+
+![Giving FAQs Image](ReadMeImages/givingfaq.png)
+
+The "Monatary Donations" section has a link to the Giving page. The Giving page has information and another accordion with monatary donations faqs.
+
+![Giving Page Image](ReadMeImages/givingpage.png)
+
+The "Ways to Give" FAQ accordion has five topics. Two of the topics, the "Give Now" and "Make a Monthly Gift" sections have a button to route to the donations page. Donations are not set up, because this is a demo site, and users will be routed to a page that tells them this. The other three sections also give information to the user.
+
+![Ways to Give FAQ Image](ReadMeImages/givingpage.png)
+
+![Donation Page Image](ReadMeImages/donationpage.png)
+
+![Cross Library Loan Form Image](ReadMeImages/librarycardform.png)
 
 
 **Second HeaderSection**
