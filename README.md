@@ -61,15 +61,43 @@ The first header, which can be seen at the top of every page in the project feat
 
 ![First Header Image](ReadMeImages/firstheader.png)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-***Second HeaderSection***
+**Second HeaderSection**
 
 The second header is also seen at the top of every page in the project. Users are able to search by book, author, or genre to find a list of the top 10 results given by the Google Books API. 
 
 ![Second Header Image](ReadMeImages/secondheader.png)
 
 Once a search has been made, the user is routed to the search results page. They will be able to view the result details. I am showing an image with the first 2 results, all 10 results in the list have the same details shown. Users will see the book cover, title, author, description, and be able to click the link to view the Google Books profile of the book. 
+
+![Search Results Page](ReadMeImages/searchresults.png)
+
+**Homepage Image Slider**
+
+The homepage image slider has four images that link to events happening at the library. The first image, when clicked, routes to a page that shows multiple author events that will be happening at the library. The second, routes to a reading to resues event for teens and tweens. The final two images do not route to different pages and are there to remind users of an upcoming sweater drive and book sale.
+
+***Author Event Section***
+
+![Author Event Image](ReadMeImages/authoreventimage.png)
+
+The Author Event page that is routed to has four upcoming author events on it. Users will see the author image, name, time, date, description, and link to an outside website about the author on each author's event section. The image provided shows two of the author events, the other two follow the same format.
+
+![Author Event Page](ReadMeImages/authoreventpage.png)
+
+***Reading to Rescues Section***
+
+![Reading to Resucues Image](ReadMeImages/readingtorescuesimage.png)
+
+The Reading to Resues event image on the carousel links to the event details page for the Reading to Rescues event. The event page shows the same image from the carousel slightly modified, the date, time, event type, age group for the event, and the event description. The event and image path are saved in a MongoDB database. All event pages use the same template and an API call on the event ID to populate the page. 
+
+![Reading to Rescues Event Page](ReadMeImages/readingtorescuespage.png)
+
+***Sweather and Book Sale Images***
+
+![Sweater Drive Image](ReadMeImages/sweaterdriveimage.png)
+
+![Book Sale Image](ReadMeImages/booksaleimage.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- **Credits**
 Pexels
