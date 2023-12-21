@@ -118,6 +118,12 @@ The "Ways to Give" FAQ accordion has five topics. Two of the topics, the "Give N
 
 ![Donation Page Image](ReadMeImages/donationpage.png)
 
+The Giving FAQ Volunteer section gives information and links to the Volunteer form page. The volunteer form PUTs the information in the database for later use. The volunteer form has inputs, a select, and checkboxes for the user to use when completing the form. The user is alerted when their form is submitted successfully.
+
+![Volunteer FAQ Image](ReadMeImages/volunteerfaq.png)
+
+![Volunteer Form Image](ReadMeImages/volunteerform.png)
+
 ***Meeting and Study Rooms FAQ***
 
 The Meeting and Study Rooms FAQ section has five topics. The "What meeting rooms are available?" section gives information and also routes to another page where users can see images and possible layout suggestions for the rooms. The "What study rooms are available?" section shows images and gives descriptions of the study rooms. The other three topics give information to the user. (Second image zoomed to show the whole page in one screenshot)
@@ -141,7 +147,6 @@ The contact us button is located in the first header. When the user clicks the b
 The hours and location button is located in the first header. When the user clicks the button they are routed to a new page. The new page that gives information about the library hours, location, and main phone number. The page also has a button that will link to the contact page if the user needs additional information from the library.
 
 ![Contact Page Image](ReadMeImages/hourslocationpage.png)
-
 
 **Second Header Section**
 
@@ -241,7 +246,7 @@ The second footer had the logo and library name, this footer will route user to 
 
 After clicking the Library Login link in the second footer users are routed to the admin login form. Once the admin user has logged in they will see new features that the user view did not show.
 
-![Admin Login Form Image](ReadMeImages/loginform.ong)
+![Admin Login Form Image](ReadMeImages/loginform.png)
 
 When the library admin user is logged in the second footer will show Library Logout as the new link option. When this link is clicked the admin is logged out and the user view is shown again.
 
