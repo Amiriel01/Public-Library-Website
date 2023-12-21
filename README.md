@@ -227,7 +227,7 @@ All pages, except the newsletter sign up form page, have the Newsletter Sign Up 
 
 ![Newsletter Sign Up Image](ReadMeImages/firstfooter.png)
 
-![Newsletter Sign Up Form Image](ReamMeImages/newsletterpage.png)
+![Newsletter Sign Up Form Image](ReadMeImages/newsletterpage.png)
 
 **Second Footer**
 
@@ -235,17 +235,48 @@ The second footer had the logo and library name, this footer will route user to 
 
 ![Second Footer Image](ReadMeImages/secondfooter.png)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Admin View Website Features
+
+After clicking the Library Login link in the second footer users are routed to the admin login form. Once the admin user has logged in they will see new features that the user view did not show.
+
+![Admin Login Form Image](ReadMeImages/loginform.ong)
+
+When the library admin user is logged in the second footer will show Library Logout as the new link option. When this link is clicked the admin is logged out and the user view is shown again.
+
+![Admin Logout Link](ReadMeImages/logoutlink.png)
+
+***Admin Contact Page***
+
+The admin contact page now shows a link to view all contact requests. Clicking this link GETs all of the contact requests in the database. The requests are filtered into two categories, completed and not completed. Each contact request card shows the user's name, phone number, email, question they selected, message user sent, and a place for admin notes. 
+
+![Admin Contact Page Image](ReadMeImages/admincontactpage.png)
+
+![All Contact Requests Page Image](ReadMeImages/allcontact1.png)
+
+![All Contact Requests Page Image](ReadMeImages/allcontact2.png)
+
+When the admin clicks on a contact request they are routed to the contact request details page. The API call GETs the details from the database and displays them in a template used for all contact requests. Once on the contact details page the admin will see the information from the previous page that cannot be changed, a checkbox to mark the contact request completed, and a place to enter admin notes if needed. The admin will also see three button options, Update Contact Request, Delete Contact Request, and View All Contact Requests. Clicking the update and delete buttons will PUT and DELETE from the database. Clicking the buttons will route the admin user back to the view all contact requests page. 
+
+![Contact Request Details Page Image](ReadMeImages/contactdetails.png)
+
+***Library Card Application PAge***
+
+When the admin clicks the Library Card Application link in the FAQs section they are routed to the application form page and will see an additional link. This link will route the admin to a page where they can view all library card applications via a GET API call. All library cards are filtered and sorted into the categories issued and not issued.
+
+![View All Library Card Applications Link Image](ReadMeImages/adminlibrarycardpage.png)
+
+![View All Library Card Page](ReadMeImages/librarycardissued.png)
+
+![View All Library Card Page](ReadMeImages/librarycardissued2.png)
+
+When the admin user clicks on a library card request they are routed to the library card details page. The admin is able to update all information on this page so they are able to update user information in the event information changes. The admin has a checkbox to check when the card has been issued and a space for providing additional information if needed. The admin will also see three button options, Update Contact Request, Delete Contact Request, and View All Contact Requests. Clicking the update and delete buttons will PUT and DELETE from the database. Clicking the buttons will route the admin user back to the view all library card requests page. 
+
+![Library Card Request Details](ReadMeImages/librarycarddetails.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- **Credits**
-Pexels
-Pixaby: children reading
-thispersondoesnotexist.com: staff images
-google books api: search api second header
-app.logo.com: library logo
-google icons: square icons
-devicon: facebook icon -->
 
 <!-- **Credits**
 Pexels
