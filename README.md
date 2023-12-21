@@ -227,7 +227,7 @@ All pages, except the newsletter sign up form page, have the Newsletter Sign Up 
 
 ![Newsletter Sign Up Image](ReadMeImages/firstfooter.png)
 
-![Newsletter Sign Up Form Image](ReamMeImages/newsletterpage.png)
+![Newsletter Sign Up Form Image](ReadMeImages/newsletterpage.png)
 
 **Second Footer**
 
@@ -235,6 +235,7 @@ The second footer had the logo and library name, this footer will route user to 
 
 ![Second Footer Image](ReadMeImages/secondfooter.png)
 
+### Admin View Website Features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
