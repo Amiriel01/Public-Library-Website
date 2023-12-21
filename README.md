@@ -23,7 +23,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#homepage-features">Homepage Features</a></li>
+        <li><a href="#user-view-website-features">User View Website Features</a></li>
       </ul>
       <ul>
         <li><a href="#built-with">Built With</a></li>
@@ -53,13 +53,33 @@ I learned a lot while working on this project and also practiced many skills I a
 
 If you notice any bugs or have an idea to make this website even better please use the links to make your suggestions! Thank you in advance for viewing my website. 
 
-### Homepage Features
+### User View Website Features
 
 **First Header Section**
 
 The first header, which can be seen at the top of every page in the project features the library logo and name, along with three buttons for navigating to important pages in the website. Clicking the logo in the header will always return the user to the Homepage. 
 
 ![First Header Image](ReadMeImages/firstheader.png)
+
+**FAQs Page**
+
+The Frequently Asked Questions page has five sections. Each section has an accordion that drops down when clicked. 
+
+***Library Card FAQ***
+
+The Library Card FAQ section has eight topics. Each topic provides information to users. Some of the topics also link to other pages.
+
+![Library Card FAQs Image](ReadMeImages/faqlibrarycard.png)
+
+The "How do I apply for a library card?" section has a link to the library card application and some library card information.
+
+![Apply For Library Card FAQ Image](ReadMeImages/faqlibrarycard2.png)
+
+The library card application form takes a users information and PUTs it in the database. The user will enter their name, phone number, email, and additional comments if needed. Once the user submits the information they will recieve an alert letting them know it has been successfully submitted.
+
+![Library Card Form Image](ReadMeImages/librarycardform.png)
+
+
 
 **Second HeaderSection**
 
@@ -81,7 +101,7 @@ The homepage image slider has four images that link to events happening at the l
 
 The Author Event page that is routed to has four upcoming author events on it. Users will see the author image, name, time, date, description, and link to an outside website about the author on each author's event section. The image provided shows two of the author events, the other two follow the same format.
 
-![Author Event Page](ReadMeImages/authoreventpage.png)
+![Author Event Page](ReadMeImages/authoreventspage.png)
 
 ***Reading to Rescues Section***
 
@@ -95,7 +115,15 @@ The Reading to Resues event image on the carousel links to the event details pag
 
 ![Sweater Drive Image](ReadMeImages/sweaterdriveimage.png)
 
-![Book Sale Image](ReadMeImages/booksaleimage.png)
+![Book Sale Image](ReadMeImages/usedbookimage.png)
+
+**Traveling Exhibit**
+
+The traveling exhibit section showcases the current exhibit on display at the library. The exhibit has two images and a description for the event.
+
+![Traveling Exhibit Image](ReadMeImages/travelingexhibit.png)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
