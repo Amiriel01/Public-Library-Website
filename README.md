@@ -26,6 +26,9 @@
         <li><a href="#user-view-website-features">User View Website Features</a></li>
       </ul>
       <ul>
+        <li><a href="#admin-view-website-features">Admin View Website Features</a></li>
+      </ul>
+      <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -125,8 +128,22 @@ The Meeting and Study Rooms FAQ section has five topics. The "What meeting rooms
 
 ![Study Room FAQ Image](ReadMeImages/meetingfaq2.png)
 
+**Contact Us Page**
 
-**Second HeaderSection**
+The contact us button is located in the first header. When the user clicks the button they are routed to a new page. The new page features library department phone numbers, head librarians for each department, and a contact form that PUTs the users contact request in the database for later viewing. The user is also alerted on the page when their contact request form is submitted successfully.
+
+![Contact Page Image](ReadMeImages/contactpage1.png)
+
+![Contact Page Image](ReadMeImages/contactpage2.png)
+
+**Hours and Location Page**
+
+The hours and location button is located in the first header. When the user clicks the button they are routed to a new page. The new page that gives information about the library hours, location, and main phone number. The page also has a button that will link to the contact page if the user needs additional information from the library.
+
+![Contact Page Image](ReadMeImages/hourslocationpage.png)
+
+
+**Second Header Section**
 
 The second header is also seen at the top of every page in the project. Users are able to search by book, author, or genre to find a list of the top 10 results given by the Google Books API. 
 
