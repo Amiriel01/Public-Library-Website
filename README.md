@@ -318,32 +318,83 @@ The admin user can create new events when they are logged in. To access the form
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
+* [![Node][Node.js]][Node-url]
 * [![React][React.js]][React-url]
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* [![React-Router][React-Router.com]][React-Router-url]
 * [![Vite][vite.js]][Vite-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* [![TypeScript][TypeScript.com]][TypeScript-url]
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* [![Express][Express.js]][Express-url]
+* [![MongoDB][MongoDB.com]][MongoDB-url]
+* [![Nodemon][Nodemon.io]][Nodemon-url]
+* [![NPM][NPM.io]][NPM-url]
+* [![VSCode][VSCode.com]][VSCode-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[Next.js]: https://img.shields.io/badge/next.js-FF69B4?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-FF69B4?style=for-the-badge&logo=react&logoColor=white
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Installation
+
+1. Get a free API Key at [Google Books API](https://developers.google.com/books)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/Amiriel01/Public-Library-Website
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. cd backend
+   ```sh
+   npm install
+   ```
+5. Enter your API in `app.ts`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+
+* [Pexels: Website Images](https://www.pexels.com/)
+* [Pixaby: Website Images](https://pixabay.com/)
+* [This Person Does Not Exist: Staff Images](thispersondoesnotexist.com)
+* [Google Books API](https://developers.google.com/books)
+* [App Logo: Library Logo](app.logo.com)
+* [Google Icons](https://fonts.google.com/icons)
+* [Devicon](https://devicon.dev/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[Node.js]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org/en
+[React.js]: https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB
 [React-url]: https://reactjs.org/
-[Vite.js]: https://img.shields.io/badge/Vite-FF69B4?style=for-the-badge&logo=react&logoColor=white
+[React-Router.com]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[React-Router-url]: https://reactrouter.com/en/main
+[Vite.js]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
 [Vite-url]: https://vitejs.dev/
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-FF69B4?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-%238511FA?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
+[TypeScript.com]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
+[Express.js]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
+[Express-url]: https://expressjs.com/
+[MongoDB.com]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[Nodemon.io]: https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD
+[Nodemon-url]: https://nodemon.io/
+[NPM.io]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
+[NPM-url]: https://www.npmjs.com/
+[VSCode.com]: https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white
+[VSCode-url]: https://code.visualstudio.com/
 
 
-<!-- **Credits**
-Pexels
-Pixaby: children reading
-thispersondoesnotexist.com: staff images
-google books api: search api second header
-app.logo.com: library logo
-google icons: square icons
-devicon: facebook icon -->
+
