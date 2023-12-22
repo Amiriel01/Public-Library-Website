@@ -13,7 +13,7 @@
     ·
     <a href="https://github.com/Amiriel01/Public-Library-Website/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Amiriel01/Public-Library-Website/issues">Change Request</a>
+    <a href="https://github.com/Amiriel01/Public-Library-Website/issues">Suggestions</a>
   </p>
 </div>
 
