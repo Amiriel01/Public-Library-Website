@@ -13,7 +13,7 @@
     ·
     <a href="https://github.com/Amiriel01/Public-Library-Website/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Amiriel01/Public-Library-Website/issues">Change Request</a>
+    <a href="https://github.com/Amiriel01/Public-Library-Website/issues">Suggestions</a>
   </p>
 </div>
 
@@ -35,15 +35,10 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -314,15 +309,98 @@ The admin user can create new events when they are logged in. To access the form
 
 ![Create New Event Form Image](ReadMeImages/createeventform.png)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+* [![Node][Node.js]][Node-url]
+* [![React][React.js]][React-url]
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* [![React-Router][React-Router.com]][React-Router-url]
+* [![Vite][vite.js]][Vite-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* [![TypeScript][TypeScript.com]][TypeScript-url]
+* [![Express][Express.js]][Express-url]
+* [![MongoDB][MongoDB.com]][MongoDB-url]
+* [![Nodemon][Nodemon.io]][Nodemon-url]
+* [![NPM][NPM.io]][NPM-url]
+* [![VSCode][VSCode.com]][VSCode-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Installation
+
+1. Get a free API Key at [Google Books API](https://developers.google.com/books)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/Amiriel01/Public-Library-Website
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `app.ts`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- **Credits**
-Pexels
-Pixaby: children reading
-thispersondoesnotexist.com: staff images
-google books api: search api second header
-app.logo.com: library logo
-google icons: square icons
-devicon: facebook icon -->
+## Acknowledgments
+
+* [Pexels: Website Images](https://www.pexels.com/)
+* [Pixaby: Website Images](https://pixabay.com/)
+* [This Person Does Not Exist: Staff Images](thispersondoesnotexist.com)
+* [Google Books API](https://developers.google.com/books)
+* [App Logo: Library Logo](app.logo.com)
+* [Google Icons](https://fonts.google.com/icons)
+* [Devicon](https://devicon.dev/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[Node.js]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org/en
+[React.js]: https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB
+[React-url]: https://reactjs.org/
+[React-Router.com]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[React-Router-url]: https://reactrouter.com/en/main
+[Vite.js]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-%238511FA?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[TypeScript.com]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
+[Express.js]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
+[Express-url]: https://expressjs.com/
+[MongoDB.com]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[Nodemon.io]: https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD
+[Nodemon-url]: https://nodemon.io/
+[NPM.io]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
+[NPM-url]: https://www.npmjs.com/
+[VSCode.com]: https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white
+[VSCode-url]: https://code.visualstudio.com/
+
+
+
