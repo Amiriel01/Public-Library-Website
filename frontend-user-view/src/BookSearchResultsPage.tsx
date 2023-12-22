@@ -33,7 +33,12 @@ export default function BookSearchResultsPage({ bookData, setBookData }: BookAPI
                         </h2>
                     </Col>
                 </Row>
-                {bookData.items.map((item) => {
+                {/* src={
+      book.volumeInfo.imageLinks === undefined
+        ? ""
+        : `${book.volumeInfo.imageLinks.thumbnail}`
+  } */}
+                {bookData.items.filter(value => value.volumeInfo.imageLinks !== undefined).map((item) => {
                     return <div key={item.volumeInfo.infoLink}>
                         <Card id="book-info-card-container">
                             <Card.Body id="book-info-card">
