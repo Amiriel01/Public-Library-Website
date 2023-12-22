@@ -104,7 +104,7 @@ export default function CreateEventForm() {
                     />
                 </Form.Group>
                 <div>
-                    <MyButton id='event-form-submit-button' title='Submit'></MyButton>
+                    <MyButton id='event-form-submit-button' title='Select Image'></MyButton>
                 </div>
             </Form>
             <Row>
@@ -202,7 +202,7 @@ export default function CreateEventForm() {
                     />
                 </Form.Group>
                 <div>
-                    <MyButton id='event-form-submit-button' title='Submit'></MyButton>
+                    <MyButton id='event-form-submit-button' title='Submit New Event'></MyButton>
                 </div>
             </Form>
             <Row>
