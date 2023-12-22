@@ -321,7 +321,6 @@ The admin user can create new events when they are logged in. To access the form
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 * [![TypeScript][TypeScript.com]][TypeScript-url]
-* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 * [![Express][Express.js]][Express-url]
 * [![MongoDB][MongoDB.com]][MongoDB-url]
 * [![Nodemon][Nodemon.io]][Nodemon-url]
