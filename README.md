@@ -314,8 +314,29 @@ The admin user can create new events when they are logged in. To access the form
 
 ![Create New Event Form Image](ReadMeImages/createeventform.png)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![Vite][vite.js]][Vite-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Svelte][Svelte.dev]][Svelte-url]
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[Next.js]: https://img.shields.io/badge/next.js-FF69B4?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-FF69B4?style=for-the-badge&logo=react&logoColor=white
+[React-url]: https://reactjs.org/
+[Vite.js]: https://img.shields.io/badge/Vite-FF69B4?style=for-the-badge&logo=react&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-FF69B4?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
 
 
 <!-- **Credits**
