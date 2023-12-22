@@ -252,7 +252,7 @@ When the library admin user is logged in the second footer will show Library Log
 
 ![Admin Logout Link](ReadMeImages/logoutlink.png)
 
-***Admin Contact Page***
+***Admin Contact***
 
 The admin contact page now shows a link to view all contact requests. Clicking this link GETs all of the contact requests in the database. The requests are filtered into two categories, completed and not completed. Each contact request card shows the user's name, phone number, email, question they selected, message user sent, and a place for admin notes. 
 
@@ -266,9 +266,9 @@ When the admin clicks on a contact request they are routed to the contact reques
 
 ![Contact Request Details Page Image](ReadMeImages/contactdetails.png)
 
-***Library Card Application PAge***
+***Admin Library Card Application***
 
-When the admin clicks the Library Card Application link in the FAQs section they are routed to the application form page and will see an additional link. This link will route the admin to a page where they can view all library card applications via a GET API call. All library cards are filtered and sorted into the categories issued and not issued.
+When the admin clicks the Library Card Application link in the FAQs section they are routed to the application form page and will see an additional link. This link will route the admin to a page where they can view all library card applications via a GET API call. All library cards are filtered and sorted into the categories, issued and not issued.
 
 ![View All Library Card Applications Link Image](ReadMeImages/adminlibrarycardpage.png)
 
@@ -279,6 +279,33 @@ When the admin clicks the Library Card Application link in the FAQs section they
 When the admin user clicks on a library card request they are routed to the library card details page. The admin is able to update all information on this page so they are able to update user information in the event information changes. The admin has a checkbox to check when the card has been issued and a space for providing additional information if needed. The admin will also see three button options, Update Contact Request, Delete Contact Request, and View All Contact Requests. Clicking the update and delete buttons will PUT and DELETE from the database. Clicking the buttons will route the admin user back to the view all library card requests page. 
 
 ![Library Card Request Details](ReadMeImages/librarycarddetails.png)
+
+***Admin Cross Library Form***
+
+When the admin clicks Cross Library link in the FAQs section they are routed to the application form page and will see an additional link. This link will route the admin to a page where they can view all cross library forms via a GET API call. All library cards are filtered and sorted into the categories ordered and not ordered.
+
+![View All Cross Library Form Link Image](ReadMeImages/admincrosslibrary.png)
+
+![View All Cross Library Page](ReadMeImages/crosslibrary1.png)
+
+![View All Cross Library Page](ReadMeImages/crosslibrary2.png)
+
+When the admin user clicks on a contact request they are routed to the contract request details page. The admin is able to see the information from the all contact requests page on this page. The admin has a checkbox to check when the item has been ordered and a space for providing order notes if needed. The admin will also see three button options, Update Cross Library Loan Request, Delete Cross Library Loan Request, and View All Cross Library Loan Requests. Clicking the update and delete buttons will PUT and DELETE from the database. Clicking the buttons will route the admin user back to the view all cross library loan requests page. 
+
+![Cross Library Loan Details](ReadMeImages/crosslibrarydetails.png)
+
+***Admin Volunteer Application***
+
+When the admin clicks the Volunteer Application link in the FAQs section they are routed to the application form page and will see an additional link. This link will route the admin to a page where they can view all volunteer applications via a GET API call. All volunteer applications are filtered and sorted into the categories, new applications and approved applications.
+
+![View All Volunteer Application Link Image](ReadMeImages/allvolunteerlink.png)
+
+![View All Volunteer Applications Page](ReadMeImages/allvolunteerpage.png)
+
+When the admin user clicks on a volunteer application they are routed to the volunteer application details page. The admin is able to view all information on this page about the volunteer application. The admin has a checkbox to check when the application has been approved and a space for providing interview notes if needed. The admin will also see three button options, Update Volunteer Applictation, Delete Volunteer Application, and View All Volunteer Applications. Clicking the update and delete buttons will PUT and DELETE from the database. Clicking the buttons will route the admin user back to the view all library card requests page. 
+
+![Volunteer Application Details](ReadMeImages/volunteerdetails.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
