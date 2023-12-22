@@ -344,11 +344,7 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    npm install
    ```
-4. cd backend
-   ```sh
-   npm install
-   ```
-5. Enter your API in `app.ts`
+4. Enter your API in `app.ts`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
