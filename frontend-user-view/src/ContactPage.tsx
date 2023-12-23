@@ -8,7 +8,9 @@ import Staff from './Staff';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function ContactPage({ showAdmin }) {
+export default function ContactPage({ showAdmin } : {
+    showAdmin: boolean
+}) {
 
     const { pathname } = useLocation();
 

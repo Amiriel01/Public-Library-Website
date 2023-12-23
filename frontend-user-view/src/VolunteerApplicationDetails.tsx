@@ -18,6 +18,17 @@ export default function VolunteerApplicationDetails() {
         email: '',
         work_experience: '',
         volunteer_experience: '',
+        monday: false,
+        tuesday: false,
+        wednesday: false,
+        thursday: false,
+        friday: false,
+        saturday: false,
+        sunday: false,
+        morning: false,
+        afternoon: false,
+        evening: false,
+        interview_notes: '',
     });
 
     const [monday, setMonday] = useState<string>('');

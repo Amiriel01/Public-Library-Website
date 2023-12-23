@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
 import Form from 'react-bootstrap/Form';
 import MyButton from "./MyButton";
 import axios from "axios";
@@ -9,21 +9,23 @@ import Alert from 'react-bootstrap/Alert';
 
 export default function CreateEventForm() {
 
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState<File | null>(null);
     const [imageURL, setImageURL] = useState(null);
     const [alertImageShow, setAlertImageShow] = useState(false);
     const [alertFormShow, setAlertFormShow] = useState(false);
 
-    const onInputChange = (event: FormEvent) => {
-        console.log(event.target.files[0]);
-        setImage(event.target.files[0]);
+    const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+        if (event.target.files) {
+            console.log(event.target.files[0]);
+            setImage(event.target.files[0]);
+        } 
     };
 
     async function submitImage(event: FormEvent) {
         event.preventDefault();
 
         const formData = new FormData();
-        formData.append("image", image)
+        formData.append("image", image as Blob)
 
         try {
             const result = await axios.post("http://localhost:3000/upload-image", formData, {

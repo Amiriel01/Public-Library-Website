@@ -3,7 +3,7 @@ interface MyButtonProps {
     id: string,
     // onClick():void,
     //onClick is a function that returns void
-    onClick? : () => undefined,
+    onClick? : () => undefined | void,
 }
 
 export default function MyButton(props: MyButtonProps) {

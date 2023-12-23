@@ -15,6 +15,8 @@ export default function AdultEvents() {
         description1: '',
         description2: '',
         imageURL: '',
+        age_group: '',
+        _id: '',
     }]);
 
     async function getEventDetails() {

@@ -6,10 +6,21 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import HomepageLink from './HomepageLink';
 
+interface ContactForm {
+    _id: string,
+    completed: boolean,
+    name: string,
+    phone: string,
+    email: string,
+    help: string,
+    message: string,
+    admin_notes: string,
+}
+
 export default function AllContactRequests() {
 
     const { pathname } = useLocation();
-    const [contactRequestsList, setContactRequestsList] = useState([]);
+    const [contactRequestsList, setContactRequestsList] = useState<Array<ContactForm>>([]);
 
     async function getContactRequests() {
         await axios.get('http://localhost:3000/contact/contactFormList').then((response) => {
