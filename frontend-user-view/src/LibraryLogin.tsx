@@ -10,7 +10,10 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useNavigate } from "react-router";
 
-export default function LibraryLogin({ setLoggedIn, setShowAdmin }) {
+export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
+    setLoggedIn: (data: boolean) => void,
+    setShowAdmin: (data: boolean) => void,
+}) {
 
     const { pathname } = useLocation();
     const navigate = useNavigate();

@@ -3,7 +3,11 @@ import Col from 'react-bootstrap/Col';
 import Logo from './images/logo.png';
 import { Link } from 'react-router-dom';
 
-export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }) {
+export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }: {
+    showAdmin: boolean,
+    setLoggedIn: (data: boolean) => void,
+    setShowAdmin: (data: boolean) => void,
+}) {
 
     const renderLibraryLogin = () => {
         if (showAdmin === false) {

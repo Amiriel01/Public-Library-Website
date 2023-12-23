@@ -44,6 +44,11 @@ import VolunteerApplicationDetails from './VolunteerApplicationDetails';
 import CreateEventForm from './CreateEventForm';
 import RescueEvent from './RescueEvent';
 
+export interface LibraryLogin {
+  loggedIn: string,
+  setLoggedIn: () => void,
+}
+
 function App() {
 
   const [bookData, setBookData] = useState<BookAPIData>({ items: [] })
