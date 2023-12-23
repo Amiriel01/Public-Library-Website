@@ -3,7 +3,7 @@ import AuthorEvent from "./images/authoreventsslider.png";
 import ReadingToRescues from "./images/readingtorescuesslider.png";
 import SweaterDrive from "./images/sweaterdriveslider.png";
 import WinterBookSale from "./images/winterusedbookslider.png";
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function EventCarousel() {

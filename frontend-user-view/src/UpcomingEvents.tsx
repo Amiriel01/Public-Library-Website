@@ -9,7 +9,9 @@ import ChildrenEvents from './ChildrenEvents';
 import { useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function UpcomingEvents({showAdmin}) {
+export default function UpcomingEvents({showAdmin}: {
+    showAdmin: boolean
+}) {
 
     const { pathname } = useLocation();
 

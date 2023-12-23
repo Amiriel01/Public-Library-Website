@@ -2,8 +2,6 @@ import axios from "axios";
 import { useEffect, useState, FormEvent } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 import HomepageLink from './HomepageLink';
 import Form from 'react-bootstrap/Form';
 import MyButton from "./MyButton";

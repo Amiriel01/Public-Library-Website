@@ -6,10 +6,19 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import HomepageLink from './HomepageLink';
 
+interface LibraryCardRequest {
+    _id: string,
+    card_issued: boolean,
+    name: string,
+    phone: string,
+    email: string,
+    additional_information: string,
+}
+
 export default function AllLibraryCardRequests() {
 
     const { pathname } = useLocation();
-    const [libraryCardRequestList, setLibraryCardRequestList] = useState([]);
+    const [libraryCardRequestList, setLibraryCardRequestList] = useState<Array<LibraryCardRequest>>([]);
 
     async function getLibraryCardRequests() {
         await axios.get('http://localhost:3000/libraryCard/libraryCardSubmissionList').then((response) => {

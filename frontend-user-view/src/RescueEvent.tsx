@@ -1,6 +1,6 @@
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from 'axios'
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from "./HomepageLink";

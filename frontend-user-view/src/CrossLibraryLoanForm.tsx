@@ -10,7 +10,9 @@ import Alert from 'react-bootstrap/Alert';
 import { useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function CrossLibraryLoanForm({showAdmin}) {
+export default function CrossLibraryLoanForm({showAdmin} : {
+    showAdmin: boolean
+}) {
 
     const { pathname } = useLocation();
 

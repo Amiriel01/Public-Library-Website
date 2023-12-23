@@ -1,5 +1,4 @@
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import MyButton from './MyButton';
 import axios from 'axios';
 import { FormEvent, useState } from 'react';
@@ -7,7 +6,7 @@ import { BookAPIProps } from './BookAPIProps';
 import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 
-export default function SecondHeader({ bookData, setBookData }: BookAPIProps) {
+export default function SecondHeader({ setBookData }: BookAPIProps) {
 
     const [searchInput, setSearchInput] = useState<string>("");
     const nav = useNavigate();
@@ -25,8 +24,6 @@ export default function SecondHeader({ bookData, setBookData }: BookAPIProps) {
     return (
         <>
             <Row id='second-header-container'>
-                {/* <Row > */}
-                    {/* <Col id='search-container'> */}
                     <Form  onSubmit={handleSubmit}>
                         <Form.Group id='search-container' className="mb-3">
                             <Form.Label id='search-title'>Search:</Form.Label>
@@ -43,26 +40,7 @@ export default function SecondHeader({ bookData, setBookData }: BookAPIProps) {
                             </div>
                         </Form.Group>
                     </Form>
-                    {/* <form id='search-form-container' onSubmit={handleSubmit}>
-                            <p id='search-text'>
-                                Search:
-                            </p>
-                            <div>
-                                <input id='search-input'
-                                    type='text'
-                                    name='search-text'
-                                    value={searchInput}
-                                    placeholder='Title or Author'
-                                    onChange={(e) => setSearchInput(e.target.value)}>
-                                </input>
-
-                                <MyButton id='submit-search-button' title='Submit' />
-
-                            </div>
-                        </form> */}
-                    {/* </Col> */}
                 </Row>
-            {/* </Row> */}
         </>
     )
 }

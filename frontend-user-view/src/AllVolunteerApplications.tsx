@@ -6,12 +6,21 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import HomepageLink from './HomepageLink';
 
+interface VolunteerApplication {
+    _id: string,
+    approved: boolean,
+    name: string,
+    phone: string,
+    email: string,
+    work_experience: string,
+    volunteer_experience: string,
+}
+
 export default function AllVolunteerApplications() {
 
     const { pathname } = useLocation();
 
-    const [interviewed, setInterviewed] = useState<string>('');
-    const [volunteerApplicationsList, setVolunteerApplicationsList] = useState([]);
+    const [volunteerApplicationsList, setVolunteerApplicationsList] = useState<Array<VolunteerApplication>>([]);
 
     async function getVolunteerApplications() {
         await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {

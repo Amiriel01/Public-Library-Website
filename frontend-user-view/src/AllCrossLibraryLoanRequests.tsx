@@ -6,10 +6,23 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import HomepageLink from './HomepageLink';
 
+interface CrossLibraryLoan {
+    _id: string,
+    ordered: boolean,
+    title: string,
+    author: string,
+    material_type: string,
+    order_notes: string,
+    name: string,
+    phone: string,
+    email: string,
+    library_card_number: string,
+}
+
 export default function AllCrossLibraryLoanRequests() {
 
     const { pathname } = useLocation();
-    const [crossLibraryLoanRequestsList, setcrossLibraryLoanRequestsList] = useState([]);
+    const [crossLibraryLoanRequestsList, setcrossLibraryLoanRequestsList] = useState<Array<CrossLibraryLoan>>([]);
 
     async function getCrossLibraryLoanRequestsList() {
         await axios.get('http://localhost:3000/crossLibrary/crossLibraryFormList').then((response) => {

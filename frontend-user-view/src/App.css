@@ -101,8 +101,6 @@ html {
 }
 
 /*Homepage*/
-#homepage-container {}
-
 #homepage-event-container {
   border-top: 1px solid #474044;
   padding-top: 2rem;
@@ -192,10 +190,6 @@ html {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-#address-title-container {
-  /* padding-left: 5rem; */
 }
 
 #contact-us-button {
@@ -676,10 +670,6 @@ html {
   color: #474044;
 }
 
-#meeting-flex-container {
-  /* margin-bottom: 2rem; */
-}
-
 #meeting-room-container {
   border-bottom: #474044 1px solid;
   align-items: center;
@@ -881,8 +871,6 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-
-#author-event-card-container {}
 
 #about-section-container {
   display: flex;
