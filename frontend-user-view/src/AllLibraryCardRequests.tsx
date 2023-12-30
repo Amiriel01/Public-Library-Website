@@ -23,7 +23,7 @@ export default function AllLibraryCardRequests() {
     async function getLibraryCardRequests() {
         await axios.get('http://localhost:3000/libraryCard/libraryCardSubmissionList').then((response) => {
             setLibraryCardRequestList(response.data);
-            console.log(response.status, response.data);
+            // console.log(response.status, response.data);
         })
     }
 
@@ -55,33 +55,41 @@ export default function AllLibraryCardRequests() {
             {libraryCardRequestList.filter(value => value.card_issued === false).map((libraryCardRequest) => {
                 return <NavLink to={"/libraryCard/libraryCardSubmission/" + libraryCardRequest._id}
                     key={libraryCardRequest._id}
-                    id='library-card-request-link'>
-                    <Card id='library-card-request-container'>
-                        <Card.Body>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Name:</p>
-                                    <p>{libraryCardRequest.name}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Phone:</p>
-                                    <p>{libraryCardRequest.phone}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Email:</p>
-                                    <p id='all-library-card-email'>{libraryCardRequest.email}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Help:</p>
-                                    <p>{libraryCardRequest.additional_information}</p>
-                                </div>
-                            </Card.Text>
+                    className='library-card-request-link'>
+                    <Card className='library-card-request-container'>
+                    <Card.Body>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
+                                </Card.Text>
+                                <Card.Text>
+                                    {libraryCardRequest.name}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone:
+                                </Card.Text>
+                                <Card.Text>
+                                    {libraryCardRequest.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {libraryCardRequest.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Additional Information:
+                                </Card.Text>
+                                <Card.Text>
+                                    {libraryCardRequest.additional_information}
+                                </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                 </NavLink>
@@ -96,33 +104,41 @@ export default function AllLibraryCardRequests() {
             {libraryCardRequestList.filter(value => value.card_issued === true).map((libraryCardRequest) => {
                 return <NavLink to={"/libraryCard/libraryCardSubmission/" + libraryCardRequest._id}
                     key={libraryCardRequest._id}
-                    id='library-card-request-link'>
+                    className='library-card-request-link'>
                     <Card id='library-card-request-container'>
-                        <Card.Body>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Name:</p>
-                                    <p>{libraryCardRequest.name}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Phone:</p>
-                                    <p>{libraryCardRequest.phone}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Email:</p>
-                                    <p id='all-library-card-email'>{libraryCardRequest.email}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Help:</p>
-                                    <p>{libraryCardRequest.additional_information}</p>
-                                </div>
-                            </Card.Text>
+                    <Card.Body>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
+                                </Card.Text>
+                                <Card.Text>
+                                    {libraryCardRequest.name}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone:
+                                </Card.Text>
+                                <Card.Text>
+                                    {libraryCardRequest.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {libraryCardRequest.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Additional Information:
+                                </Card.Text>
+                                <Card.Text>
+                                    {libraryCardRequest.additional_information}
+                                </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                 </NavLink>

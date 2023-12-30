@@ -36,7 +36,7 @@ export default function SecondHeader({ setBookData }: BookAPIProps) {
                                 onChange={(e) => setSearchInput(e.target.value)}
                                 id='search-input' />
                             <div>
-                                <MyButton id='submit-search-button' title='Submit'></MyButton>
+                                <MyButton className='submit-search-button' title='Submit'></MyButton>
                             </div>
                         </Form.Group>
                     </Form>

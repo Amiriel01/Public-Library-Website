@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from "./HomepageLink";
 import FirstFooter from "./FirstFooter";
+import { Helmet } from 'react-helmet-async';
+import Logo from './images/logo.png';
 
 interface EventInterface {
     title: string,
@@ -13,7 +15,7 @@ interface EventInterface {
     program_type: string,
     age_group: string,
     description1: string,
-    description2: string, 
+    description2: string,
     imageURL: string,
 }
 
@@ -28,12 +30,8 @@ export default function EventPage() {
         age_group: "",
         description1: "",
         description2: "",
-        imageURL:"",
+        imageURL: "",
     });
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [pathname]);
 
     async function getEvent() {
         await axios.get(`http://localhost:3000/event/eventDetail/${id}`).then((response) => {
@@ -46,60 +44,79 @@ export default function EventPage() {
         getEvent();
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname]);
+
     return (
         <>
-            <Row id="event-page-container">
-                <HomepageLink />
-                <Row id="event-page-details-container">
-                    <Col id="event-page-title">
-                        <h1 id="bold-text">
-                            {event.title}
-                        </h1>
-                    </Col>
-                </Row>
-                <Row id="image-details-container">
-                    <Col id="event-image">
-                        <img className="img-fluid" id='event-page-image' src={`http://localhost:3000/public/${event.imageURL}`} alt="hot cocoa picture"></img>
-                    </Col>
-                    <Col id="details-container">
-                        <Col id="event-date">
-                            <div id='bold-flex-container'>
-                                <p className="page-detail">{event.date}</p>
-                            </div>
+            <div>
+                <Helmet>
+                    <title>Another Page Public Library Event Details Page</title>
+                    <meta name="description" content="The event page gives details about a specific event that the library patron has requested to view via the event button on the upcoming events page." />
+                    <meta name="keywords" content="react, public library, library event details" />
+                    <meta property="og:title" content="Another Page Public Library Event Details Page" />
+                    <meta property="og:description" content="The event page gives details about a specific event that the library patron has requested to view via the event button on the upcoming events page." />
+                    <meta property="og:image" content={Logo} />
+                    <meta property="og:url" content="https://example.com/my-page" />
+                    <meta name="twitter:title" content="Another Page Public Library Event Details Page" />
+                    <meta name="twitter:description" content="The event page gives details about a specific event that the library patron has requested to view via the event button on the upcoming events page." />
+                    <meta name="twitter:image" content={Logo} />
+                    <meta name="twitter:card" content={Logo} />
+                </Helmet>
+                <Row id="event-page-container">
+                    <HomepageLink />
+                    <Row id="event-page-details-container">
+                        <Col id="event-page-title">
+                            <h1 id="bold-text">
+                                {event.title}
+                            </h1>
                         </Col>
-                        <Col id="event-time">
-                            <div id='bold-flex-container'>
-                                <p className="page-detail">{event.time}</p>
-                            </div>
+                    </Row>
+                    <Row id="image-details-container">
+                        <Col id="event-image">
+                            <img className="img-fluid" id='event-page-image' src={`http://localhost:3000/public/${event.imageURL}`} alt="hot cocoa picture"></img>
                         </Col>
-                        <Col id="event-program-type">
-                            <div id='bold-flex-container'>
-                                <p className="page-detail">{event.program_type} Event</p>
-                            </div>
+                        <Col id="details-container">
+                            <Col id="event-date">
+                                <div id='bold-flex-container'>
+                                    <p className="page-detail">{event.date}</p>
+                                </div>
+                            </Col>
+                            <Col id="event-time">
+                                <div id='bold-flex-container'>
+                                    <p className="page-detail">{event.time}</p>
+                                </div>
+                            </Col>
+                            <Col id="event-program-type">
+                                <div id='bold-flex-container'>
+                                    <p className="page-detail">{event.program_type} Event</p>
+                                </div>
+                            </Col>
+                            <Col id="event-age-group">
+                                <div id='bold-flex-container'>
+                                    <p className="page-detail">{event.age_group} Welcome</p>
+                                </div>
+                            </Col>
                         </Col>
-                        <Col id="event-age-group">
-                            <div id='bold-flex-container'>
-                                <p className="page-detail">{event.age_group} Welcome</p>
-                            </div>
+                    </Row>
+                    <Row>
+                        <Col className="event-description">
+                            <p>
+                                {event.description1}
+                            </p>
                         </Col>
-                    </Col>
+                    </Row>
+                    <Row>
+                        <Col className="event-description">
+                            <p>
+                                {event.description2}
+                            </p>
+                        </Col>
+                    </Row>
                 </Row>
-                <Row>
-                    <Col className="event-description">
-                        <p>
-                            {event.description1}
-                        </p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="event-description">
-                        <p>
-                            {event.description2}
-                        </p>
-                    </Col>
-                </Row>
-            </Row>
-            <FirstFooter />
+                <FirstFooter />
+            </div>
         </>
     )
 }

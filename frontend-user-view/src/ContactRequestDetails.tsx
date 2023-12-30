@@ -29,7 +29,7 @@ export default function ContactRequestDetails() {
 
     async function getContactRequestDetails() {
         await axios.get(`http://localhost:3000/contact/contactForm/${id}`).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             setContactRequestDetail(response.data);
         })
     }
@@ -72,8 +72,8 @@ export default function ContactRequestDetails() {
         }
 
         axios.put(`http://localhost:3000/contact/contactForm/${id}`, contactDataUpdate).then((response) => {
-            console.log(contactDataUpdate)
-            console.log(response.status, response.data)
+            // console.log(contactDataUpdate)
+            // console.log(response.status, response.data)
         })
     }
 
@@ -91,36 +91,46 @@ export default function ContactRequestDetails() {
             <HomepageLink />
             <Card id='contact-request-container'>
                 <Card.Body>
-                    <Card.Text>
-                        <div id='bold-flex-container'>
-                            <p id='bold-text'>Name:</p>
-                            <p>{contactRequestDetail.name}</p>
-                        </div>
-                    </Card.Text>
-                    <Card.Text>
-                        <div id='bold-flex-container'>
-                            <p id='bold-text'>Phone:</p>
-                            <p>{contactRequestDetail.phone}</p>
-                        </div>
-                    </Card.Text>
-                    <Card.Text>
-                        <div id='bold-flex-container'>
-                            <p id='bold-text'>Email:</p>
-                            <p>{contactRequestDetail.email}</p>
-                        </div>
-                    </Card.Text>
-                    <Card.Text>
-                        <div id='bold-flex-container'>
-                            <p id='bold-text'>Help:</p>
-                            <p>{contactRequestDetail.help}</p>
-                        </div>
-                    </Card.Text>
-                    <Card.Text>
-                        <div id='bold-flex-container'>
-                            <p id='bold-text'>Message:</p>
-                            <p>{contactRequestDetail.message}</p>
-                        </div>
-                    </Card.Text>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Name:
+                        </Card.Text>
+                        <Card.Text>
+                            {contactRequestDetail.name}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Phone:
+                        </Card.Text>
+                        <Card.Text>
+                            {contactRequestDetail.phone}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Email:
+                        </Card.Text>
+                        <Card.Text id="all-contact-email">
+                            {contactRequestDetail.email}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Help:
+                        </Card.Text>
+                        <Card.Text>
+                            {contactRequestDetail.help}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Message:
+                        </Card.Text>
+                        <Card.Text>
+                            {contactRequestDetail.message}
+                        </Card.Text>
+                    </div>
                 </Card.Body>
             </Card>
             <Form onSubmit={handleSubmit}>
@@ -130,7 +140,6 @@ export default function ContactRequestDetails() {
                         type="text"
                         name="admin_notes"
                         placeholder="Type notes here."
-                        defaultValue={contactRequestDetail.admin_notes}
                         value={contactRequestDetailUpdate.admin_notes}
                         onChange={handleChange} />
                 </Form.Group>
@@ -144,14 +153,12 @@ export default function ContactRequestDetails() {
                         onChange={handleChangeCompleted}
                     />
                 </Form.Group>
-                {/* <Link to='/AllContactRequests'> */}
-                    <MyButton id="contact-request-update-button" title="Update Contact Request"></MyButton>
-                {/* </Link> */}
+                <MyButton className="contact-request-update-button" title="Update Contact Request"></MyButton>
                 <Link to='/AllContactRequests'>
-                    <MyButton onClick={handleDeleteContactRequest} id="contact-request-update-button" title="Delete Contact Request"></MyButton>
+                    <MyButton onClick={handleDeleteContactRequest} className="contact-request-update-button" title="Delete Contact Request"></MyButton>
                 </Link>
                 <Link to='/AllContactRequests'>
-                    <MyButton id="contact-request-update-button" title="View All Contact Requests"></MyButton>
+                    <MyButton className="contact-request-update-button" title="View All Contact Requests"></MyButton>
                 </Link>
             </Form>
         </Row>

@@ -20,7 +20,7 @@ export default function InLibraryResources() {
             </Col>
             <Col md={12} lg={9} id='event-cards-container'>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={MathTutoring} alt='decorative hot cocoa mug'></Card.Img>
+                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={MathTutoring} alt='math tutoring'></Card.Img>
                     <Card.Body>
                         <Card.Title id='bold-text'>Math Tutoring</Card.Title>
                         <Card.Text>
@@ -35,7 +35,7 @@ export default function InLibraryResources() {
                     </Card.Body>
                 </Card>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" variant="top" id='event-card-image' src={EnglishTutoring} />
+                    <Card.Img className="img-fluid" variant="top" id='event-card-image' src={EnglishTutoring} alt='english tutoring'/>
                     <Card.Body>
                         <Card.Title id='bold-text'>English Tutoring</Card.Title>
                         <Card.Text>
@@ -50,7 +50,7 @@ export default function InLibraryResources() {
                     </Card.Body>
                 </Card>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={MediumStudyRoom} />
+                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={MediumStudyRoom} alt='study rooms'/>
                     <Card.Body>
                         <Card.Title id='bold-text'>Study Rooms</Card.Title>
                         <Card.Text>

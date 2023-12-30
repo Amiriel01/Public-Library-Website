@@ -52,7 +52,7 @@ export default function VolunteerApplicationDetails() {
     async function getVolunteerApplicationDetails() {
         await axios.get(`http://localhost:3000/volunteer/volunteerForm/${id}`).then((response) => {
             setVolunteerApplicationDetails(response.data);
-            console.log(response.status, response.data);
+            // console.log(response.status, response.data);
         })
     }
 
@@ -150,8 +150,8 @@ export default function VolunteerApplicationDetails() {
         }
 
         axios.put(`http://localhost:3000/volunteer/volunteerForm/${id}`, volunteerApplicationUpdate).then((response) => {
-            console.log(volunteerApplicationUpdate)
-            console.log(response.status, response.data)
+            // console.log(volunteerApplicationUpdate)
+            // console.log(response.status, response.data)
         })
     }
 
@@ -168,59 +168,83 @@ export default function VolunteerApplicationDetails() {
         <Row id="volunteer-details-container-page">
             <HomepageLink />
             <Card id='contact-request-container'>
-                <Card.Body id='card-flex-container'>
-                    <div>
-                        <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Name:</p>
-                                <p>{volunteerApplicationDetails.name}</p>
-                            </div>
+                <Card.Body>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Name:
                         </Card.Text>
                         <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Phone:</p>
-                                <p>{volunteerApplicationDetails.phone}</p>
-                            </div>
+                            {volunteerApplicationDetails.name}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Phone:
                         </Card.Text>
                         <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Email:</p>
-                                <p>{volunteerApplicationDetails.email}</p>
-                            </div>
+                            {volunteerApplicationDetails.phone}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Email:
+                        </Card.Text>
+                        <Card.Text id="all-contact-email">
+                            {volunteerApplicationDetails.email}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Work Experience:
                         </Card.Text>
                         <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Work Experience:</p>
-                                <p>{volunteerApplicationDetails.work_experience}</p>
-                            </div>
+                            {volunteerApplicationDetails.work_experience}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Volunteer Experience:
                         </Card.Text>
                         <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Volunteer Experience:</p>
-                                <p>{volunteerApplicationDetails.volunteer_experience}</p>
-                            </div>
+                            {volunteerApplicationDetails.volunteer_experience}
                         </Card.Text>
                     </div>
                     <div>
-                        <Card.Text>
-                            <p id='bold-text'>Dates Available:</p>
+                        <Card.Text id='bold-text'>
+                            Dates Available:
                         </Card.Text>
                         <Card.Text>
-                            <p>{monday}</p>
-                            <p>{tuesday}</p>
-                            <p>{wednesday}</p>
-                            <p>{thursday}</p>
-                            <p>{friday}</p>
-                            <p>{saturday}</p>
-                            <p>{sunday}</p>
+                            {monday}
                         </Card.Text>
                         <Card.Text>
-                            <p id='bold-text'>Times Available:</p>
+                            {tuesday}
                         </Card.Text>
                         <Card.Text>
-                            <p>{morning}</p>
-                            <p>{afternoon}</p>
-                            <p>{evening}</p>
+                            {wednesday}
+                        </Card.Text>
+                        <Card.Text>
+                            {thursday}
+                        </Card.Text>
+                        <Card.Text>
+                            {friday}
+                        </Card.Text>
+                        <Card.Text>
+                            {saturday}
+                        </Card.Text>
+                        <Card.Text>
+                            {sunday}
+                        </Card.Text>
+                        <Card.Text id='bold-text'>
+                            Times Available:
+                        </Card.Text>
+                        <Card.Text>
+                            {morning}
+                        </Card.Text>
+                        <Card.Text>
+                            {afternoon}
+                        </Card.Text>
+                        <Card.Text>
+                            {evening}
                         </Card.Text>
                     </div>
                 </Card.Body>
@@ -246,14 +270,14 @@ export default function VolunteerApplicationDetails() {
                         onChange={handleChangeCompleted}
                     />
                 </Form.Group>
-                <MyButton id="contact-request-update-button" title="Update Volunteer Application"></MyButton>
+                <MyButton className="contact-request-update-button" title="Update Volunteer Application"></MyButton>
                 <Link to='/AllVolunteerApplications'>
-                    <MyButton onClick={handleDeleteVolunteerApplication} id="contact-request-update-button" title="Delete Volunteer Application"></MyButton>
+                    <MyButton onClick={handleDeleteVolunteerApplication} className="contact-request-update-button" title="Delete Volunteer Application"></MyButton>
                 </Link>
                 <Link to='/AllVolunteerApplications'>
-                    <MyButton id="contact-request-update-button" title="View All Volunteer Applications"></MyButton>
+                    <MyButton className="contact-request-update-button" title="View All Volunteer Applications"></MyButton>
                 </Link>
             </Form>
-        </Row>
+        </Row >
     )
 }

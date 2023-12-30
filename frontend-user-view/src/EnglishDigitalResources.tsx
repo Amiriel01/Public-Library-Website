@@ -22,7 +22,7 @@ export default function EnglishDigitalResources() {
             </Col>
             <Col md={12} lg={9} id='event-cards-container'>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={ABCya} alt='decorative hot cocoa mug'></Card.Img>
+                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={ABCya} alt='ABCYa'></Card.Img>
                     <Card.Body>
                         <Card.Title id='bold-text'>ABCya</Card.Title>
                         <Card.Text>
@@ -31,15 +31,15 @@ export default function EnglishDigitalResources() {
                         <Card.Text>
                             Students can use this free English resource games to practice English skills. ABCya covers topics from pre-school through 6th grade.
                         </Card.Text>
-                        <a id='resource-link' href="https://www.abcya.com/" target='_blank'>
+                        <a className='resource-link' href="https://www.abcya.com/" target='_blank'>
                             <div id='event-button-container'>
-                                <MyButton id='resource-button' title='Visit the ABCya Website'></MyButton>
+                                <MyButton className='resource-button' title='Visit the ABCya Website'></MyButton>
                             </div>
                         </a>
                     </Card.Body>
                 </Card>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" variant="top" id='event-card-image' src={Quill} />
+                    <Card.Img className="img-fluid" variant="top" id='event-card-image' src={Quill} alt='Quill'/>
                     <Card.Body>
                         <Card.Title id='bold-text'>Prodigy</Card.Title>
                         <Card.Text>
@@ -48,15 +48,15 @@ export default function EnglishDigitalResources() {
                         <Card.Text>
                         Students can use this free English resource to practice writing and grammar skills. Quill is typically used for students 4th-12th grades.
                         </Card.Text>
-                        <a id='resource-link' href="https://www.quill.org/session/new" target='_blank'>
+                        <a className='resource-link' href="https://www.quill.org/session/new" target='_blank'>
                             <div id='event-button-container'>
-                                <MyButton id='resource-button' title='Visit the Quill Website'></MyButton>
+                                <MyButton className='resource-button' title='Visit the Quill Website'></MyButton>
                             </div>
                         </a>
                     </Card.Body>
                 </Card>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={SplashLearn} />
+                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={SplashLearn} alt='Splash Learn'/>
                     <Card.Body>
                         <Card.Title id='bold-text'>Splash Learn</Card.Title>
                         <Card.Text>
@@ -65,9 +65,9 @@ export default function EnglishDigitalResources() {
                         <Card.Text>
                         Students can use this free English resource to find games for English skills. Splash Learn also has math resources!
                         </Card.Text>
-                        <a id='resource-link' href="https://www.splashlearn.com/" target='_blank'>
+                        <a className='resource-link' href="https://www.splashlearn.com/" target='_blank'>
                             <div id='event-button-container'>
-                                <MyButton id='resource-button' title='Visit the Splash Learn Website'></MyButton>
+                                <MyButton className='resource-button' title='Visit the Splash Learn Website'></MyButton>
                             </div>
                         </a>
                     </Card.Body>

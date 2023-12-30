@@ -6,7 +6,6 @@ import asyncHandler from "express-async-handler";
 export function user_list() {
     return asyncHandler(async (req, res, next) => {
         const userList = await User.find().exec();
-
         console.log(userList);
         res.json(userList);
     });

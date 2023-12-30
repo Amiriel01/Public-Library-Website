@@ -25,7 +25,7 @@ export default function AllVolunteerApplications() {
     async function getVolunteerApplications() {
         await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
             setVolunteerApplicationsList(response.data);
-            console.log(response.status, response.data);
+            // console.log(response.status, response.data);
         })
     }
 
@@ -57,41 +57,47 @@ export default function AllVolunteerApplications() {
             {volunteerApplicationsList.filter(value => value.approved === false).map((volunteerApplication) => {
                 return <NavLink to={"/volunteer/volunteerForm/" + volunteerApplication._id}
                     key={volunteerApplication._id}
-                    id='volunteer-application-link'>
+                    className='volunteer-application-link'>
                     <Card id='volunteer-application-container'>
-                        <Card.Body id='all-volunteer-flex-availability'>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Name:</p>
-                                        <p>{volunteerApplication.name}</p>
-                                    </div>
+                        <Card.Body>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Phone:</p>
-                                        <p>{volunteerApplication.phone}</p>
-                                    </div>
-                                </Card.Text>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Email:</p>
-                                        <p id='all-library-card-email'>{volunteerApplication.email}</p>
-                                    </div>
+                                    {volunteerApplication.name}
                                 </Card.Text>
                             </div>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Work Experience:</p>
-                                        <p>{volunteerApplication.work_experience}</p>
-                                    </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Volunteer Experience:</p>
-                                        <p>{volunteerApplication.volunteer_experience}</p>
-                                    </div>
+                                    {volunteerApplication.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {volunteerApplication.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Work Experience:
+                                </Card.Text>
+                                <Card.Text>
+                                    {volunteerApplication.work_experience}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Volunteer Experience:
+                                </Card.Text>
+                                <Card.Text>
+                                    {volunteerApplication.volunteer_experience}
                                 </Card.Text>
                             </div>
                         </Card.Body>
@@ -108,41 +114,47 @@ export default function AllVolunteerApplications() {
             {volunteerApplicationsList.filter(value => value.approved === true).map((volunteerApplication) => {
                 return <NavLink to={"/volunteer/volunteerForm/" + volunteerApplication._id}
                     key={volunteerApplication._id}
-                    id='volunteer-application-link'>
+                    className='volunteer-application-link'>
                     <Card id='volunteer-application-container'>
-                        <Card.Body id='all-volunteer-flex-availability'>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Name:</p>
-                                        <p>{volunteerApplication.name}</p>
-                                    </div>
+                    <Card.Body>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Phone:</p>
-                                        <p>{volunteerApplication.phone}</p>
-                                    </div>
-                                </Card.Text>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Email:</p>
-                                        <p id='all-library-card-email'>{volunteerApplication.email}</p>
-                                    </div>
+                                    {volunteerApplication.name}
                                 </Card.Text>
                             </div>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Work Experience:</p>
-                                        <p>{volunteerApplication.work_experience}</p>
-                                    </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Volunteer Experience:</p>
-                                        <p>{volunteerApplication.volunteer_experience}</p>
-                                    </div>
+                                    {volunteerApplication.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {volunteerApplication.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Work Experience:
+                                </Card.Text>
+                                <Card.Text>
+                                    {volunteerApplication.work_experience}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Volunteer Experience:
+                                </Card.Text>
+                                <Card.Text>
+                                    {volunteerApplication.volunteer_experience}
                                 </Card.Text>
                             </div>
                         </Card.Body>

@@ -6,7 +6,7 @@ export default function HomepageSquares() {
     return (
         <Row id='homepage-squares-container'>
             <Col id='home-page-square'>
-                <Link id='square-link' to="/AboutLibrary">
+                <Link id='square-link1' to="/AboutLibrary">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
                             local_library
@@ -21,7 +21,7 @@ export default function HomepageSquares() {
                 </Link>
             </Col>
             <Col id='home-page-square'>
-                <Link id='square-link' to="/UpcomingEvents">
+                <Link id='square-link2' to="/UpcomingEvents">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
                             calendar_month
@@ -36,7 +36,7 @@ export default function HomepageSquares() {
                 </Link>
             </Col>
             <Col id='home-page-square'>
-                <Link id='square-link' to="/GivingInfo">
+                <Link id='square-link3' to="/GivingInfo">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
                             volunteer_activism
@@ -51,7 +51,7 @@ export default function HomepageSquares() {
                 </Link>
             </Col>
             <Col id='home-page-square'>
-                <Link id='square-link' to="/StudentResources">
+                <Link id='square-link4' to="/StudentResources">
                     <div id='square-container'>
                         <span id='square-icon' className="material-symbols-outlined">
                             school

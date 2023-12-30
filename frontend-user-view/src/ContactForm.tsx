@@ -108,13 +108,14 @@ export default function ContactForm() {
                         name='message'
                         value={contactForm.message}
                         onChange={handleChange}
+                        placeholder="Type your message here."
                     />
                 </Form.Group>
                 <Form.Text id='form-text' className="text-muted">
                     We'll never share your phone number or email with anyone else.
                 </Form.Text>
                 <div>
-                    <MyButton id='contact-form-submit-button' title='Submit'></MyButton>
+                    <MyButton className='contact-form-submit-button' title='Submit'></MyButton>
                 </div>
             </Form>
             <Row>

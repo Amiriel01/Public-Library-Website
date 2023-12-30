@@ -68,7 +68,7 @@ export default function EveryoneEvents() {
                                 </Card.Text>
                                 <div id='event-button-container'>
                                     <NavLink to={"/event/eventDetail/" + ageEventDetail._id}>
-                                        <MyButton id='event-button' title='Learn More About the Event'></MyButton>
+                                        <MyButton className='event-button' title='Learn More About the Event'></MyButton>
                                     </NavLink>
                                 </div>
                             </Card.Body>

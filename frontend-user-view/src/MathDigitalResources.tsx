@@ -21,7 +21,7 @@ export default function MathDigitalResources() {
             </Col>
             <Col md={12} lg={9} id='event-cards-container'>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={Khan} alt='decorative hot cocoa mug'></Card.Img>
+                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={Khan} alt='Khan Academy'></Card.Img>
                     <Card.Body>
                         <Card.Title id='bold-text'>Khan Academy</Card.Title>
                         <Card.Text>
@@ -30,15 +30,15 @@ export default function MathDigitalResources() {
                         <Card.Text>
                             Students can use this free Math resource for videos, written explanations, and practice questions. Khan Academy covers topics from pre-school through college.
                         </Card.Text>
-                        <a id='resource-link' href="https://www.khanacademy.org/" target='_blank'>
+                        <a className='resource-link' href="https://www.khanacademy.org/" target='_blank'>
                             <div id='event-button-container'>
-                                <MyButton id='resource-button' title='Visit the Khan Academy Website'></MyButton>
+                                <MyButton className='resource-button' title='Visit the Khan Academy Website'></MyButton>
                             </div>
                         </a>
                     </Card.Body>
                 </Card>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" variant="top" id='event-card-image' src={Prodigy} />
+                    <Card.Img className="img-fluid" variant="top" id='event-card-image' src={Prodigy} alt='prodigy'/>
                     <Card.Body>
                         <Card.Title id='bold-text'>Prodigy</Card.Title>
                         <Card.Text>
@@ -47,15 +47,15 @@ export default function MathDigitalResources() {
                         <Card.Text>
                         Students can use this free Math resource to play a game while completing math questions. Prodigy is typically used for students kindergarten through middle school.
                         </Card.Text>
-                        <a id='resource-link' href="https://www.prodigygame.com/main-en/prodigy/" target='_blank'>
+                        <a className='resource-link' href="https://www.prodigygame.com/main-en/prodigy/" target='_blank'>
                             <div id='event-button-container'>
-                                <MyButton id='resource-button' title='Visit the Prodigy Game Website'></MyButton>
+                                <MyButton className='resource-button' title='Visit the Prodigy Game Website'></MyButton>
                             </div>
                         </a>
                     </Card.Body>
                 </Card>
                 <Card id='event-card' style={{ width: '20rem' }}>
-                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={Xtra} />
+                    <Card.Img className="img-fluid" id='event-card-image' variant="top" src={Xtra} alt='XtraMath'/>
                     <Card.Body>
                         <Card.Title id='bold-text'>XtraMath</Card.Title>
                         <Card.Text>
@@ -64,9 +64,9 @@ export default function MathDigitalResources() {
                         <Card.Text>
                         Students can use this free Math resource for practicing their operations and fact fluency. XtraMath is great for students learn their math facts.
                         </Card.Text>
-                        <a id='resource-link' href="https://home.xtramath.org/" target='_blank'>
+                        <a className='resource-link' href="https://home.xtramath.org/" target='_blank'>
                             <div id='event-button-container'>
-                                <MyButton id='resource-button' title='Visit the XtraMath Website'></MyButton>
+                                <MyButton className='resource-button' title='Visit the XtraMath Website'></MyButton>
                             </div>
                         </a>
                     </Card.Body>

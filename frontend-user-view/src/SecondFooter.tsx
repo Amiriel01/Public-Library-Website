@@ -11,7 +11,7 @@ export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }: {
 
     const renderLibraryLogin = () => {
         if (showAdmin === false) {
-            return <Link id='second-footer-link' to='/LibraryLogin'>
+            return <Link id='second-footer-link4' to='/LibraryLogin'>
                 <p id='bold-text'>
                     Library Login
                 </p>
@@ -37,7 +37,7 @@ export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }: {
             <Row id='second-footer-flex-container'>
                 <Col md={12} lg={4} id='second-footer-logo-container'>
                     <Link to='/Homepage'>
-                        <img className='img-fluid' id='second-footer-logo' src={Logo}
+                        <img id='second-footer-logo' src={Logo}
                             alt='library-logo'></img>
                     </Link>
                 </Col>
@@ -46,24 +46,24 @@ export default function SecondFooter({ showAdmin, setShowAdmin, setLoggedIn }: {
                         Stay Connected
                     </h3>
                     <div id='social-icon-text-container'>
-                        <img id='social-media-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-plain.svg" />
+                        <img id='social-media-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-plain.svg" alt='Facebook Icon'/>
                         <p id='social-media-text'>
                             Like us on Facebook!
                         </p>
                     </div>
                 </Col>
                 <Col md={12} lg={4} id='second-footer-links-container'>
-                    <Link id='second-footer-link' to='/FAQPage'>
+                    <Link id='second-footer-link1' to='/FAQPage'>
                         <p id='bold-text'>
                             FAQ
                         </p>
                     </Link>
-                    <Link id='second-footer-link' to='/ContactPage'>
+                    <Link id='second-footer-link2' to='/ContactPage'>
                         <p id='bold-text'>
                             Contact
                         </p>
                     </Link>
-                    <Link id='second-footer-link' to='/HoursLocationPage'>
+                    <Link id='second-footer-link3' to='/HoursLocationPage'>
                         <p id='bold-text'>
                             Hours & Location
                         </p>

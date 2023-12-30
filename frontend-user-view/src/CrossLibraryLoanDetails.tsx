@@ -31,7 +31,7 @@ export default function CrossLibraryLoanDetails() {
 
     async function getCrossLibraryLoanDetails() {
         await axios.get(`http://localhost:3000/crossLibrary/crossLibraryForm/${id}`).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             setCrossLibraryLoanDetails(response.data);
         })
     }
@@ -76,8 +76,8 @@ export default function CrossLibraryLoanDetails() {
         }
 
         axios.put(`http://localhost:3000/crossLibrary/crossLibraryForm/${id}`, crossLibraryDataUpdate).then((response) => {
-            console.log(crossLibraryDataUpdate)
-            console.log(response.status, response.data)
+            // console.log(crossLibraryDataUpdate)
+            // console.log(response.status, response.data)
         })
     }
 
@@ -94,51 +94,61 @@ export default function CrossLibraryLoanDetails() {
         <Row id="contact-request-container-page">
             <HomepageLink />
             <Card id='contact-request-container'>
-                <Card.Body id='card-flex-container'>
-                    <div>
-                        <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Title:</p>
-                                <p>{crossLibraryLoanDetails.title}</p>
-                            </div>
+                <Card.Body>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Title:
                         </Card.Text>
                         <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Author:</p>
-                                <p>{crossLibraryLoanDetails.author}</p>
-                            </div>
-                        </Card.Text>
-                        <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Material Type:</p>
-                                <p>{crossLibraryLoanDetails.material_type}</p>
-                            </div>
-                        </Card.Text>
-                        <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Library Card Number:</p>
-                                <p>{crossLibraryLoanDetails.library_card_number}</p>
-                            </div>
+                            {crossLibraryLoanDetails.title}
                         </Card.Text>
                     </div>
-                    <div>
-                        <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Name:</p>
-                                <p>{crossLibraryLoanDetails.name}</p>
-                            </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Author:
                         </Card.Text>
                         <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Phone:</p>
-                                <p>{crossLibraryLoanDetails.phone}</p>
-                            </div>
+                            {crossLibraryLoanDetails.author}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Material Type:
                         </Card.Text>
                         <Card.Text>
-                            <div id='bold-flex-container'>
-                                <p id='bold-text'>Email:</p>
-                                <p>{crossLibraryLoanDetails.email}</p>
-                            </div>
+                            {crossLibraryLoanDetails.material_type}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Order Notes:
+                        </Card.Text>
+                        <Card.Text>
+                            {crossLibraryLoanDetails.order_notes}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Name:
+                        </Card.Text>
+                        <Card.Text>
+                            {crossLibraryLoanDetails.name}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Phone Number:
+                        </Card.Text>
+                        <Card.Text>
+                            {crossLibraryLoanDetails.phone}
+                        </Card.Text>
+                    </div>
+                    <div className='bold-flex-container'>
+                        <Card.Text id='bold-text'>
+                            Email:
+                        </Card.Text>
+                        <Card.Text id="all-contact-email">
+                            {crossLibraryLoanDetails.email}
                         </Card.Text>
                     </div>
                 </Card.Body>
@@ -150,7 +160,6 @@ export default function CrossLibraryLoanDetails() {
                         type="text"
                         name="order_notes"
                         placeholder="Type notes here."
-                        // defaultValue={crossLibraryLoanDetails.order_notes}
                         value={crossLibraryLoanDetailsUpdate.order_notes}
                         onChange={handleChange} />
                 </Form.Group>
@@ -164,14 +173,12 @@ export default function CrossLibraryLoanDetails() {
                         onChange={handleChangeCompleted}
                     />
                 </Form.Group>
-                {/* <Link to='/AllContactRequests'> */}
-                <MyButton id="contact-request-update-button" title="Update Cross Library Loan Request"></MyButton>
-                {/* </Link> */}
+                <MyButton className="contact-request-update-button" title="Update Cross Library Loan Request"></MyButton>
                 <Link to='/AllCrossLibraryLoanRequests'>
-                    <MyButton onClick={handleDeleteCrossLibraryRequest} id="contact-request-update-button" title="Delete Cross Library Loan Request"></MyButton>
+                    <MyButton onClick={handleDeleteCrossLibraryRequest} className="contact-request-update-button" title="Delete Cross Library Loan Request"></MyButton>
                 </Link>
                 <Link to='/AllCrossLibraryLoanRequests'>
-                    <MyButton id="contact-request-update-button" title="View All Cross Library Loan Requests"></MyButton>
+                    <MyButton className="contact-request-update-button" title="View All Cross Library Loan Requests"></MyButton>
                 </Link>
             </Form>
         </Row>

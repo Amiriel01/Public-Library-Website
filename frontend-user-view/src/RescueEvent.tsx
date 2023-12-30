@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from "./HomepageLink";
 import FirstFooter from "./FirstFooter";
+import { Helmet } from 'react-helmet-async';
+import Logo from './images/logo.png';
 
 interface EventInterface {
     title: string,
@@ -13,7 +15,7 @@ interface EventInterface {
     program_type: string,
     age_group: string,
     description1: string,
-    description2: string, 
+    description2: string,
     imageURL: string,
 }
 
@@ -27,7 +29,7 @@ export default function RescueEvent() {
         age_group: "",
         description1: "",
         description2: "",
-        imageURL:"",
+        imageURL: "",
     });
 
     useEffect(() => {
@@ -47,62 +49,77 @@ export default function RescueEvent() {
 
     return (
         <>
-            <Row id="event-page-container">
-                <HomepageLink />
-                <Row id="event-page-details-container">
-                    <Col id="event-page-title">
-                        <h1 id="bold-text">
-                            {event.title}
-                        </h1>
-                    </Col>
-                </Row>
-                <Row id="image-details-container">
-                    <Col id="event-image">
-                        <img className="img-fluid" id='event-page-image' src={`http://localhost:3000/public/${event.imageURL}`} alt="hot cocoa picture"></img>
-                    </Col>
-                    <Col id="details-container">
-                        <Col id="event-date">
-                            <div id='bold-flex-container'>
-                                {/* <p className='page-detail-bold'>Date & Time:</p> */}
-                                <p className="page-detail">{event.date}</p>
-                            </div>
+            <div>
+                <Helmet>
+                    <title>Another Page Public Library Reading to Rescues Event`</title>
+                    <meta name="description" content="The Another Page Public Library Reading to Rescues event is open to tweens and teens in the community. By volunteering at the event tweens and teens are increasing awareness for the shelters, completing volunteer tasks, and enjoying the company of the shelter pets." />
+                    <meta name="keywords" content="react, public library, volunteer events" />
+                    <meta property="og:title" content="Page Public Library Reading to Rescues Event" />
+                    <meta property="og:description" content="The Another Page Public Library Reading to Rescues event is open to tweens and teens in the community. By volunteering at the event tweens and teens are increasing awareness for the shelters, completing volunteer tasks, and enjoying the company of the shelter pets." />
+                    <meta property="og:image" content={Logo} />
+                    <meta property="og:url" content="https://example.com/my-page" />
+                    <meta name="twitter:title" content="Page Public Library Reading to Rescues Event" />
+                    <meta name="twitter:description" content="The Another Page Public Library Reading to Rescues event is open to tweens and teens in the community. By volunteering at the event tweens and teens are increasing awareness for the shelters, completing volunteer tasks, and enjoying the company of the shelter pets." />
+                    <meta name="twitter:image" content={Logo} />
+                    <meta name="twitter:card" content={Logo} />
+                </Helmet>
+                <Row id="event-page-container">
+                    <HomepageLink />
+                    <Row id="event-page-details-container">
+                        <Col id="event-page-title">
+                            <h1 id="bold-text">
+                                {event.title}
+                            </h1>
                         </Col>
-                        <Col id="event-time">
-                            <div id='bold-flex-container'>
-                                {/* <p className='page-detail-bold'>Time:</p> */}
-                                <p className="page-detail">{event.time}</p>
-                            </div>
+                    </Row>
+                    <Row id="image-details-container">
+                        <Col id="event-image">
+                            <img className="img-fluid" id='event-page-image' src={`http://localhost:3000/public/${event.imageURL}`} alt="hot cocoa picture"></img>
                         </Col>
-                        <Col id="event-program-type">
-                            <div id='bold-flex-container'>
-                                {/* <p className='page-detail-bold'>Program Type:</p> */}
-                                <p className="page-detail">{event.program_type} Event</p>
-                            </div>
+                        <Col id="details-container">
+                            <Col id="event-date">
+                                <div id='bold-flex-container'>
+                                    {/* <p className='page-detail-bold'>Date & Time:</p> */}
+                                    <p className="page-detail">{event.date}</p>
+                                </div>
+                            </Col>
+                            <Col id="event-time">
+                                <div id='bold-flex-container'>
+                                    {/* <p className='page-detail-bold'>Time:</p> */}
+                                    <p className="page-detail">{event.time}</p>
+                                </div>
+                            </Col>
+                            <Col id="event-program-type">
+                                <div id='bold-flex-container'>
+                                    {/* <p className='page-detail-bold'>Program Type:</p> */}
+                                    <p className="page-detail">{event.program_type} Event</p>
+                                </div>
+                            </Col>
+                            <Col id="event-age-group">
+                                <div id='bold-flex-container'>
+                                    {/* <p className='page-detail-bold'>Age Group:</p> */}
+                                    <p className="page-detail">{event.age_group} Welcome</p>
+                                </div>
+                            </Col>
                         </Col>
-                        <Col id="event-age-group">
-                            <div id='bold-flex-container'>
-                                {/* <p className='page-detail-bold'>Age Group:</p> */}
-                                <p className="page-detail">{event.age_group} Welcome</p>
-                            </div>
+                    </Row>
+                    <Row>
+                        <Col className="event-description">
+                            <p>
+                                {event.description1}
+                            </p>
                         </Col>
-                    </Col>
+                    </Row>
+                    <Row>
+                        <Col className="event-description">
+                            <p>
+                                {event.description2}
+                            </p>
+                        </Col>
+                    </Row>
                 </Row>
-                <Row>
-                    <Col className="event-description">
-                        <p>
-                            {event.description1}
-                        </p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="event-description">
-                        <p>
-                            {event.description2}
-                        </p>
-                    </Col>
-                </Row>
-            </Row>
-            <FirstFooter />
+                <FirstFooter />
+            </div>
         </>
     )
 }

@@ -59,7 +59,7 @@ export default function MeetingRoom() {
                             <p>20ft x 25ft</p>
                         </div>
                         <p>
-                            Click <Link id='meeting-room-information-page-link' to="/MeetingRoomInformation">here</Link> to view meeting room pictures and available seating arrangements.
+                            <Link id='meeting-room-information-page-link' to="/MeetingRoomInformation">Click  here</Link> to view meeting room pictures and available seating arrangements.
                         </p>
                         <p id='bold-text'>When making a room reservation please specify the seating arrangement if needed.</p>
                     </Accordion.Body>

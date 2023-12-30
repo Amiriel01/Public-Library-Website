@@ -17,7 +17,7 @@ export default function FirstFooter() {
                 </Col>
                 <Col id='first-footer-right'>
                     <Link to='/NewsletterSignUp'>
-                        <MyButton id='newsletter-button' title='Sign Up Now!'></MyButton>
+                        <MyButton className='newsletter-button' title='Sign Up Now!'></MyButton>
                     </Link>
                 </Col>
             </Row>

@@ -29,7 +29,7 @@ export default function LibraryCardRequestDetails() {
 
     async function getLibraryCardRequestDetails() {
         await axios.get(`http://localhost:3000/libraryCard/libraryCardSubmission/${id}`).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             setLibraryCardRequestDetails(response.data);
         })
     }
@@ -97,7 +97,7 @@ export default function LibraryCardRequestDetails() {
                     <Form.Control
                         type="text"
                         name="name"
-                        defaultValue={libraryCardRequestDetails.name}
+                        placeholder="Type your name here."
                         value={libraryCardRequestDetailsUpdate.name}
                         onChange={handleChange} />
                 </Form.Group>
@@ -106,7 +106,7 @@ export default function LibraryCardRequestDetails() {
                     <Form.Control
                         type="text"
                         name="phone"
-                        defaultValue={libraryCardRequestDetails.phone}
+                        placeholder="Type your phone number here."
                         value={libraryCardRequestDetailsUpdate.phone}
                         onChange={handleChange} />
                 </Form.Group>
@@ -115,7 +115,7 @@ export default function LibraryCardRequestDetails() {
                     <Form.Control
                         type="text"
                         name="email"
-                        defaultValue={libraryCardRequestDetails.email}
+                        placeholder="Type your email here."
                         value={libraryCardRequestDetailsUpdate.email}
                         onChange={handleChange} />
                 </Form.Group>
@@ -125,7 +125,6 @@ export default function LibraryCardRequestDetails() {
                         type="text"
                         name="additional_information"
                         placeholder="Type additional information here."
-                        defaultValue={libraryCardRequestDetails.additional_information}
                         value={libraryCardRequestDetailsUpdate.additional_information}
                         onChange={handleChange} />
                 </Form.Group>
@@ -140,13 +139,13 @@ export default function LibraryCardRequestDetails() {
                     />
                 </Form.Group>
                 {/* <Link to='/AllLibraryCardRequests'> */}
-                    <MyButton id="library-card-request-update-button" title="Update Library Card Request"></MyButton>
+                    <MyButton className="library-card-request-update-button" title="Update Library Card Request"></MyButton>
                 {/* </Link> */}
                 <Link to='/AllLibraryCardRequests'>
-                    <MyButton onClick={handleDeleteLibraryCardRequest} id="library-card-request-update-button" title="Delete Library Card Request"></MyButton>
+                    <MyButton onClick={handleDeleteLibraryCardRequest} className="library-card-request-update-button" title="Delete Library Card Request"></MyButton>
                 </Link>
                 <Link to='/AllLibraryCardRequests'>
-                    <MyButton id="library-card-request-update-button" title="View All Library Card Requests"></MyButton>
+                    <MyButton className="library-card-request-update-button" title="View All Library Card Requests"></MyButton>
                 </Link>
             </Form>
         </Row>

@@ -27,7 +27,7 @@ export default function AllCrossLibraryLoanRequests() {
     async function getCrossLibraryLoanRequestsList() {
         await axios.get('http://localhost:3000/crossLibrary/crossLibraryFormList').then((response) => {
             setcrossLibraryLoanRequestsList(response.data);
-            console.log(response.status, response.data);
+            // console.log(response.status, response.data);
         })
     }
 
@@ -59,59 +59,71 @@ export default function AllCrossLibraryLoanRequests() {
             {crossLibraryLoanRequestsList.filter(value => value.ordered === false).map((crossLibraryRequest) => {
                 return <NavLink to={"/crossLibrary/crossLibraryForm/" + crossLibraryRequest._id}
                     key={crossLibraryRequest._id}
-                    id='cross-library-request-link'>
+                    className='cross-library-request-link'>
                     <Card id='cross-library-request-container'>
-                        <Card.Body id='card-flex-container'>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Title:</p>
-                                        <p>{crossLibraryRequest.title}</p>
-                                    </div>
+                        <Card.Body>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Title:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Author:</p>
-                                        <p>{crossLibraryRequest.author}</p>
-                                    </div>
-                                </Card.Text>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Material Type:</p>
-                                        <p id='all-contact-email'>{crossLibraryRequest.material_type}</p>
-                                    </div>
-                                </Card.Text>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Order Notes:</p>
-                                        <p>{crossLibraryRequest.order_notes}</p>
-                                    </div>
+                                    {crossLibraryRequest.title}
                                 </Card.Text>
                             </div>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Name:</p>
-                                        <p>{crossLibraryRequest.name}</p>
-                                    </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Author:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Phone:</p>
-                                        <p>{crossLibraryRequest.phone}</p>
-                                    </div>
+                                    {crossLibraryRequest.author}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Material Type:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Email:</p>
-                                        <p>{crossLibraryRequest.email}</p>
-                                    </div>
+                                    {crossLibraryRequest.material_type}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Order Notes:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Library Card Number:</p>
-                                        <p>{crossLibraryRequest.library_card_number}</p>
-                                    </div>
+                                    {crossLibraryRequest.order_notes}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
+                                </Card.Text>
+                                <Card.Text>
+                                    {crossLibraryRequest.name}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone Number:
+                                </Card.Text>
+                                <Card.Text>
+                                    {crossLibraryRequest.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {crossLibraryRequest.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Library Card Number:
+                                </Card.Text>
+                                <Card.Text>
+                                    {crossLibraryRequest.library_card_number}
                                 </Card.Text>
                             </div>
                         </Card.Body>
@@ -128,59 +140,71 @@ export default function AllCrossLibraryLoanRequests() {
             {crossLibraryLoanRequestsList.filter(value => value.ordered === true).map((crossLibraryRequest) => {
                 return <NavLink to={"/crossLibrary/crossLibraryForm/" + crossLibraryRequest._id}
                     key={crossLibraryRequest._id}
-                    id='contact-request-link'>
+                    className='cross-library-request-link'>
                     <Card id='cross-library-request-container'>
-                        <Card.Body id='card-flex-container'>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Title:</p>
-                                        <p>{crossLibraryRequest.title}</p>
-                                    </div>
+                        <Card.Body>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Title:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Author:</p>
-                                        <p>{crossLibraryRequest.author}</p>
-                                    </div>
-                                </Card.Text>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Material Type:</p>
-                                        <p id='all-contact-email'>{crossLibraryRequest.material_type}</p>
-                                    </div>
-                                </Card.Text>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Order Notes:</p>
-                                        <p>{crossLibraryRequest.order_notes}</p>
-                                    </div>
+                                    {crossLibraryRequest.title}
                                 </Card.Text>
                             </div>
-                            <div>
-                                <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Name:</p>
-                                        <p>{crossLibraryRequest.name}</p>
-                                    </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Author:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Phone:</p>
-                                        <p>{crossLibraryRequest.phone}</p>
-                                    </div>
+                                    {crossLibraryRequest.author}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Material Type:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Email:</p>
-                                        <p>{crossLibraryRequest.email}</p>
-                                    </div>
+                                    {crossLibraryRequest.material_type}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Order Notes:
                                 </Card.Text>
                                 <Card.Text>
-                                    <div id='bold-flex-container'>
-                                        <p id='bold-text'>Library Card Number:</p>
-                                        <p>{crossLibraryRequest.library_card_number}</p>
-                                    </div>
+                                    {crossLibraryRequest.order_notes}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
+                                </Card.Text>
+                                <Card.Text>
+                                    {crossLibraryRequest.name}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone Number:
+                                </Card.Text>
+                                <Card.Text>
+                                    {crossLibraryRequest.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {crossLibraryRequest.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Library Card Number:
+                                </Card.Text>
+                                <Card.Text>
+                                    {crossLibraryRequest.library_card_number}
                                 </Card.Text>
                             </div>
                         </Card.Body>

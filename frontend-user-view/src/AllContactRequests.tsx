@@ -25,7 +25,7 @@ export default function AllContactRequests() {
     async function getContactRequests() {
         await axios.get('http://localhost:3000/contact/contactFormList').then((response) => {
             setContactRequestsList(response.data);
-            console.log(response.status, response.data);
+            // console.log(response.status, response.data);
         })
     }
 
@@ -42,113 +42,137 @@ export default function AllContactRequests() {
             <HomepageLink />
             <Row>
                 <Col>
-                <h1 id='bold-text'>
-                    Contact Requests
-                </h1>
+                    <h1 id='bold-text'>
+                        Contact Requests
+                    </h1>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                <h2 className='all-contact-subheader'>
-                    Not Completed:
-                </h2>
+                    <h2 className='all-contact-subheader'>
+                        Not Completed:
+                    </h2>
                 </Col>
             </Row>
             {contactRequestsList.filter(value => value.completed === false).map((contactRequest) => {
                 return <NavLink to={"/contact/contactForm/" + contactRequest._id}
                     key={contactRequest._id}
-                    id='contact-request-link'>
+                    className='contact-request-link'>
                     <Card id='contact-request-container'>
                         <Card.Body>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Name:</p>
-                                    <p>{contactRequest.name}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Phone:</p>
-                                    <p>{contactRequest.phone}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Email:</p>
-                                    <p id='all-contact-email'>{contactRequest.email}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Help:</p>
-                                    <p>{contactRequest.help}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Message:</p>
-                                    <p>{contactRequest.message}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Admin Notes:</p>
-                                    <p>{contactRequest.admin_notes}</p>
-                                </div>
-                            </Card.Text>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.name}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {contactRequest.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Help:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.help}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Message:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.message}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Admin Notes:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.admin_notes}
+                                </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                 </NavLink>
             })}
             <Row>
                 <Col>
-                <h2 className='all-contact-subheader'>
-                    Completed:
-                </h2>
+                    <h2 className='all-contact-subheader'>
+                        Completed:
+                    </h2>
                 </Col>
             </Row>
             {contactRequestsList.filter(value => value.completed === true).map((contactRequest) => {
                 return <NavLink to={"/contact/contactForm/" + contactRequest._id}
                     key={contactRequest._id}
-                    id='contact-request-link'>
+                    className='contact-request-link'>
                     <Card id='contact-request-container'>
                         <Card.Body>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Name:</p>
-                                    <p>{contactRequest.name}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Phone:</p>
-                                    <p>{contactRequest.phone}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Email:</p>
-                                    <p id='all-contact-email'>{contactRequest.email}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Help:</p>
-                                    <p>{contactRequest.help}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Message:</p>
-                                    <p>{contactRequest.message}</p>
-                                </div>
-                            </Card.Text>
-                            <Card.Text>
-                                <div id='bold-flex-container'>
-                                    <p id='bold-text'>Admin Notes:</p>
-                                    <p>{contactRequest.admin_notes}</p>
-                                </div>
-                            </Card.Text>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Name:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.name}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Phone:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.phone}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Email:
+                                </Card.Text>
+                                <Card.Text id="all-contact-email">
+                                    {contactRequest.email}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Help:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.help}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Message:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.message}
+                                </Card.Text>
+                            </div>
+                            <div className='bold-flex-container'>
+                                <Card.Text id='bold-text'>
+                                    Admin Notes:
+                                </Card.Text>
+                                <Card.Text>
+                                    {contactRequest.admin_notes}
+                                </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                 </NavLink>

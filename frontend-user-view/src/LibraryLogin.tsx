@@ -9,6 +9,8 @@ import FirstFooter from './FirstFooter';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useNavigate } from "react-router";
+import { Helmet } from 'react-helmet-async';
+import Logo from './images/logo.png';
 
 export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
     setLoggedIn: (data: boolean) => void,
@@ -58,51 +60,60 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
         })
     }
 
-    // const asyncUpdate = () => {
-    //     setTimeout(() => {
-    //       setCount((currentCount) => currentCount + 1);
-    //     }, 2000);
-    //   };
-
     return (
         <>
-            <Row id='login-form-container'>
-                <HomepageLink />
-                <Row>
-                    <Col>
-                        <h1 id='page-titles'>
-                            Library Login
-                        </h1>
-                    </Col>
+            <div>
+                <Helmet>
+                    <title>Another Page PublicLibrary Login Page</title>
+                    <meta name="description" content="The library login page is for current library employees to log into their accounts. Please do not attempt to login if you are not a current library employee." />
+                    <meta name="keywords" content="public library, library login" />
+                    <meta property="og:title" content="Another Page Public Library Login Page" />
+                    <meta property="og:description" content="The library login page is for current library employees to log into their accounts. Please do not attempt to login if you are not a current library employee." />
+                    <meta property="og:image" content={Logo} />
+                    <meta property="og:url" content="https://example.com/my-page" />
+                    <meta name="twitter:title" content="Another Page Public Library Login Page" />
+                    <meta name="twitter:description" content="The library login page is for current library employees to log into their accounts. Please do not attempt to login if you are not a current library employee." />
+                    <meta name="twitter:image" content={Logo} />
+                    <meta name="twitter:card" content={Logo} />
+                </Helmet>
+                <Row id='login-form-container'>
+                    <HomepageLink />
+                    <Row>
+                        <Col>
+                            <h1 id='page-titles'>
+                                Library Login
+                            </h1>
+                        </Col>
+                    </Row>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Username:</Form.Label>
+                            <Form.Control
+                                required
+                                type="text"
+                                name='username'
+                                placeholder="Type your username here."
+                                value={userLogin.username}
+                                onChange={handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Password:</Form.Label>
+                            <Form.Control
+                                required
+                                type="text"
+                                name='password'
+                                placeholder="Type your password here."
+                                value={userLogin.password}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                        <div>
+                            <MyButton className='login-form-submit-button' title='Submit'></MyButton>
+                        </div>
+                    </Form>
                 </Row>
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Username:</Form.Label>
-                        <Form.Control
-                            required
-                            type="text"
-                            name='username'
-                            placeholder="Type your username here."
-                            value={userLogin.username}
-                            onChange={handleChange} />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Password:</Form.Label>
-                        <Form.Control
-                            required
-                            type="text"
-                            name='password'
-                            placeholder="Type your password here."
-                            value={userLogin.password}
-                            onChange={handleChange}
-                        />
-                    </Form.Group>
-                    <div>
-                        <MyButton id='login-form-submit-button' title='Submit'></MyButton>
-                    </div>
-                </Form>
-            </Row>
-            <FirstFooter />
+                <FirstFooter />
+            </div>
         </>
     );
 }

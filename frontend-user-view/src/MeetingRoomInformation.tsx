@@ -11,10 +11,11 @@ import Club from "./images/clubmeeting.png";
 import Exhibition from "./images/exhibition.png";
 import Horseshoe from "./images/horseshoe.png";
 import Meeting from "./images/meeting.png";
-import MyButton from './MyButton';
-import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Logo from './images/logo.png';
+
 
 export default function MeetingRoomInformation() {
 
@@ -23,122 +24,137 @@ export default function MeetingRoomInformation() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [pathname]);
-    
+
     return (
         <>
-            <Row id='meeting-room-info-page-container'>
-                <HomepageLink />
-                <Row>
-                    <Col>
-                        <h1 id='page-titles'>
-                            Meeting Rooms
-                        </h1>
-                    </Col>
+            <div>
+                <Helmet>
+                    <title>Another Page Public Library Meeting Room Information</title>
+                    <meta name="description" content="Another page library has meeting rooms that can be reserved. On this page patrons can view the meeting rooms and potential room set ups that are available when reserving a meeting room." />
+                    <meta name="keywords" content="react, public library, meeting room information" />
+                    <meta property="og:title" content="Another Page Public Library Meeting Room Information" />
+                    <meta property="og:description" content="Another page library has meeting rooms that can be reserved. On this page patrons can view the meeting rooms and potential room set ups that are available when reserving a meeting room." />
+                    <meta property="og:image" content={Logo} />
+                    <meta property="og:url" content="https://example.com/my-page" />
+                    <meta name="twitter:title" content="Another Page Public Library Meeting Room Information" />
+                    <meta name="twitter:description" content="Another page library has meeting rooms that can be reserved. On this page patrons can view the meeting rooms and potential room set ups that are available when reserving a meeting room." />
+                    <meta name="twitter:image" content={Logo} />
+                    <meta name="twitter:card" content={Logo} />
+                </Helmet>
+                <Row id='meeting-room-info-page-container'>
+                    <HomepageLink />
+                    <Row>
+                        <Col>
+                            <h1 id='page-titles'>
+                                Meeting Rooms
+                            </h1>
+                        </Col>
+                    </Row>
+                    <Row id='meeting-room-container'>
+                        <Col>
+                            <img id="meeting-room-image" src={LargeMeeting} alt='large meeting room' className='img-fluid'></img>
+                        </Col>
+                        <Col md={12} lg={6}>
+                            <h2 id='meeting-room-information'>
+                                Large Meeting Room Setups Available
+                            </h2>
+                            <Row id='meeting-flex-container'>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Banquet} alt='banquet seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Banquet Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Classroom} alt='classroom seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Classroom Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Club} alt='club seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Club Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Exhibition} alt='exhibition seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Exhibition Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Horseshoe} alt='horseshoe seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Horseshoe Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Meeting} alt='meeting seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Meeting Seating</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                    <Row id='meeting-room-container'>
+                        <Col>
+                            <img id="meeting-room-image" src={MediumMeeting} alt='large meeting room' className='img-fluid'></img>
+                        </Col>
+                        <Col md={12} lg={6}>
+                            <h2 id='meeting-room-information'>
+                                Medium Meeting Room Setups Available
+                            </h2>
+                            <Row id='meeting-flex-container'>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Classroom} alt='classroom seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Classroom Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Club} alt='club seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Club Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Meeting} alt='meeting seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Meeting Seating</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                    <Row id='meeting-room-container'>
+                        <Col>
+                            <img id="meeting-room-image" src={SmallMeeting} alt='large meeting room' className='img-fluid'></img>
+                        </Col>
+                        <Col md={12} lg={6}>
+                            <h2 id='meeting-room-information'>
+                                Small Meeting Room Setups Available
+                            </h2>
+                            <Row id='meeting-flex-container'>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Classroom} alt='classroom seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Classroom Seating</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div id='meeting-image-name-container'>
+                                        <img id='meeting-image-size' src={Club} alt='club seating arrangement' className='img-fluid'></img>
+                                        <p id='bold-text'>Club Seating</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </Row>
-                <Row id='meeting-room-container'>
-                    <Col>
-                        <img id="meeting-room-image" src={LargeMeeting} alt='large meeting room' className='img-fluid'></img>
-                    </Col>
-                    <Col md={12} lg={6}>
-                        <h3 id='meeting-room-information'>
-                            Large Meeting Room Setups Available
-                        </h3>
-                        <Row id='meeting-flex-container'>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Banquet} alt='banquet seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Banquet Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Classroom} alt='classroom seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Classroom Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Club} alt='club seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Club Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Exhibition} alt='exhibition seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Exhibition Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Horseshoe} alt='horseshoe seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Horseshoe Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Meeting} alt='meeting seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Meeting Seating</p>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-                <Row id='meeting-room-container'>
-                    <Col>
-                        <img id="meeting-room-image" src={MediumMeeting} alt='large meeting room' className='img-fluid'></img>
-                    </Col>
-                    <Col md={12} lg={6}>
-                        <h3 id='meeting-room-information'>
-                            Medium Meeting Room Setups Available
-                        </h3>
-                        <Row id='meeting-flex-container'>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Classroom} alt='classroom seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Classroom Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Club} alt='club seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Club Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Meeting} alt='meeting seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Meeting Seating</p>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-                <Row id='meeting-room-container'>
-                    <Col>
-                        <img id="meeting-room-image" src={SmallMeeting} alt='large meeting room' className='img-fluid'></img>
-                    </Col>
-                    <Col md={12} lg={6}>
-                        <h3 id='meeting-room-information'>
-                            Small Meeting Room Setups Available
-                        </h3>
-                        <Row id='meeting-flex-container'>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Classroom} alt='classroom seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Classroom Seating</p>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div id='meeting-image-name-container'>
-                                    <img id='meeting-image-size' src={Club} alt='club seating arrangement' className='img-fluid'></img>
-                                    <p id='bold-text'>Club Seating</p>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </Row>
-            <FirstFooter />
+                <FirstFooter />
+            </div>
         </>
     )
 }
