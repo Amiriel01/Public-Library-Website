@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import { body, validationResult } from 'express-validator';
-import CrossLibraryForm from '../models/crossLibrary.ts';
+import CrossLibraryForm from '../models/crossLibrary';
 
 //GET a list of all cross library forms submissions with details
 export function cross_library_form_list() {

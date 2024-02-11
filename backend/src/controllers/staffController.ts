@@ -1,8 +1,8 @@
 // const asyncHandler = require("express-async-handler");
 import { body, validationResult } from 'express-validator'
 // const { body, validationResult } = require("express-validator");
-// const Staff = require("../models/staff.ts");
-import Staff from "../models/staff.ts";
+// const Staff = require("../models/staff");
+import Staff from "../models/staff";
 import asyncHandler from "express-async-handler";
 
 

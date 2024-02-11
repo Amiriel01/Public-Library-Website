@@ -2,15 +2,15 @@ import 'dotenv/config';
 import createError from "http-errors";
 import express from "express";
 import cors from 'cors';
-import indexRouter from './routes/index.ts';
-import usersRouter from './routes/users.ts';
-import staffRouter from './routes/staff.ts';
-import contactRouter from './routes/contact.ts'
-import libraryCardRouter from './routes/libraryCard.ts';
-import crossLibraryRouter from './routes/crossLibrary.ts';
-import volunteerRouter from './routes/volunteer.ts';
-import newsletterRouter from './routes/newsletter.ts';
-import eventRouter from './routes/event.ts';
+import indexRouter from './routes/index';
+import usersRouter from './routes/users';
+import staffRouter from './routes/staff';
+import contactRouter from './routes/contact'
+import libraryCardRouter from './routes/libraryCard';
+import crossLibraryRouter from './routes/crossLibrary';
+import volunteerRouter from './routes/volunteer';
+import newsletterRouter from './routes/newsletter';
+import eventRouter from './routes/event';
 
 const app = express();
 

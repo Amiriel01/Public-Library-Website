@@ -1,7 +1,7 @@
 import {Router} from "express";
 const router = Router();
 import passport from 'passport';
-import { user_get } from "../controllers/userController.ts";
+import { user_get } from "../controllers/userController";
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

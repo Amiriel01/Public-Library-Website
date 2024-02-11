@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import { body, validationResult } from 'express-validator';
-import VolunteerForm from "../models/volunteerForm.ts";
+import VolunteerForm from "../models/volunteerForm";
 
 //GET a list of all volunteer form submissions
 export function volunteer_form_list() {

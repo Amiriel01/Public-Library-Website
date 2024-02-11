@@ -1,7 +1,7 @@
 import {Router} from "express";
 const router = Router();
 
-import {staff_list, staff_member_create, staff_member_delete, staff_member_edit, staff_member_get} from "../controllers/staffController.ts";
+import {staff_list, staff_member_create, staff_member_delete, staff_member_edit, staff_member_get} from "../controllers/staffController";
 
 //GET all staff list 
 router.get("/staffList", staff_list());

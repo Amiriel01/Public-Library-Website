@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import { body, validationResult } from 'express-validator';
-import LibraryCard from '../models/libraryCard.ts';
+import LibraryCard from '../models/libraryCard';
 
 //GET a list of all library card submissions with details
 export function library_card_submissions_list() {

@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import { body, validationResult } from 'express-validator';
-import Contact from "../models/contact.ts";
+import Contact from "../models/contact";
 
 //GET a list of all contact forms submissions with details
 export function contact_form_submissions_list() {

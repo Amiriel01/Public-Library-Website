@@ -1,6 +1,6 @@
 import {Router} from "express";
 const router = Router();
-import { cross_library_form_list, cross_library_submission_get, cross_library_submission_create, cross_library_submission_edit, cross_library_submission_delete} from "../controllers/crossLibraryController.ts"
+import { cross_library_form_list, cross_library_submission_get, cross_library_submission_create, cross_library_submission_edit, cross_library_submission_delete} from "../controllers/crossLibraryController"
 
 //GET all cross library Submission list
 router.get("/crossLibraryFormList", cross_library_form_list());

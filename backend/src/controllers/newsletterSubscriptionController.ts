@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import { body, validationResult } from 'express-validator';
-import NewsletterSubscription from "../models/newsletterSubscription.ts";
+import NewsletterSubscription from "../models/newsletterSubscription";
 
 //GET a list of all newsletter subscription submissions with details
 export function newsletter_subscription_list() {

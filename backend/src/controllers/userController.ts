@@ -1,5 +1,5 @@
 import { body, validationResult } from 'express-validator';
-import User from "../models/user.ts";
+import User from "../models/user";
 import asyncHandler from "express-async-handler";
 
 //GET a list of all users with details

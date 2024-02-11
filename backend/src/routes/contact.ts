@@ -1,6 +1,6 @@
 import {Router} from "express";
 const router = Router();
-import { contact_form_submissions_list, contact_form_submission_get, contact_form_submission_create, contact_form_submission_edit, contact_form_submission_delete} from '../controllers/contactController.ts';
+import { contact_form_submissions_list, contact_form_submission_get, contact_form_submission_create, contact_form_submission_edit, contact_form_submission_delete} from '../controllers/contactController';
 
 //GET all contactForm Submission list
 router.get("/contactFormList", contact_form_submissions_list());

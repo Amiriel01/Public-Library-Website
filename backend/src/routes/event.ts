@@ -1,6 +1,6 @@
 import {Router} from "express";
 const router = Router();
-import { event_list, event_list_age_group, event_get, event_create, event_edit, event_delete } from '../controllers/eventController.ts';
+import { event_list, event_list_age_group, event_get, event_create, event_edit, event_delete } from '../controllers/eventController';
 
 //GET all events list
 router.get("/eventList", event_list());

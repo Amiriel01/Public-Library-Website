@@ -1,6 +1,6 @@
 import { Router } from "express";
 const router = Router();
-import { newsletter_subscription_list, newsletter_subscription_get, newsletter_subscription_create, newsletter_subscription_edit, newsletter_subscription_delete } from "../controllers/newsletterSubscriptionController.ts";
+import { newsletter_subscription_list, newsletter_subscription_get, newsletter_subscription_create, newsletter_subscription_edit, newsletter_subscription_delete } from "../controllers/newsletterSubscriptionController";
 
 //GET all newsletter Submission list
 router.get("/newsletterSubscriptionList", newsletter_subscription_list());

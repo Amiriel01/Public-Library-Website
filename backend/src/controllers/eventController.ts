@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import { body, validationResult } from 'express-validator';
-import Event from "../models/event.ts";
+import Event from "../models/event";
 
 //GET a list of all events
 export function event_list() {
