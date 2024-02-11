@@ -141,7 +141,6 @@ export default function VolunteerApplication({ showAdmin }: {
         setVolunteerApplicationInfo(initialValues);
 
         await axios.post("http://localhost:3000/volunteer/volunteerForm", volunteerApplicationData).then((response) => {
-            console.log(response.status, response.data);
             setIsCheckedMonday(false);
             setIsCheckedTuesday(false);
             setIsCheckedWednesday(false);
@@ -181,10 +180,6 @@ export default function VolunteerApplication({ showAdmin }: {
                     <meta property="og:description" content="The volunteer application should be filled out by library patrons who are interesting in volunteering at the library. Once the application is submitted the library will review it and contact the patron for an informal interview." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Volunteer Application" />
-                    <meta name="twitter:description" content="The volunteer application should be filled out by library patrons who are interesting in volunteering at the library. Once the application is submitted the library will review it and contact the patron for an informal interview." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='library-card-form-container'>
                     <HomepageLink />

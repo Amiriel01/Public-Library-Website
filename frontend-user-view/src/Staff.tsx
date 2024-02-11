@@ -2,7 +2,6 @@ import Card from 'react-bootstrap/Card';
 import StaffImage from "./images/director.png";
 import StaffImage2 from './images/director2.png';
 import StaffImage3 from './images/director3.png';
-import axios from 'axios';
 
 export default function Staff() {
     return (

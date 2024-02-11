@@ -35,7 +35,6 @@ export default function EventPage() {
 
     async function getEvent() {
         await axios.get(`http://localhost:3000/event/eventDetail/${id}`).then((response) => {
-            console.log(response)
             setEvent(response.data)
         });
     };
@@ -59,10 +58,6 @@ export default function EventPage() {
                     <meta property="og:description" content="The event page gives details about a specific event that the library patron has requested to view via the event button on the upcoming events page." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Event Details Page" />
-                    <meta name="twitter:description" content="The event page gives details about a specific event that the library patron has requested to view via the event button on the upcoming events page." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id="event-page-container">
                     <HomepageLink />

@@ -29,10 +29,6 @@ export default function AboutLibrary() {
                     <meta property="og:description" content="The Another Page Public Library about page, tells the libraries history. It discusses locations and employee counts, along with some other interesting facts." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library History" />
-                    <meta name="twitter:description" content="The Another Page Public Library about page, tells the libraries history. It discusses locations and employee counts, along with some other interesting facts." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='about-page-container'>
                     <HomepageLink />

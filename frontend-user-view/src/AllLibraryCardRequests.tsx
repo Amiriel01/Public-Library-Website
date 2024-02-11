@@ -23,7 +23,6 @@ export default function AllLibraryCardRequests() {
     async function getLibraryCardRequests() {
         await axios.get('http://localhost:3000/libraryCard/libraryCardSubmissionList').then((response) => {
             setLibraryCardRequestList(response.data);
-            // console.log(response.status, response.data);
         })
     }
 

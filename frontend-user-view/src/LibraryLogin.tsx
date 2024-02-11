@@ -71,10 +71,6 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
                     <meta property="og:description" content="The library login page is for current library employees to log into their accounts. Please do not attempt to login if you are not a current library employee." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Login Page" />
-                    <meta name="twitter:description" content="The library login page is for current library employees to log into their accounts. Please do not attempt to login if you are not a current library employee." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='login-form-container'>
                     <HomepageLink />

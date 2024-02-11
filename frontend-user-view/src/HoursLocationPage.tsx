@@ -29,10 +29,6 @@ export default function HoursLocationPage() {
                     <meta property="og:description" content="The Hours & Location page gives the hours the library is open, the library's address, and a link to the contact page." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Hours & Location" />
-                    <meta name="twitter:description" content="The Hours & Location page gives the hours the library is open, the library's address, and a link to the contact page." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='hours-location-page-container'>
                     <HomepageLink />

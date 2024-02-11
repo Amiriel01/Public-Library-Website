@@ -36,10 +36,6 @@ export default function MeetingRoomInformation() {
                     <meta property="og:description" content="Another page library has meeting rooms that can be reserved. On this page patrons can view the meeting rooms and potential room set ups that are available when reserving a meeting room." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Meeting Room Information" />
-                    <meta name="twitter:description" content="Another page library has meeting rooms that can be reserved. On this page patrons can view the meeting rooms and potential room set ups that are available when reserving a meeting room." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='meeting-room-info-page-container'>
                     <HomepageLink />

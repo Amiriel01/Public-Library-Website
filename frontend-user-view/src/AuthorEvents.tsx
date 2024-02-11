@@ -31,10 +31,6 @@ export default function AuthorEvents() {
                     <meta property="og:description" content="The Another Page Public Library Author Events page gives details on presentations that will be given about each author." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Author Events" />
-                    <meta name="twitter:description" content="The Another Page Public Library Author Events page gives details on presentations that will be given about each author." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='visiting-author-page-container'>
                     <HomepageLink />

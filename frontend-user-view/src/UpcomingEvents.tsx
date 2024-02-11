@@ -46,10 +46,6 @@ export default function UpcomingEvents({ showAdmin }: {
                     <meta property="og:description" content="The Another Page Public Library upcoming events page, tells lists all upcoming events for all ages on one page. Visit this page to plan for upcoming events." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Upcoming Events" />
-                    <meta name="twitter:description" content="The Another Page Public Library upcoming events page, tells lists all upcoming events for all ages on one page. Visit this page to plan for upcoming events." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='upcoming-events-page-container'>
                     <HomepageLink />

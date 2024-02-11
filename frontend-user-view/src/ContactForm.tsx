@@ -21,7 +21,6 @@ export default function ContactForm() {
 
     const handleChange = (event: FormEvent) => {
         const { name, value } = event.target as any;
-        console.log(event.target)
         setContactForm({
             ...contactForm,
             [name]: value
@@ -42,7 +41,6 @@ export default function ContactForm() {
         setContactForm(initialValues);
 
         await axios.post("http://localhost:3000/contact/contactForm", contactFormData).then((response) => {
-            console.log(response.status, response.data)
             setAlertShow(true)
         })
 

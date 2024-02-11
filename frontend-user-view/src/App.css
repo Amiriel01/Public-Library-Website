@@ -184,10 +184,6 @@ html {
   font-size: 1.75rem;
 }
 
-/* #carousel-container {
-  height: 21.25rem;
-} */
-
 #homepage-image-container {
   width: 80%;
   margin-left: auto;
@@ -345,8 +341,6 @@ html {
   color: #474044;
   margin-right: 3rem;
   margin-bottom: 1rem;
-  /* padding: .5rem; */
-
 }
 
 #staff-card-flex-container {
@@ -514,7 +508,6 @@ html {
     align-items: center;
     justify-content: center;
     color: #474044;
-    /* flex-wrap: wrap; */
     flex-direction: column;
   }
 
@@ -703,7 +696,6 @@ html {
 #give-flex-container {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
 }
 
 #give-title-subtitle-container {
@@ -855,10 +847,6 @@ html {
   margin-right: 10rem
 }
 
-/* #carousel-image {
-  height: 20rem;
-} */
-
 /*AuthorEvents Page */
 #visiting-author-page-container {
   width: 60%;
@@ -873,7 +861,6 @@ html {
     display: flex;
     align-items: center;
     color: #474044;
-    /* flex-wrap: wrap; */
   }
 
   #author-name-image {
@@ -934,8 +921,6 @@ html {
   width: 55%;
   margin-right: auto;
   margin-left: auto;
-  /* display: flex;
-  justify-content: center; */
 }
 
 #square-link1,
@@ -1094,8 +1079,6 @@ html {
 #first-footer-left-right {
   margin-left: auto;
   margin-right: auto;
-  /* display: flex;
-  justify-content: space-between; */
   width: 70%;
   align-items: center;
 }
@@ -1179,12 +1162,6 @@ html {
   background-color: #474044;
   padding: 3rem;
 }
-
-/* #second-footer-flex-container {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 @media(min-width: 1400px) {
   #second-footer-flex-container {

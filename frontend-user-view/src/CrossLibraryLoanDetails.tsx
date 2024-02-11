@@ -31,7 +31,6 @@ export default function CrossLibraryLoanDetails() {
 
     async function getCrossLibraryLoanDetails() {
         await axios.get(`http://localhost:3000/crossLibrary/crossLibraryForm/${id}`).then((response) => {
-            // console.log(response.data);
             setCrossLibraryLoanDetails(response.data);
         })
     }
@@ -76,8 +75,7 @@ export default function CrossLibraryLoanDetails() {
         }
 
         axios.put(`http://localhost:3000/crossLibrary/crossLibraryForm/${id}`, crossLibraryDataUpdate).then((response) => {
-            // console.log(crossLibraryDataUpdate)
-            // console.log(response.status, response.data)
+
         })
     }
 

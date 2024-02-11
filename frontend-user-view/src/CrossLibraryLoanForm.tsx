@@ -59,7 +59,6 @@ export default function CrossLibraryLoanForm({ showAdmin }: {
         setCrossLibraryFormInfo(initialValues);
 
         await axios.post("http://localhost:3000/crossLibrary/crossLibraryForm", crossLibraryFormData).then((response) => {
-            console.log(response.status, response.data)
             setAlertShow(true);
         })
     }
@@ -89,10 +88,6 @@ export default function CrossLibraryLoanForm({ showAdmin }: {
                     <meta property="og:description" content="The cross library loan form allows library card holders to request materials that our local library does not have. Patrons will fill out the form and pay a $5.00 fee when picking up their requested item." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="nother Page Public Library Cross Library Loans" />
-                    <meta name="twitter:description" content="The cross library loan form allows library card holders to request materials that our local library does not have. Patrons will fill out the form and pay a $5.00 fee when picking up their requested item." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='library-card-form-container'>
                     <HomepageLink />

@@ -26,10 +26,6 @@ export default function Donate() {
                     <meta property="og:description" content="The Donate page is not set up for online payments at this time. Please visit the library to make your monetary donation." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Donate Page" />
-                    <meta name="twitter:description" content="The Donate page is not set up for online payments at this time. Please visit the library to make your monetary donation." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='donate-page-container'>
                     <HomepageLink />

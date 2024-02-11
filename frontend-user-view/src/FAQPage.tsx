@@ -31,10 +31,6 @@ export default function FAQPage() {
                     <meta property="og:description" content="The faq page answers many common questions the library receives. The page has sections that help patrons learn about library cards, the library's borrowing and technology services, donations, volunteering, and meeting/study rooms available at the library." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Frequently Asked Questions" />
-                    <meta name="twitter:description" content="The faq page answers many common questions the library receives. The page has sections that help patrons learn about library cards, the library's borrowing and technology services, donations, volunteering, and meeting/study rooms available at the library." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='faq-page-container'>
                     <HomepageLink />

@@ -21,7 +21,6 @@ export default function AdultEvents() {
 
     async function getEventDetails() {
         await axios.get("http://localhost:3000/event/eventList").then((response) => {
-            // console.log(response.data);
             setEventDetails(response.data);
         })
     }

@@ -16,7 +16,6 @@ export default function CreateEventForm() {
 
     const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
-            console.log(event.target.files[0]);
             setImage(event.target.files[0]);
         } 
     };
@@ -33,12 +32,10 @@ export default function CreateEventForm() {
                     'Content-Type': 'multipart/form-data'
                 }
             })
-            console.log(result.data)
             setImageURL(result.data)
-            console.log(formData)
             setAlertImageShow(true)
         } catch (err) {
-            console.log(err)
+
         }
     }
 
@@ -57,7 +54,6 @@ export default function CreateEventForm() {
 
     const handleChange = (event: FormEvent) => {
         const { name, value } = event.target as any;
-        // console.log(event.target)
         setEventForm({
             ...eventForm,
             [name]: value
@@ -81,7 +77,6 @@ export default function CreateEventForm() {
         setEventForm(initialValues);
 
         await axios.post("http://localhost:3000/event/eventDetail", eventFormData).then((response) => {
-            console.log(response.status, response.data)
             setAlertFormShow(true);
         })
     }
@@ -99,7 +94,6 @@ export default function CreateEventForm() {
             <Form onSubmit={submitImage} id="event-form-">
                 <Form.Group className="mb-3" >
                     <Form.Control
-                        // id="event-form-color"
                         type="file"
                         accept="image/*"
                         onChange={onInputChange}

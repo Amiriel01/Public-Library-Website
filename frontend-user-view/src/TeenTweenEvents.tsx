@@ -21,7 +21,6 @@ export default function TeenTweenEvents() {
 
     async function getEventDetails() {
         await axios.get("http://localhost:3000/event/eventList").then((response) => {
-            // console.log(response.data);
             setEventDetails(response.data);
         })
     }
@@ -68,7 +67,7 @@ export default function TeenTweenEvents() {
                                 </Card.Text>
                                 <div id='event-button-container'>
                                     <NavLink to={"/event/eventDetail/" + ageEventDetail._id}>
-                                        <MyButton id='event-button' title='Learn More About the Event'></MyButton>
+                                        <MyButton className='event-button' title='Learn More About the Event'></MyButton>
                                     </NavLink>
                                 </div>
                             </Card.Body>

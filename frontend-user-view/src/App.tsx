@@ -6,7 +6,7 @@ import HoursLocationPage from './HoursLocationPage';
 import SecondHeader from './SecondHeader';
 import ContactPage from './ContactPage';
 import { useState } from 'react';
-import { BookAPIData, BookDataInterface } from './BookAPIInterface';
+import { BookAPIData } from './BookAPIInterface';
 import BookSearchResultsPage from './BookSearchResultsPage';
 import FAQPage from './FAQPage';
 import LibraryCardForm from './LibraryCardForm';

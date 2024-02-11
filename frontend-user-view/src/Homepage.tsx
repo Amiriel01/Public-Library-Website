@@ -29,10 +29,6 @@ export default function Homepage() {
                     <meta property="og:description" content="The homepage for Another Page Public Library contains the upcoming events carousel, the current traveling exhibit, and links to other pages." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Homepage" />
-                    <meta name="twitter:description" content="The homepage for Another Page Public Library contains the upcoming events carousel, the current traveling exhibit, and links to other pages." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='homepage-container'>
                     <Row id='carousel-container'>

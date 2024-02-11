@@ -52,7 +52,6 @@ export default function VolunteerApplicationDetails() {
     async function getVolunteerApplicationDetails() {
         await axios.get(`http://localhost:3000/volunteer/volunteerForm/${id}`).then((response) => {
             setVolunteerApplicationDetails(response.data);
-            // console.log(response.status, response.data);
         })
     }
 
@@ -150,8 +149,7 @@ export default function VolunteerApplicationDetails() {
         }
 
         axios.put(`http://localhost:3000/volunteer/volunteerForm/${id}`, volunteerApplicationUpdate).then((response) => {
-            // console.log(volunteerApplicationUpdate)
-            // console.log(response.status, response.data)
+
         })
     }
 
@@ -256,7 +254,6 @@ export default function VolunteerApplicationDetails() {
                         type="text"
                         name="interview_notes"
                         placeholder="Type notes here."
-                        // defaultValue={volunteerApplicationDetails.interview_notes}
                         value={volunteerApplicationDetailsUpdate.interview_notes}
                         onChange={handleChange} />
                 </Form.Group>

@@ -30,10 +30,6 @@ export default function StudentResources() {
                     <meta property="og:description" content="The student resources page is split into three catagories. Resources offered at the library, free online math resources, and free online english resources." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Student Resources" />
-                    <meta name="twitter:description" content="The student resources page is split into three catagories. Resources offered at the library, free online math resources, and free online english resources." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='upcoming-events-page-container'>
                     <HomepageLink />

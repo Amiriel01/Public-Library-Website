@@ -53,7 +53,6 @@ export default function LibraryCardForm({ showAdmin }: {
         setLibraryCardFormInfo(initialValues);
 
         await axios.post("http://localhost:3000/libraryCard/libraryCardSubmission", libraryCardFormData).then((response) => {
-            // console.log(response.status, response.data)
             setAlertShow(true);
         })
     }
@@ -83,10 +82,6 @@ export default function LibraryCardForm({ showAdmin }: {
                     <meta property="og:description" content="The library card application allows residents to apply for a library card online. Patrons will pick up their library card at the library when it is ready." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Card Application" />
-                    <meta name="twitter:description" content="The library card application allows residents to apply for a library card online. Patrons will pick up their library card at the library when it is ready." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='library-card-form-container'>
                     <HomepageLink />

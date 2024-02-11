@@ -29,7 +29,6 @@ export default function LibraryCardRequestDetails() {
 
     async function getLibraryCardRequestDetails() {
         await axios.get(`http://localhost:3000/libraryCard/libraryCardSubmission/${id}`).then((response) => {
-            // console.log(response.data);
             setLibraryCardRequestDetails(response.data);
         })
     }
@@ -74,8 +73,7 @@ export default function LibraryCardRequestDetails() {
         }
 
         axios.put(`http://localhost:3000/libraryCard/libraryCardSubmission/${id}`, libraryCardDataUpdate).then((response) => {
-            console.log(libraryCardDataUpdate)
-            console.log(response.status, response.data)
+
         })
     }
 
@@ -92,7 +90,7 @@ export default function LibraryCardRequestDetails() {
         <Row id="library-card-request-container-page">
             <HomepageLink />
             <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
+                <Form.Group className="mb-3">
                     <Form.Label>Name:</Form.Label>
                     <Form.Control
                         type="text"
@@ -138,9 +136,7 @@ export default function LibraryCardRequestDetails() {
                         onChange={handleChangeCompleted}
                     />
                 </Form.Group>
-                {/* <Link to='/AllLibraryCardRequests'> */}
-                    <MyButton className="library-card-request-update-button" title="Update Library Card Request"></MyButton>
-                {/* </Link> */}
+                <MyButton className="library-card-request-update-button" title="Update Library Card Request"></MyButton>
                 <Link to='/AllLibraryCardRequests'>
                     <MyButton onClick={handleDeleteLibraryCardRequest} className="library-card-request-update-button" title="Delete Library Card Request"></MyButton>
                 </Link>

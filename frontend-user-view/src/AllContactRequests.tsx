@@ -25,7 +25,6 @@ export default function AllContactRequests() {
     async function getContactRequests() {
         await axios.get('http://localhost:3000/contact/contactFormList').then((response) => {
             setContactRequestsList(response.data);
-            // console.log(response.status, response.data);
         })
     }
 

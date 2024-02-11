@@ -25,7 +25,6 @@ export default function AllVolunteerApplications() {
     async function getVolunteerApplications() {
         await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
             setVolunteerApplicationsList(response.data);
-            // console.log(response.status, response.data);
         })
     }
 

@@ -28,10 +28,6 @@ export default function BookSearchResultsPage({ bookData }: BookAPIProps) {
                     <meta property="og:description" content="The book search results page is accessed after a patron searches for a book. The top ten results from Google Books and their details are shown on the results page." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Book Search Results" />
-                    <meta name="twitter:description" content="The book search results page is accessed after a patron searches for a book. The top ten results from Google Books and their details are shown on the results page." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <div id="book-search-result-page-container">
                     <HomepageLink />

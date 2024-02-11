@@ -28,7 +28,6 @@ export default function NewsletterSignUp() {
 
     const handleChange = (event: FormEvent) => {
         const { name, value } = event.target as any;
-        console.log(event.target)
         setNewsletterForm({
             ...newsletterForm,
             [name]: value
@@ -45,7 +44,6 @@ export default function NewsletterSignUp() {
         setNewsletterForm(initialValues);
 
         await axios.post("http://localhost:3000/newsletter/newsletterSubscription", newsletterFormData).then((response) => {
-            console.log(response.status, response.data)
             setAlertShow(true)
         })
 
@@ -62,10 +60,6 @@ export default function NewsletterSignUp() {
                     <meta property="og:description" content="The newsletter sign up will sign library patrons up for a monthly newsletter email. The email will contain information about exhibits, events, and new book releases." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Newsletter Sign Up" />
-                    <meta name="twitter:description" content="The newsletter sign up will sign library patrons up for a monthly newsletter email. The email will contain information about exhibits, events, and new book releases." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='newsletter-sign-up-container'>
                     <HomepageLink />

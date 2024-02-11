@@ -29,7 +29,6 @@ export default function ContactRequestDetails() {
 
     async function getContactRequestDetails() {
         await axios.get(`http://localhost:3000/contact/contactForm/${id}`).then((response) => {
-            // console.log(response.data);
             setContactRequestDetail(response.data);
         })
     }
@@ -72,8 +71,7 @@ export default function ContactRequestDetails() {
         }
 
         axios.put(`http://localhost:3000/contact/contactForm/${id}`, contactDataUpdate).then((response) => {
-            // console.log(contactDataUpdate)
-            // console.log(response.status, response.data)
+            
         })
     }
 

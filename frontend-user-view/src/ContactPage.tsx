@@ -43,10 +43,6 @@ export default function ContactPage({ showAdmin }: {
                     <meta property="og:description" content="The contact page lists the department phone numbers, each departments head librarian, and a contact form for patrons to use if they need to contact the library." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Contact Page" />
-                    <meta name="twitter:description" content="The contact page lists the department phone numbers, each departments head librarian, and a contact form for patrons to use if they need to contact the library." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='contact-page-container'>
                     <HomepageLink />

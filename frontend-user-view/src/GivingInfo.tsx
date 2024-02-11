@@ -30,10 +30,6 @@ export default function GivingInfo() {
                     <meta property="og:description" content="The Giving page is a place for library patrons and local businesses to learn about monetary donations that help support the library." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Another Page Public Library Giving Page" />
-                    <meta name="twitter:description" content="The Giving page is a place for library patrons and local businesses to learn about monetary donations that help support the library." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id='giving-info-page-container'>
                     <HomepageLink />
@@ -133,7 +129,6 @@ export default function GivingInfo() {
                                 <div id='bold-flex-container'>
                                     <p id='bold-text'>Special Projects:</p>
                                     <p>Legacy gifts help provide the funding for special projects or purchasing equipment and technology that could not otherwise be afforded.</p>
-                                    {/* <p>Legacy gifts can provide the funding to embark on a special project or purchase equipment/technology that could not otherwise be afforded.</p> */}
                                 </div>
                                 <h4 id='ways-to-give-header'>How you benefit from your legacy gift:</h4>
                                 <div id='bold-flex-container'>

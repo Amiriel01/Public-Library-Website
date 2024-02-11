@@ -38,7 +38,6 @@ export default function RescueEvent() {
 
     async function getEvent() {
         await axios.get(`http://localhost:3000/event/eventDetail/657f9525e1f010728bdeb78b`).then((response) => {
-            console.log(response)
             setEvent(response.data)
         });
     };
@@ -58,10 +57,6 @@ export default function RescueEvent() {
                     <meta property="og:description" content="The Another Page Public Library Reading to Rescues event is open to tweens and teens in the community. By volunteering at the event tweens and teens are increasing awareness for the shelters, completing volunteer tasks, and enjoying the company of the shelter pets." />
                     <meta property="og:image" content={Logo} />
                     <meta property="og:url" content="https://example.com/my-page" />
-                    <meta name="twitter:title" content="Page Public Library Reading to Rescues Event" />
-                    <meta name="twitter:description" content="The Another Page Public Library Reading to Rescues event is open to tweens and teens in the community. By volunteering at the event tweens and teens are increasing awareness for the shelters, completing volunteer tasks, and enjoying the company of the shelter pets." />
-                    <meta name="twitter:image" content={Logo} />
-                    <meta name="twitter:card" content={Logo} />
                 </Helmet>
                 <Row id="event-page-container">
                     <HomepageLink />
@@ -79,25 +74,21 @@ export default function RescueEvent() {
                         <Col id="details-container">
                             <Col id="event-date">
                                 <div id='bold-flex-container'>
-                                    {/* <p className='page-detail-bold'>Date & Time:</p> */}
                                     <p className="page-detail">{event.date}</p>
                                 </div>
                             </Col>
                             <Col id="event-time">
                                 <div id='bold-flex-container'>
-                                    {/* <p className='page-detail-bold'>Time:</p> */}
                                     <p className="page-detail">{event.time}</p>
                                 </div>
                             </Col>
                             <Col id="event-program-type">
                                 <div id='bold-flex-container'>
-                                    {/* <p className='page-detail-bold'>Program Type:</p> */}
                                     <p className="page-detail">{event.program_type} Event</p>
                                 </div>
                             </Col>
                             <Col id="event-age-group">
                                 <div id='bold-flex-container'>
-                                    {/* <p className='page-detail-bold'>Age Group:</p> */}
                                     <p className="page-detail">{event.age_group} Welcome</p>
                                 </div>
                             </Col>

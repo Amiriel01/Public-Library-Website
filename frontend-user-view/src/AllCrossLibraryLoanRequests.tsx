@@ -27,7 +27,6 @@ export default function AllCrossLibraryLoanRequests() {
     async function getCrossLibraryLoanRequestsList() {
         await axios.get('http://localhost:3000/crossLibrary/crossLibraryFormList').then((response) => {
             setcrossLibraryLoanRequestsList(response.data);
-            // console.log(response.status, response.data);
         })
     }
 
