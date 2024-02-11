@@ -55,13 +55,11 @@ function App() {
   const [bookData, setBookData] = useState<BookAPIData>({ items: [] })
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
   const [showAdmin, setShowAdmin] = useState<boolean>(false);
-  const helmetContext = {};
 
   return (
     <>
       <HelmetProvider>
         <FirstHeader
-          context={helmetContext}
         />
         <SecondHeader
           bookData={bookData}
