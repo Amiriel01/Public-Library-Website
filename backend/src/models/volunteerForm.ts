@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-//define schema
 const Schema = mongoose.Schema;
 
 const VolunteerFormSchema = new Schema({

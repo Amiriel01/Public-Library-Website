@@ -1,5 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
 import {Router} from "express";
 const router = Router();
 import passport from 'passport';
@@ -12,27 +10,5 @@ router.get('/', function(req, res, next) {
 
 //GET user details
 router.get("/user/:id", user_get());
-// router.get("/staff/:id", staff_member_get());
-
-//GET login form//
-// router.get("/login", user_get())
-
-// router.post(
-//   "/login",
-//   passport.authenticate("local", {
-//     // successRedirect: "/",
-//     // failureRedirect: "/users/login"
-    
-//   })
-// );
-
-// router.get("/logout", (req, res, next) => {
-//   req.logout((err) => {
-//     if (err) {
-//       return next(err);
-//     }
-//     res.redirect("/")
-//   });
-// });
 
 export default router;

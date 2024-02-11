@@ -6,7 +6,6 @@ import Event from "../models/event.ts";
 export function event_list() {
     return asyncHandler(async (req, res, next) => {
         const eventList = await Event.find().exec();
-        console.log(eventList);
         res.json(eventList);
     });
 };
@@ -15,7 +14,6 @@ export function event_list() {
 export function event_list_age_group() {
     return asyncHandler(async (req, res, next) => {
         const eventAgeGroupDetails = await Event.find(req.body.age_group).exec();
-        console.log(eventAgeGroupDetails);
         res.json(eventAgeGroupDetails);
     });
 };
@@ -24,7 +22,6 @@ export function event_list_age_group() {
 export function event_get() {
     return asyncHandler(async (req, res, next) => {
         const eventDetails = await Event.findById(req.params.id).exec();
-        console.log(eventDetails);
         res.json(eventDetails);
     });
 };
@@ -79,15 +76,11 @@ export function event_create() {
                 imageURL: req.body.imageURL,
             });
 
-            console.log(req.body)
-
             //check for errors
             if (!errors.isEmpty()) {
                 errors.array();
                 res.json(errors);
-                console.log(errors)
             } else {
-                console.log(eventDetails);
                 res.json(await eventDetails.save());
             };
         })
@@ -133,7 +126,6 @@ export function event_edit() {
             //check for errors
             if (!errors.isEmpty()) {
                 errors.array()
-                console.log(errors)
                 res.json(errors)
             } else {
                 const eventEdit = await Event.findByIdAndUpdate(req.params.id, {
@@ -148,7 +140,6 @@ export function event_edit() {
                     { new: true })
                     .exec()
 
-                console.log(eventEdit);
                 res.json(eventEdit);
             };
         })
@@ -159,6 +150,5 @@ export function event_edit() {
 export function event_delete() {
     return asyncHandler(async (req, res, next) => {
         const eventDelete = await Event.findByIdAndDelete(req.params.id).exec();
-        console.log("item deleted");
     });
 };

@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-//define schema
 const Schema = mongoose.Schema;
 
 //create contact schema

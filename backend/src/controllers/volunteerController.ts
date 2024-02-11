@@ -6,7 +6,6 @@ import VolunteerForm from "../models/volunteerForm.ts";
 export function volunteer_form_list() {
     return asyncHandler(async (req, res, next) => {
         const volunteerFormList = await VolunteerForm.find().exec();
-        console.log(volunteerFormList);
         res.json(volunteerFormList);
     });
 };
@@ -15,7 +14,6 @@ export function volunteer_form_list() {
 export function volunteer_form_submission_get() {
     return asyncHandler(async (req, res, next) => {
         const volunteerFormSubmissionDetails = await VolunteerForm.findById(req.params.id).exec();
-        console.log(volunteerFormSubmissionDetails);
         res.json(volunteerFormSubmissionDetails);
     });
 };
@@ -71,13 +69,10 @@ export function volunteer_form_submission_post() {
                 interview_notes: req.body.interview_notes,
             });
 
-            console.log(req.body)
-
             //check for errors
             if (!errors.isEmpty()) {
                 errors.array();
                 res.json(volunteerFormubmission);
-                console.log(errors)
             } else {
                 console.log(volunteerFormubmission);
                 res.json(await volunteerFormubmission.save());
@@ -121,7 +116,6 @@ export function volunteer_form_submission_edit() {
             //check for errors
             if (!errors.isEmpty()) {
                 errors.array()
-                console.log(errors)
                 res.json(errors)
             } else {
                 const volunteerFormEdit = await VolunteerForm.findByIdAndUpdate(req.params.id, {
@@ -147,7 +141,6 @@ export function volunteer_form_submission_edit() {
                     { new: true })
                     .exec()
 
-                console.log(volunteerFormEdit);
                 res.json(volunteerFormEdit);
             };
         })
@@ -158,6 +151,5 @@ export function volunteer_form_submission_edit() {
 export function volunteer_form_submission_delete() {
     return asyncHandler(async (req, res, next) => {
         const volunteerFormDelete = await VolunteerForm.findByIdAndDelete(req.params.id).exec();
-        console.log("item deleted");
     });
 };

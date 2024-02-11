@@ -6,8 +6,6 @@ import Contact from "../models/contact.ts";
 export function contact_form_submissions_list() {
     return asyncHandler(async (req, res, next) => {
         const contactFormSubmissionsList = await Contact.find().exec()
-
-        console.log(contactFormSubmissionsList);
         res.json(contactFormSubmissionsList);
     })
 };
@@ -16,8 +14,6 @@ export function contact_form_submissions_list() {
 export function contact_form_submission_get() {
     return asyncHandler(async (req, res, next) => {
         const contactFormSubmissionDetails = await Contact.findById(req.params.id).exec()
-
-        console.log(contactFormSubmissionDetails);
         res.json(contactFormSubmissionDetails);
     })
 };
@@ -66,16 +62,14 @@ export function contact_form_submission_create() {
                 message: req.body.message,
                 admin_notes: req.body.admin_notes,
             });
-            console.log(req.body)
+        
             //check for errors
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array();
                 res.json(contactSubmission);
-                console.log(errors)
             } else {
                 //form data is valid, save the staff member
-                console.log(contactSubmission);
                 res.json(await contactSubmission.save());
             }
         })
@@ -123,13 +117,11 @@ export function contact_form_submission_edit() {
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array()
-                console.log(errors)
                 res.json(errors)
             } else {
                 //find the staff member and update
                 const contactFormSubmissionUpdate = await Contact.findByIdAndUpdate(req.params.id, { name: req.body.name, phone: req.body.phone, email: req.body.email, help: req.body.help, message: req.body.message, completed: req.body.completed, admin_notes: req.body.admin_notes }, { new: true }).exec()
                 //save the staff member update
-                console.log(contactFormSubmissionUpdate)
                 res.json(contactFormSubmissionUpdate)
             }
         })
@@ -139,9 +131,7 @@ export function contact_form_submission_edit() {
 //delete contact form submission
 export function contact_form_submission_delete() {
     return asyncHandler(async (req, res, next) => {
-        console.log(Contact.findByIdAndDelete)
         const contactFormSubmissionDelete = await Contact.findByIdAndDelete(req.params.id).exec();
-        console.log("item deleted");
         res.json("item deleted");
     })
 }

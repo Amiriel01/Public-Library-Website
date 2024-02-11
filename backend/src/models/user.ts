@@ -14,10 +14,6 @@ const UserSchema = new Schema({
         required: true,
         maxLength: 100,
     },
-    // admin: {
-    //     type: Boolean,
-    //     default: true,
-    // }
 })
 
 export default mongoose.model("User", UserSchema);

@@ -6,8 +6,6 @@ import NewsletterSubscription from "../models/newsletterSubscription.ts";
 export function newsletter_subscription_list() {
     return asyncHandler(async (req, res, next) => {
         const newsletterSubscriptionList = await NewsletterSubscription.find().exec()
-
-        console.log(newsletterSubscriptionList);
         res.json(newsletterSubscriptionList);
     })
 };
@@ -15,9 +13,7 @@ export function newsletter_subscription_list() {
 //GET single newsletter subscription submission with details
 export function newsletter_subscription_get() {
     return asyncHandler(async (req, res, next) => {
-        const newsletterSubscriptionDetails = await NewsletterSubscription.findById(req.params.id).exec()
-
-        console.log(newsletterSubscriptionDetails);
+        const newsletterSubscriptionDetails = await NewsletterSubscription.findById(req.params.id).exec();
         res.json(newsletterSubscriptionDetails);
     })
 };
@@ -40,18 +36,14 @@ export function newsletter_subscription_create() {
             const newsletterSubscriptionSubmission = new NewsletterSubscription({
                 email: req.body.email,
             });
-
-            console.log(req.body)
             
             //check for errors
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array();
                 res.json(newsletterSubscriptionSubmission);
-                console.log(newsletterSubscriptionSubmission);
             } else {
                 //form data is valid, save the staff member
-                console.log(newsletterSubscriptionSubmission);
                 res.json(await newsletterSubscriptionSubmission.save());
             }
         })
@@ -76,13 +68,11 @@ export function newsletter_subscription_edit() {
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array()
-                console.log(errors)
                 res.json(errors)
             } else {
                 //find the staff member and update
                 const newsletterSubscriptionSubmissionUpdate = await NewsletterSubscription.findByIdAndUpdate(req.params.id, { email: req.body.email }, { new: true }).exec()
                 //save the staff member update
-                console.log(newsletterSubscriptionSubmissionUpdate);
                 res.json(newsletterSubscriptionSubmissionUpdate);
             }
         })
@@ -92,9 +82,7 @@ export function newsletter_subscription_edit() {
 //delete newsletter subscription submission
 export function newsletter_subscription_delete() {
     return asyncHandler(async (req, res, next) => {
-        // console.log(NewsletterSubscription.findByIdAndDelete)
         const newsletterSubscriptionSubmissionDelete = await NewsletterSubscription.findByIdAndDelete(req.params.id).exec();
-        console.log("item deleted");
         res.json("item deleted");
     })
 }

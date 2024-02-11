@@ -1,7 +1,4 @@
-//require mongoose
 import mongoose from "mongoose";
-// const mongoose = require("mongoose");
-//define schema
 const Schema = mongoose.Schema;
 
 //create staff schema

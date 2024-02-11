@@ -1,15 +1,7 @@
 import 'dotenv/config';
 import createError from "http-errors";
 import express from "express";
-import path from "path";
-import cookieParser from 'cookie-parser';
-import logger from "morgan";
 import cors from 'cors';
-import passport from 'passport';
-import LocalStrategy from 'passport-local';
-import bcrypt from 'bcrypt';
-import User from './models/user.ts';
-
 import indexRouter from './routes/index.ts';
 import usersRouter from './routes/users.ts';
 import staffRouter from './routes/staff.ts';
@@ -59,7 +51,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.json(err);
-  console.log(err)
 });
 
 app.listen(3000, "localhost", () => {

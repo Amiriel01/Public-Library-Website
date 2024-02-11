@@ -6,7 +6,6 @@ import CrossLibraryForm from '../models/crossLibrary.ts';
 export function cross_library_form_list() {
     return asyncHandler(async (req, res, next) => {
         const crossLibraryFormList = await CrossLibraryForm.find().exec()
-        console.log(crossLibraryFormList);
         res.json(crossLibraryFormList);
     })
 };
@@ -15,7 +14,6 @@ export function cross_library_form_list() {
 export function cross_library_submission_get() {
     return asyncHandler(async (req, res, next) => {
         const crossLibraryFormDetails = await CrossLibraryForm.findById(req.params.id).exec()
-        console.log(crossLibraryFormDetails);
         res.json(crossLibraryFormDetails);
     })
 };
@@ -79,15 +77,11 @@ export function cross_library_submission_create() {
                 order_notes: req.body.order_notes,
             });
 
-            console.log(req.body)
-
             //check for errors
             if (!errors.isEmpty()) {
                 errors.array();
                 res.json(crossLibraryFormSubmission);
-                console.log(errors)
             } else {
-                console.log(crossLibraryFormSubmission);
                 res.json(await crossLibraryFormSubmission.save());
             }
         })
@@ -145,12 +139,9 @@ export function cross_library_submission_edit() {
             //check for errors
             if (!errors.isEmpty()) {
                 errors.array()
-                console.log(errors)
                 res.json(errors)
             } else {
-                const crossLibraryFormEdit = await CrossLibraryForm.findByIdAndUpdate(req.params.id, { title: req.body.title, author: req.body.author, material_type: req.body.material_type, name: req.body.name, phone: req.body.phone, email: req.body.email, library_card_number: req.body.library_card_number, ordered: req.body.ordered, order_notes: req.body.order_notes }, { new: true }).exec()
-
-                console.log(crossLibraryFormEdit);
+                const crossLibraryFormEdit = await CrossLibraryForm.findByIdAndUpdate(req.params.id, { title: req.body.title, author: req.body.author, material_type: req.body.material_type, name: req.body.name, phone: req.body.phone, email: req.body.email, library_card_number: req.body.library_card_number, ordered: req.body.ordered, order_notes: req.body.order_notes }, { new: true }).exec();
                 res.json(crossLibraryFormEdit);
             }
         })
@@ -161,7 +152,6 @@ export function cross_library_submission_edit() {
 export function cross_library_submission_delete() {
     return asyncHandler(async (req, res, next) => {
         const crossLibrarySubmissionDelete = await CrossLibraryForm.findByIdAndDelete(req.params.id).exec();
-        console.log("item deleted");
         res.json("item deleted");
     })
 }

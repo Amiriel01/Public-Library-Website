@@ -9,9 +9,7 @@ import asyncHandler from "express-async-handler";
 //GET a list of all staff with details
 export function staff_list() {
     return asyncHandler(async (req, res, next) => {
-        const staffList = await Staff.find().exec()
-
-        console.log(staffList);
+        const staffList = await Staff.find().exec();
         res.json(staffList);
     })
 }
@@ -19,9 +17,7 @@ export function staff_list() {
 //GET single staff member with details
 export function staff_member_get() {
     return asyncHandler(async (req, res, next) => {
-        const staffMember = await Staff.findById(req.params.id).exec()
-
-        console.log(staffMember);
+        const staffMember = await Staff.findById(req.params.id).exec();
         res.json(staffMember);
     })
 }
@@ -72,11 +68,9 @@ export function staff_member_create() {
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array();
-                console.log(errors);
                 res.json(staff);
             } else {
                 //form data is valid, save the staff member
-                console.log(staff);
                 res.json(await staff.save());
             }
         })
@@ -119,15 +113,13 @@ export function staff_member_edit() {
             //check for errors
             if (!errors.isEmpty()) {
                 //take staff information from the form
-                errors.array()
-                console.log(errors)
+                errors.array();
                 res.json("There are errors, look at the console.")
             } else {
                 //find the staff member and update
                 const staffMemberUpdate = await Staff.findByIdAndUpdate(req.params.id, { image: req.body.image, title: req.body.title, name: req.body.name, phone: req.body.phone, email: req.body.email }, { new: true }).exec()
                 //save the staff member update
-                console.log(staffMemberUpdate)
-                res.json(staffMemberUpdate)
+                res.json(staffMemberUpdate);
             }
         }),
     ];

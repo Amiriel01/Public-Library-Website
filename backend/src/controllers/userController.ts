@@ -6,7 +6,6 @@ import asyncHandler from "express-async-handler";
 export function user_list() {
     return asyncHandler(async (req, res, next) => {
         const userList = await User.find().exec();
-        console.log(userList);
         res.json(userList);
     });
 };
@@ -15,8 +14,6 @@ export function user_list() {
 export function user_get() {
     return asyncHandler(async (req, res, next) => {
         const userDetails = await User.findById(req.params.id).exec();
-
-        console.log(userDetails);
         res.json(userDetails);
     });
 };
@@ -49,11 +46,9 @@ export function user_create() {
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array();
-                console.log(errors);
                 res.json(user);
             } else {
                 //form data is valid, save the staff member
-                console.log(user);
                 res.json(await user.save());
             };
         })

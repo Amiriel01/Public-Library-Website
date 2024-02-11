@@ -6,7 +6,6 @@ import LibraryCard from '../models/libraryCard.ts';
 export function library_card_submissions_list() {
     return asyncHandler(async (req, res, next) => {
         const libraryCardSubmissionList = await LibraryCard.find().exec();
-        console.log(libraryCardSubmissionList);
         res.json(libraryCardSubmissionList);
     })
 }
@@ -14,9 +13,7 @@ export function library_card_submissions_list() {
 //GET single library card submission with details
 export function library_card_submission_get() {
     return asyncHandler(async (req, res, next) => {
-        const librarycardsubmissiondetails = await LibraryCard.findById(req.params.id).exec()
-
-        console.log(librarycardsubmissiondetails);
+        const librarycardsubmissiondetails = await LibraryCard.findById(req.params.id).exec();
         res.json(librarycardsubmissiondetails);
     })
 }
@@ -56,17 +53,13 @@ export function library_card_submission_create() {
                 additional_information: req.body.additional_information,
             });
 
-            console.log(req.body)
-
             //check for errors
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array();
                 res.json(errors);
-                console.log(errors)
             } else {
                 //form data is valid, save the staff member
-                console.log(libraryCardDetails);
                 res.json(await libraryCardDetails.save());
             }
         })
@@ -105,13 +98,11 @@ export function library_card_submission_edit() {
             if (!errors.isEmpty()) {
                 //take staff information from the form
                 errors.array()
-                console.log(errors)
                 res.json(errors)
             } else {
                 //find the staff member and update
                 const libraryCardUpdate = await LibraryCard.findByIdAndUpdate(req.params.id, { name: req.body.name, phone: req.body.phone, email: req.body.email, additional_information: req.body.additional_information, card_issued: req.body.card_issued}, { new: true }).exec()
                 //save the staff member update
-                console.log(libraryCardUpdate)
                 res.json(libraryCardUpdate)
             }
         })
@@ -122,7 +113,6 @@ export function library_card_submission_edit() {
 export function library_card_submission_delete() {
     return asyncHandler(async (req, res, next) => {
         const libraryCardSubmissionDelete = await LibraryCard.findByIdAndDelete(req.params.id).exec();
-        console.log("item deleted");
         res.json("item deleted");
     })
 }
