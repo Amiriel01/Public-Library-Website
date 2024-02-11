@@ -6,6 +6,7 @@
   "scripts": {
     "startDoNotUse": "node ./bin/www",
     "buildOptionNotUsing": "ts-node src/app.ts",
+    "prebuild": "npm install",
     "build": "swc ./src -d ./dist",
     "start": "node --experimental-specifier-resolution=node ./dist/src/app.js",
     "devstartNotUsedWhenDeploying": "nodemon --experimental-specifier-resolution=node --loader ts-node/esm --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node src/app.ts'"
