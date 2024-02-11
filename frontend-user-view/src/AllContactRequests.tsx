@@ -1,6 +1,6 @@
 import { useLocation, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from './utility/axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -23,7 +23,7 @@ export default function AllContactRequests() {
     const [contactRequestsList, setContactRequestsList] = useState<Array<ContactForm>>([]);
 
     async function getContactRequests() {
-        await axios.get('http://localhost:3000/contact/contactFormList').then((response) => {
+        await axios.get('contact/contactFormList').then((response) => {
             setContactRequestsList(response.data);
         })
     }

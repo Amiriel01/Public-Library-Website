@@ -37,7 +37,7 @@ export default function RescueEvent() {
     }, [pathname]);
 
     async function getEvent() {
-        await axios.get(`http://localhost:3000/event/eventDetail/657f9525e1f010728bdeb78b`).then((response) => {
+        await axios.get(`event/eventDetail/657f9525e1f010728bdeb78b`).then((response) => {
             setEvent(response.data)
         });
     };
@@ -69,7 +69,7 @@ export default function RescueEvent() {
                     </Row>
                     <Row id="image-details-container">
                         <Col id="event-image">
-                            <img className="img-fluid" id='event-page-image' src={`http://localhost:3000/public/${event.imageURL}`} alt="hot cocoa picture"></img>
+                            <img className="img-fluid" id='event-page-image' src={`public/${event.imageURL}`} alt="hot cocoa picture"></img>
                         </Col>
                         <Col id="details-container">
                             <Col id="event-date">

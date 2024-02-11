@@ -3,7 +3,7 @@ import MyButton from './MyButton';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
-import axios from 'axios';
+import axios from './utility/axios';
 import { useState, FormEvent } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import { useLocation } from 'react-router-dom';
@@ -43,7 +43,7 @@ export default function NewsletterSignUp() {
 
         setNewsletterForm(initialValues);
 
-        await axios.post("http://localhost:3000/newsletter/newsletterSubscription", newsletterFormData).then((response) => {
+        await axios.post("newsletter/newsletterSubscription", newsletterFormData).then((response) => {
             setAlertShow(true)
         })
 

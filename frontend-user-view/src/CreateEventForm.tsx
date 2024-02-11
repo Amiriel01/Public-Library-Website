@@ -27,7 +27,7 @@ export default function CreateEventForm() {
         formData.append("image", image as Blob)
 
         try {
-            const result = await axios.post("http://localhost:3000/upload-image", formData, {
+            const result = await axios.post("upload-image", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -76,7 +76,7 @@ export default function CreateEventForm() {
 
         setEventForm(initialValues);
 
-        await axios.post("http://localhost:3000/event/eventDetail", eventFormData).then((response) => {
+        await axios.post("event/eventDetail", eventFormData).then((response) => {
             setAlertFormShow(true);
         })
     }

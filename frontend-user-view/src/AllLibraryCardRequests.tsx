@@ -1,6 +1,6 @@
 import { useLocation, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from './utility/axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -21,7 +21,7 @@ export default function AllLibraryCardRequests() {
     const [libraryCardRequestList, setLibraryCardRequestList] = useState<Array<LibraryCardRequest>>([]);
 
     async function getLibraryCardRequests() {
-        await axios.get('http://localhost:3000/libraryCard/libraryCardSubmissionList').then((response) => {
+        await axios.get('libraryCard/libraryCardSubmissionList').then((response) => {
             setLibraryCardRequestList(response.data);
         })
     }

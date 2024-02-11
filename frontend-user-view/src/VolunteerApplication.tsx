@@ -1,6 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import MyButton from './MyButton';
-import axios from 'axios';
+import axios from './utility/axios';
 import { FormEvent, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -140,7 +140,7 @@ export default function VolunteerApplication({ showAdmin }: {
 
         setVolunteerApplicationInfo(initialValues);
 
-        await axios.post("http://localhost:3000/volunteer/volunteerForm", volunteerApplicationData).then((response) => {
+        await axios.post("volunteer/volunteerForm", volunteerApplicationData).then((response) => {
             setIsCheckedMonday(false);
             setIsCheckedTuesday(false);
             setIsCheckedWednesday(false);

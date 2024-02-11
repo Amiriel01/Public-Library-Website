@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
 import FirstFooter from './FirstFooter';
-import axios from 'axios';
+import axios from './utility/axios';
 import { FormEvent, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import { useLocation, Link } from 'react-router-dom';
@@ -58,7 +58,7 @@ export default function CrossLibraryLoanForm({ showAdmin }: {
 
         setCrossLibraryFormInfo(initialValues);
 
-        await axios.post("http://localhost:3000/crossLibrary/crossLibraryForm", crossLibraryFormData).then((response) => {
+        await axios.post("crossLibrary/crossLibraryForm", crossLibraryFormData).then((response) => {
             setAlertShow(true);
         })
     }

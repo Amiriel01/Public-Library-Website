@@ -1,6 +1,6 @@
 import { useLocation, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from './utility/axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -23,7 +23,7 @@ export default function AllVolunteerApplications() {
     const [volunteerApplicationsList, setVolunteerApplicationsList] = useState<Array<VolunteerApplication>>([]);
 
     async function getVolunteerApplications() {
-        await axios.get('http://localhost:3000/volunteer/volunteerFormList').then((response) => {
+        await axios.get('volunteer/volunteerFormList').then((response) => {
             setVolunteerApplicationsList(response.data);
         })
     }

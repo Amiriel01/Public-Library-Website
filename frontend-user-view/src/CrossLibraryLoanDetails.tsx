@@ -30,7 +30,7 @@ export default function CrossLibraryLoanDetails() {
     const [isCheckedCompleted, setIsCheckedCompleted] = useState(false);
 
     async function getCrossLibraryLoanDetails() {
-        await axios.get(`http://localhost:3000/crossLibrary/crossLibraryForm/${id}`).then((response) => {
+        await axios.get(`crossLibrary/crossLibraryForm/${id}`).then((response) => {
             setCrossLibraryLoanDetails(response.data);
         })
     }
@@ -74,14 +74,14 @@ export default function CrossLibraryLoanDetails() {
             ordered: ordered,
         }
 
-        axios.put(`http://localhost:3000/crossLibrary/crossLibraryForm/${id}`, crossLibraryDataUpdate).then((response) => {
+        axios.put(`crossLibrary/crossLibraryForm/${id}`, crossLibraryDataUpdate).then((response) => {
 
         })
     }
 
     const handleDeleteCrossLibraryRequest = () => {
 
-        axios.delete(`http://localhost:3000/crossLibrary/crossLibraryForm/${id}`);
+        axios.delete(`crossLibrary/crossLibraryForm/${id}`);
     }
 
     useEffect(() => {

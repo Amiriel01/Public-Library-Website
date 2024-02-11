@@ -50,7 +50,7 @@ export default function VolunteerApplicationDetails() {
     const [isCheckedApproved, setIsCheckedApproved] = useState(false);
 
     async function getVolunteerApplicationDetails() {
-        await axios.get(`http://localhost:3000/volunteer/volunteerForm/${id}`).then((response) => {
+        await axios.get(`volunteer/volunteerForm/${id}`).then((response) => {
             setVolunteerApplicationDetails(response.data);
         })
     }
@@ -148,14 +148,14 @@ export default function VolunteerApplicationDetails() {
             approved: approved,
         }
 
-        axios.put(`http://localhost:3000/volunteer/volunteerForm/${id}`, volunteerApplicationUpdate).then((response) => {
+        axios.put(`volunteer/volunteerForm/${id}`, volunteerApplicationUpdate).then((response) => {
 
         })
     }
 
     const handleDeleteVolunteerApplication = () => {
 
-        axios.delete(`http://localhost:3000/volunteer/volunteerForm/${id}`);
+        axios.delete(`volunteer/volunteerForm/${id}`);
     }
 
     useEffect(() => {

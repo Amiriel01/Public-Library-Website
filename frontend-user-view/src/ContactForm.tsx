@@ -1,6 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import MyButton from './MyButton';
-import axios from 'axios';
+import axios from './utility/axios';
 import { FormEvent, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -40,7 +40,7 @@ export default function ContactForm() {
 
         setContactForm(initialValues);
 
-        await axios.post("http://localhost:3000/contact/contactForm", contactFormData).then((response) => {
+        await axios.post("contact/contactForm", contactFormData).then((response) => {
             setAlertShow(true)
         })
 

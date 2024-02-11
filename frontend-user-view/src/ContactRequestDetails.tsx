@@ -28,7 +28,7 @@ export default function ContactRequestDetails() {
     const [isCheckedCompleted, setIsCheckedCompleted] = useState(false);
 
     async function getContactRequestDetails() {
-        await axios.get(`http://localhost:3000/contact/contactForm/${id}`).then((response) => {
+        await axios.get(`contact/contactForm/${id}`).then((response) => {
             setContactRequestDetail(response.data);
         })
     }
@@ -70,14 +70,14 @@ export default function ContactRequestDetails() {
             completed: completed
         }
 
-        axios.put(`http://localhost:3000/contact/contactForm/${id}`, contactDataUpdate).then((response) => {
+        axios.put(`contact/contactForm/${id}`, contactDataUpdate).then((response) => {
             
         })
     }
 
     const handleDeleteContactRequest = () => {
 
-        axios.delete(`http://localhost:3000/contact/contactForm/${id}`);
+        axios.delete(`contact/contactForm/${id}`);
     }
 
     useEffect(() => {

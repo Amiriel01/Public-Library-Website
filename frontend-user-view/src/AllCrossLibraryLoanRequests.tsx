@@ -1,6 +1,6 @@
 import { useLocation, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from './utility/axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -25,7 +25,7 @@ export default function AllCrossLibraryLoanRequests() {
     const [crossLibraryLoanRequestsList, setcrossLibraryLoanRequestsList] = useState<Array<CrossLibraryLoan>>([]);
 
     async function getCrossLibraryLoanRequestsList() {
-        await axios.get('http://localhost:3000/crossLibrary/crossLibraryFormList').then((response) => {
+        await axios.get('crossLibrary/crossLibraryFormList').then((response) => {
             setcrossLibraryLoanRequestsList(response.data);
         })
     }

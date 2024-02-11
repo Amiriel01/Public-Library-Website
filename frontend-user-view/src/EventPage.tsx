@@ -34,7 +34,7 @@ export default function EventPage() {
     });
 
     async function getEvent() {
-        await axios.get(`http://localhost:3000/event/eventDetail/${id}`).then((response) => {
+        await axios.get(`event/eventDetail/${id}`).then((response) => {
             setEvent(response.data)
         });
     };
@@ -70,7 +70,7 @@ export default function EventPage() {
                     </Row>
                     <Row id="image-details-container">
                         <Col id="event-image">
-                            <img className="img-fluid" id='event-page-image' src={`http://localhost:3000/public/${event.imageURL}`} alt="hot cocoa picture"></img>
+                            <img className="img-fluid" id='event-page-image' src={`public/${event.imageURL}`} alt="hot cocoa picture"></img>
                         </Col>
                         <Col id="details-container">
                             <Col id="event-date">

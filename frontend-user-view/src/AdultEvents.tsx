@@ -2,7 +2,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import MyButton from './MyButton';
-import axios from 'axios';
+import axios from './utility/axios';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ export default function AdultEvents() {
     }]);
 
     async function getEventDetails() {
-        await axios.get("http://localhost:3000/event/eventList").then((response) => {
+        await axios.get("event/eventList").then((response) => {
             setEventDetails(response.data);
         })
     }
@@ -46,7 +46,7 @@ export default function AdultEvents() {
                 {eventDetails.filter(value => value.age_group === "Adults").map((ageEventDetail) => {
                     return <div key={ageEventDetail._id}>
                         <Card id='event-card' style={{ width: '20rem' }}>
-                            <Card.Img className="img-fluid" id='event-card-image' variant="top" src={`http://localhost:3000/public/${ageEventDetail.imageURL}`}
+                            <Card.Img className="img-fluid" id='event-card-image' variant="top" src={`public/${ageEventDetail.imageURL}`}
                             alt='decorative image'
                             ></Card.Img>
                             <Card.Body>

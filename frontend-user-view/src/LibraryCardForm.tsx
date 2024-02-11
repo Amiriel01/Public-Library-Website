@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
 import FirstFooter from './FirstFooter';
-import axios from 'axios';
+import axios from './utility/axios';
 import { FormEvent, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import { useLocation, Link } from 'react-router-dom';
@@ -52,7 +52,7 @@ export default function LibraryCardForm({ showAdmin }: {
 
         setLibraryCardFormInfo(initialValues);
 
-        await axios.post("http://localhost:3000/libraryCard/libraryCardSubmission", libraryCardFormData).then((response) => {
+        await axios.post("libraryCard/libraryCardSubmission", libraryCardFormData).then((response) => {
             setAlertShow(true);
         })
     }

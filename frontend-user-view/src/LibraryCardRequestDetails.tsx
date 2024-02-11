@@ -28,7 +28,7 @@ export default function LibraryCardRequestDetails() {
     const [isCheckedIssued, setIsIssuedCompleted] = useState(false);
 
     async function getLibraryCardRequestDetails() {
-        await axios.get(`http://localhost:3000/libraryCard/libraryCardSubmission/${id}`).then((response) => {
+        await axios.get(`libraryCard/libraryCardSubmission/${id}`).then((response) => {
             setLibraryCardRequestDetails(response.data);
         })
     }
@@ -72,14 +72,14 @@ export default function LibraryCardRequestDetails() {
             issued: issued,
         }
 
-        axios.put(`http://localhost:3000/libraryCard/libraryCardSubmission/${id}`, libraryCardDataUpdate).then((response) => {
+        axios.put(`libraryCard/libraryCardSubmission/${id}`, libraryCardDataUpdate).then((response) => {
 
         })
     }
 
     const handleDeleteLibraryCardRequest = () => {
 
-        axios.delete(`http://localhost:3000/libraryCard/libraryCardSubmission/${id}`);
+        axios.delete(`libraryCard/libraryCardSubmission/${id}`);
     }
 
     useEffect(() => {

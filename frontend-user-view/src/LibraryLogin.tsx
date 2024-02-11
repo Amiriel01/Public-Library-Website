@@ -3,7 +3,7 @@ import MyButton from './MyButton';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomepageLink from './HomepageLink';
-import axios from 'axios';
+import axios from './utility/axios';
 import { FormEvent, useState } from 'react';
 import FirstFooter from './FirstFooter';
 import { useLocation } from 'react-router-dom';
@@ -49,7 +49,7 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
 
         setUserLogin(initialValues);
 
-        await axios.get("http://localhost:3000/users/user/656d2207092df7c8443fd310").then((response) => {
+        await axios.get("users/user/656d2207092df7c8443fd310").then((response) => {
             if (response.data.username === userLoginData.username && response.data.password === userLoginData.password) {
                 setLoggedIn(true);
                 setShowAdmin(true);
