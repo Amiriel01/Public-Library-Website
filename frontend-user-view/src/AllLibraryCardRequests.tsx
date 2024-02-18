@@ -28,7 +28,7 @@ export default function AllLibraryCardRequests() {
 
     useEffect(() => {
         getLibraryCardRequests();
-    }, []);
+    }, [libraryCardRequestList]);
 
     useEffect(() => {
         window.scrollTo(0, 0)

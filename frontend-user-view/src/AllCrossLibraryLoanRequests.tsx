@@ -32,7 +32,7 @@ export default function AllCrossLibraryLoanRequests() {
 
     useEffect(() => {
         getCrossLibraryLoanRequestsList();
-    }, []);
+    }, [crossLibraryLoanRequestsList]);
 
     useEffect(() => {
         window.scrollTo(0, 0)

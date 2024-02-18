@@ -30,7 +30,7 @@ export default function AllContactRequests() {
 
     useEffect(() => {
         getContactRequests();
-    }, []);
+    }, [contactRequestsList]);
 
     useEffect(() => {
         window.scrollTo(0, 0)
