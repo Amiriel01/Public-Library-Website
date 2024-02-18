@@ -53,6 +53,6 @@ app.use(function(err, req, res, next) {
   res.json(err);
 });
 
-app.listen(3000, "localhost", () => {
+app.listen(3000, "0.0.0.0", () => {
   console.log("listening")
 })
