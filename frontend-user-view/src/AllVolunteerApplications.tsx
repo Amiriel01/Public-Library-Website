@@ -19,6 +19,7 @@ interface VolunteerApplication {
 export default function AllVolunteerApplications() {
 
     const { pathname } = useLocation();
+    const [needsRerender, setNeedsRerender] = useState(true);
 
     const [volunteerApplicationsList, setVolunteerApplicationsList] = useState<Array<VolunteerApplication>>([]);
 
@@ -30,7 +31,14 @@ export default function AllVolunteerApplications() {
 
     useEffect(() => {
         getVolunteerApplications();
-    }, [volunteerApplicationsList]);
+    }, []);
+
+    useEffect(() => {
+        if (needsRerender) { 
+            getVolunteerApplications();
+            setNeedsRerender(false);
+        }
+    }, [needsRerender]);
 
     useEffect(() => {
         window.scrollTo(0, 0)
