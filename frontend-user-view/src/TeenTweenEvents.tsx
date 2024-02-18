@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import MyButton from './MyButton';
 import axios from './utility/axios';
+import { backendURL } from './utility/backendSettings';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -46,7 +47,7 @@ export default function TeenTweenEvents() {
             {eventDetails.filter(value => value.age_group === "Teens and Tweens").map((ageEventDetail) => {
                     return <div key={ageEventDetail._id}>
                         <Card id='event-card' style={{ width: '20rem' }}>
-                            <Card.Img className="img-fluid" id='event-card-image' variant="top" src={`public/${ageEventDetail.imageURL}`}
+                            <Card.Img className="img-fluid" id='event-card-image' variant="top" src={`${backendURL}public/${ageEventDetail.imageURL}`}
                             alt='decorative image'
                             ></Card.Img>
                             <Card.Body>
