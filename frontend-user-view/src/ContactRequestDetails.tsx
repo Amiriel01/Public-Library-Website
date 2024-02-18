@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from '../src/utility/axios';
 import { useEffect, useState, FormEvent } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
