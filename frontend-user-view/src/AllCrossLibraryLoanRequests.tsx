@@ -23,6 +23,7 @@ export default function AllCrossLibraryLoanRequests() {
 
     const { pathname } = useLocation();
     const [crossLibraryLoanRequestsList, setcrossLibraryLoanRequestsList] = useState<Array<CrossLibraryLoan>>([]);
+    const [needsRerender, setNeedsRerender] = useState(true);
 
     async function getCrossLibraryLoanRequestsList() {
         await axios.get('crossLibrary/crossLibraryFormList').then((response) => {
@@ -32,7 +33,14 @@ export default function AllCrossLibraryLoanRequests() {
 
     useEffect(() => {
         getCrossLibraryLoanRequestsList();
-    }, [crossLibraryLoanRequestsList]);
+    }, []);
+
+    useEffect(() => {
+        if (needsRerender) { 
+            getCrossLibraryLoanRequestsList();
+            setNeedsRerender(false);
+        }
+    }, [needsRerender]);
 
     useEffect(() => {
         window.scrollTo(0, 0)

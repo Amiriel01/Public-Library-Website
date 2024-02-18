@@ -21,6 +21,7 @@ export default function AllContactRequests() {
 
     const { pathname } = useLocation();
     const [contactRequestsList, setContactRequestsList] = useState<Array<ContactForm>>([]);
+    const [needsRerender, setNeedsRerender] = useState(true);
 
     async function getContactRequests() {
         await axios.get('contact/contactFormList').then((response) => {
@@ -30,7 +31,14 @@ export default function AllContactRequests() {
 
     useEffect(() => {
         getContactRequests();
-    }, [contactRequestsList]);
+    }, []);
+
+    useEffect(() => {
+        if (needsRerender) { 
+            getContactRequests();
+            setNeedsRerender(false);
+        }
+    }, [needsRerender]);
 
     useEffect(() => {
         window.scrollTo(0, 0)

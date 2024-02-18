@@ -19,6 +19,7 @@ export default function AllLibraryCardRequests() {
 
     const { pathname } = useLocation();
     const [libraryCardRequestList, setLibraryCardRequestList] = useState<Array<LibraryCardRequest>>([]);
+    const [needsRerender, setNeedsRerender] = useState(true);
 
     async function getLibraryCardRequests() {
         await axios.get('libraryCard/libraryCardSubmissionList').then((response) => {
@@ -28,7 +29,14 @@ export default function AllLibraryCardRequests() {
 
     useEffect(() => {
         getLibraryCardRequests();
-    }, [libraryCardRequestList]);
+    }, []);
+
+    useEffect(() => {
+        if (needsRerender) { 
+            getLibraryCardRequests();
+            setNeedsRerender(false);
+        }
+    }, [needsRerender]);
 
     useEffect(() => {
         window.scrollTo(0, 0)
