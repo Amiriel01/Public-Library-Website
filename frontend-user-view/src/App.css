@@ -524,12 +524,12 @@ html {
   font-weight: bold;
 }
 
-.book-info-link {
+#book-info-link {
   color: #474044;
   text-decoration: none;
 }
 
-.book-info-link:hover {
+#book-info-link:hover {
   color: #f49fbc;
 }
 
