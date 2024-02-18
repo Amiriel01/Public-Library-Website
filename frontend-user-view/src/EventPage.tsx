@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from 'axios'
+import axios from '../src/utility/axios'
 import { backendURL } from "./utility/backendSettings";
 import { useParams, useLocation } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
