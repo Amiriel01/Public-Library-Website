@@ -49,7 +49,7 @@ export default function UpcomingEvents({ showAdmin }: {
                 </Helmet>
                 <Row id='upcoming-events-page-container'>
                     <HomepageLink />
-                    {createEventLink()}
+                    {/* {createEventLink()} */}
                     <Row>
                         <Col>
                             <h1 id='page-titles'>
