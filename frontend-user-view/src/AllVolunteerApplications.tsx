@@ -30,7 +30,7 @@ export default function AllVolunteerApplications() {
 
     useEffect(() => {
         getVolunteerApplications();
-    }, []);
+    }, [volunteerApplicationsList]);
 
     useEffect(() => {
         window.scrollTo(0, 0)
