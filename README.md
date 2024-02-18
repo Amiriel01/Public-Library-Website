@@ -8,7 +8,7 @@
   <p align="center">
     Full Stack MERN (MongoDB, Express, React, and Node) Project
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://anotherpagelibrary.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/Amiriel01/Public-Library-Website/issues">Report Bug</a>
     ·
