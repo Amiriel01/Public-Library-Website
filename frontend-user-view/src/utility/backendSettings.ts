@@ -1,0 +1,1 @@
+export const backendURL = import.meta.env.DEV ? "http://localhost:3000/" : "https://public-library-backend.fly.dev/";

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios'
+import { backendURL } from "./utility/backendSettings";
 import { useParams, useLocation } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -70,7 +71,7 @@ export default function EventPage() {
                     </Row>
                     <Row id="image-details-container">
                         <Col id="event-image">
-                            <img className="img-fluid" id='event-page-image' src={`public/${event.imageURL}`} alt="hot cocoa picture"></img>
+                            <img className="img-fluid" id='event-page-image' src={`${backendURL}public/${event.imageURL}`} alt="hot cocoa picture"></img>
                         </Col>
                         <Col id="details-container">
                             <Col id="event-date">
