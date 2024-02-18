@@ -300,7 +300,7 @@ When the admin user clicks on a volunteer application they are routed to the vol
 
 ![Volunteer Application Details](ReadMeImages/volunteerdetails.png)
 
-***Create Events***
+***Create Events (Disabled in Live Demo Site)***
 
 The admin user can create new events when they are logged in. To access the form to add events the admin user will click on the Create New Event link on the Upcoming Events page. Once the admin user clicks this link they will be routed to a form to create the event. The admin user will select the image file by clicking Choose File and then Select Image after selecting the image file. The admin user will then complete the form and hit Submit New Event.
 
