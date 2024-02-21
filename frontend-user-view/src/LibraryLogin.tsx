@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { useNavigate } from "react-router";
 import { Helmet } from 'react-helmet-async';
 import Logo from './images/logo.png';
+import { Alert } from 'react-bootstrap';
 
 export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
     setLoggedIn: (data: boolean) => void,
@@ -19,6 +20,7 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
 
     const { pathname } = useLocation();
     const navigate = useNavigate();
+    const [showAlert, setShowAlert] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -55,7 +57,7 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
                 setShowAdmin(true);
                 navigate("/Homepage");
             } else {
-                return
+                setShowAlert(true);
             }
         })
     }
@@ -108,6 +110,11 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
                         </div>
                     </Form>
                 </Row>
+                {showAlert && (
+                    <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>
+                        Username and password not recognized!
+                    </Alert>
+                )}
                 <FirstFooter />
             </div>
         </>
