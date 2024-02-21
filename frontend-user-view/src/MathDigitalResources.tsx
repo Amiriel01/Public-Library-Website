@@ -47,7 +47,7 @@ export default function MathDigitalResources() {
                         <Card.Text>
                         Students can use this free Math resource to play a game while completing math questions. Prodigy is typically used for students kindergarten through middle school.
                         </Card.Text>
-                        <a className='resource-link' href="https://www.prodigygame.com/main-en/prodigy/" target='_blank'>
+                        <a className='resource-link' href="https://www.prodigygame.com/main-en/" target='_blank'>
                             <div id='event-button-container'>
                                 <MyButton className='resource-button' title='Visit the Prodigy Game Website'></MyButton>
                             </div>
