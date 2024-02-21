@@ -112,7 +112,7 @@ export default function LibraryLogin({ setLoggedIn, setShowAdmin }: {
                 </Row>
                 {showAlert && (
                     <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible id='login-alert'>
-                        Username and password not recognized!
+                        Username and password not recognized
                     </Alert>
                 )}
                 <FirstFooter />
